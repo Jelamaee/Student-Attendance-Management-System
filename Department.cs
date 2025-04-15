@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Student_Attendance_Management_System
 {
-    public partial class Attendance : Form
+    public partial class Department : Form
     {
-        public Attendance()
+        public Department()
         {
             InitializeComponent();
         }
@@ -22,6 +22,7 @@ namespace Student_Attendance_Management_System
             Dashboard dashboard = new Dashboard();
             dashboard.Show();
         }
+
         private void studentButton_Click(object sender, EventArgs e)
         {
             Student student = new Student();
@@ -42,8 +43,8 @@ namespace Student_Attendance_Management_System
 
         private void classButton_Click(object sender, EventArgs e)
         {
-            Cclasses cclasses = new Cclasses();
-            cclasses.Show();
+            Cclasses classClasses = new Cclasses();
+            classClasses.Show();
         }
 
         private void professorButton_Click(object sender, EventArgs e)
@@ -54,30 +55,13 @@ namespace Student_Attendance_Management_System
 
         private void departmentButton_Click(object sender, EventArgs e)
         {
-            Department department = new Department();   
+            Department department = new Department();
             department.Show();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void button4_Click(object sender, EventArgs e)
         {
 
         }
-
-        private void markAttendanceTabPage_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void studentIDLabel_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        
     }
 }

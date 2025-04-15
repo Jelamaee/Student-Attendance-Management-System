@@ -29,7 +29,7 @@ namespace Student_Attendance_Management_System
 
         private void dashboardButton_Click(object sender, EventArgs e)
         {
-
+           
         }
 
         private void studentButton_Click(object sender, EventArgs e)
@@ -52,20 +52,29 @@ namespace Student_Attendance_Management_System
 
         private void classButton_Click(object sender, EventArgs e)
         {
-
+            Cclasses cclasses = new Cclasses();
+            cclasses.Show();
         }
 
         private void professorButton_Click(object sender, EventArgs e)
         {
-
+            Professor professor = new Professor();
+            professor.Show();
         }
 
         private void departmentButton_Click(object sender, EventArgs e)
         {
-
+            Department department = new Department();
+            department.Show();
         }
 
-        private void archiveButton_Click(object sender, EventArgs e)
+        private void archivedButton_Click(object sender, EventArgs e)
+        {
+            Archived archived = new Archived();
+            archived.Show();
+        }
+
+        private void userControlDashboard1_Load(object sender, EventArgs e)
         {
 
         }

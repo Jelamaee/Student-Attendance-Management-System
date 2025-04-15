@@ -30,7 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Dashboard));
             dashboardPanel = new Panel();
-            archiveButton = new Button();
+            archivedButton = new Button();
             departmentButton = new Button();
             professorButton = new Button();
             classButton = new Button();
@@ -49,6 +49,7 @@
             logoutButton = new Button();
             minimizePanel = new Panel();
             minimizeButton = new Button();
+            userControlDashboard1 = new UserControlDashboard();
             dashboardPanel.SuspendLayout();
             dashboardSmallpanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dashboardPictureBox).BeginInit();
@@ -64,7 +65,7 @@
             // 
             dashboardPanel.Anchor = AnchorStyles.None;
             dashboardPanel.BackColor = Color.FromArgb(188, 234, 213);
-            dashboardPanel.Controls.Add(archiveButton);
+            dashboardPanel.Controls.Add(archivedButton);
             dashboardPanel.Controls.Add(departmentButton);
             dashboardPanel.Controls.Add(professorButton);
             dashboardPanel.Controls.Add(classButton);
@@ -73,27 +74,27 @@
             dashboardPanel.Controls.Add(studentButton);
             dashboardPanel.Controls.Add(dashboardButton);
             dashboardPanel.Controls.Add(dashboardSmallpanel);
-            dashboardPanel.Location = new Point(2, 0);
+            dashboardPanel.Location = new Point(8, -3);
             dashboardPanel.Name = "dashboardPanel";
-            dashboardPanel.Size = new Size(352, 1033);
+            dashboardPanel.Size = new Size(330, 1033);
             dashboardPanel.TabIndex = 0;
             // 
-            // archiveButton
+            // archivedButton
             // 
-            archiveButton.Anchor = AnchorStyles.None;
-            archiveButton.FlatAppearance.BorderSize = 0;
-            archiveButton.FlatStyle = FlatStyle.Flat;
-            archiveButton.Font = new Font("Century Gothic", 11F);
-            archiveButton.Image = (Image)resources.GetObject("archiveButton.Image");
-            archiveButton.ImageAlign = ContentAlignment.MiddleLeft;
-            archiveButton.Location = new Point(0, 590);
-            archiveButton.Name = "archiveButton";
-            archiveButton.Size = new Size(220, 40);
-            archiveButton.TabIndex = 8;
-            archiveButton.Text = "                Archive";
-            archiveButton.TextAlign = ContentAlignment.MiddleLeft;
-            archiveButton.UseVisualStyleBackColor = true;
-            archiveButton.Click += archiveButton_Click;
+            archivedButton.Anchor = AnchorStyles.None;
+            archivedButton.FlatAppearance.BorderSize = 0;
+            archivedButton.FlatStyle = FlatStyle.Flat;
+            archivedButton.Font = new Font("Century Gothic", 11F);
+            archivedButton.Image = (Image)resources.GetObject("archivedButton.Image");
+            archivedButton.ImageAlign = ContentAlignment.MiddleLeft;
+            archivedButton.Location = new Point(0, 592);
+            archivedButton.Name = "archivedButton";
+            archivedButton.Size = new Size(220, 40);
+            archivedButton.TabIndex = 8;
+            archivedButton.Text = "                Archived";
+            archivedButton.TextAlign = ContentAlignment.MiddleLeft;
+            archivedButton.UseVisualStyleBackColor = true;
+            archivedButton.Click += archivedButton_Click;
             // 
             // departmentButton
             // 
@@ -103,7 +104,7 @@
             departmentButton.Font = new Font("Century Gothic", 11F);
             departmentButton.Image = (Image)resources.GetObject("departmentButton.Image");
             departmentButton.ImageAlign = ContentAlignment.MiddleLeft;
-            departmentButton.Location = new Point(0, 540);
+            departmentButton.Location = new Point(0, 542);
             departmentButton.Name = "departmentButton";
             departmentButton.Size = new Size(220, 40);
             departmentButton.TabIndex = 7;
@@ -120,7 +121,7 @@
             professorButton.Font = new Font("Century Gothic", 11F);
             professorButton.Image = (Image)resources.GetObject("professorButton.Image");
             professorButton.ImageAlign = ContentAlignment.MiddleLeft;
-            professorButton.Location = new Point(0, 490);
+            professorButton.Location = new Point(0, 492);
             professorButton.Name = "professorButton";
             professorButton.Size = new Size(220, 40);
             professorButton.TabIndex = 6;
@@ -137,7 +138,7 @@
             classButton.Font = new Font("Century Gothic", 11F);
             classButton.Image = (Image)resources.GetObject("classButton.Image");
             classButton.ImageAlign = ContentAlignment.MiddleLeft;
-            classButton.Location = new Point(0, 440);
+            classButton.Location = new Point(0, 442);
             classButton.Name = "classButton";
             classButton.Size = new Size(220, 40);
             classButton.TabIndex = 5;
@@ -154,7 +155,7 @@
             courseButton.Font = new Font("Century Gothic", 11F);
             courseButton.Image = (Image)resources.GetObject("courseButton.Image");
             courseButton.ImageAlign = ContentAlignment.MiddleLeft;
-            courseButton.Location = new Point(0, 390);
+            courseButton.Location = new Point(0, 392);
             courseButton.Name = "courseButton";
             courseButton.Size = new Size(220, 40);
             courseButton.TabIndex = 4;
@@ -171,7 +172,7 @@
             attendanceButton.Font = new Font("Century Gothic", 11F);
             attendanceButton.Image = (Image)resources.GetObject("attendanceButton.Image");
             attendanceButton.ImageAlign = ContentAlignment.MiddleLeft;
-            attendanceButton.Location = new Point(0, 340);
+            attendanceButton.Location = new Point(0, 342);
             attendanceButton.Name = "attendanceButton";
             attendanceButton.Size = new Size(220, 40);
             attendanceButton.TabIndex = 3;
@@ -189,7 +190,7 @@
             studentButton.Font = new Font("Century Gothic", 11F);
             studentButton.Image = (Image)resources.GetObject("studentButton.Image");
             studentButton.ImageAlign = ContentAlignment.MiddleLeft;
-            studentButton.Location = new Point(0, 290);
+            studentButton.Location = new Point(0, 292);
             studentButton.Name = "studentButton";
             studentButton.Size = new Size(220, 40);
             studentButton.TabIndex = 2;
@@ -206,7 +207,7 @@
             dashboardButton.Font = new Font("Century Gothic", 11F);
             dashboardButton.Image = (Image)resources.GetObject("dashboardButton.Image");
             dashboardButton.ImageAlign = ContentAlignment.MiddleLeft;
-            dashboardButton.Location = new Point(0, 240);
+            dashboardButton.Location = new Point(0, 242);
             dashboardButton.Name = "dashboardButton";
             dashboardButton.Size = new Size(220, 40);
             dashboardButton.TabIndex = 1;
@@ -220,7 +221,7 @@
             dashboardSmallpanel.Anchor = AnchorStyles.None;
             dashboardSmallpanel.Controls.Add(dashboardTitle);
             dashboardSmallpanel.Controls.Add(dashboardPictureBox);
-            dashboardSmallpanel.Location = new Point(3, 0);
+            dashboardSmallpanel.Location = new Point(-8, 0);
             dashboardSmallpanel.Name = "dashboardSmallpanel";
             dashboardSmallpanel.Size = new Size(365, 224);
             dashboardSmallpanel.TabIndex = 0;
@@ -254,9 +255,9 @@
             panelBack.Controls.Add(expandPictureBox);
             panelBack.Controls.Add(logoutPictureBox);
             panelBack.Controls.Add(panelTop);
-            panelBack.Location = new Point(353, 0);
+            panelBack.Location = new Point(335, 0);
             panelBack.Name = "panelBack";
-            panelBack.Size = new Size(1543, 218);
+            panelBack.Size = new Size(1565, 221);
             panelBack.TabIndex = 1;
             // 
             // expandPictureBox
@@ -285,9 +286,9 @@
             panelTop.BackColor = Color.FromArgb(188, 234, 213);
             panelTop.Controls.Add(panelExpand);
             panelTop.Dock = DockStyle.Bottom;
-            panelTop.Location = new Point(0, 92);
+            panelTop.Location = new Point(0, 95);
             panelTop.Name = "panelTop";
-            panelTop.Size = new Size(1543, 126);
+            panelTop.Size = new Size(1565, 126);
             panelTop.TabIndex = 0;
             // 
             // panelExpand
@@ -296,7 +297,7 @@
             panelExpand.BackColor = Color.FromArgb(188, 234, 213);
             panelExpand.Controls.Add(logoutButton);
             panelExpand.Controls.Add(minimizePanel);
-            panelExpand.Location = new Point(1241, 0);
+            panelExpand.Location = new Point(1263, 0);
             panelExpand.Name = "panelExpand";
             panelExpand.Size = new Size(200, 125);
             panelExpand.TabIndex = 0;
@@ -333,11 +334,22 @@
             minimizeButton.Text = "Minimize";
             minimizeButton.UseVisualStyleBackColor = true;
             // 
+            // userControlDashboard1
+            // 
+            userControlDashboard1.AutoSize = true;
+            userControlDashboard1.Location = new Point(345, 225);
+            userControlDashboard1.Margin = new Padding(4, 3, 4, 3);
+            userControlDashboard1.Name = "userControlDashboard1";
+            userControlDashboard1.Size = new Size(1690, 729);
+            userControlDashboard1.TabIndex = 2;
+            userControlDashboard1.Load += userControlDashboard1_Load;
+            // 
             // Dashboard
             // 
             AutoScaleDimensions = new SizeF(14F, 27F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1902, 1033);
+            Controls.Add(userControlDashboard1);
             Controls.Add(panelBack);
             Controls.Add(dashboardPanel);
             Font = new Font("Century Gothic", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
@@ -357,6 +369,7 @@
             panelExpand.ResumeLayout(false);
             minimizePanel.ResumeLayout(false);
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -372,7 +385,7 @@
         private Button classButton;
         private Button professorButton;
         private Button departmentButton;
-        private Button archiveButton;
+        private Button archivedButton;
         private Panel panelBack;
         private Panel panelTop;
         private PictureBox logoutPictureBox;
@@ -381,5 +394,6 @@
         private Panel minimizePanel;
         private Button minimizeButton;
         private Button logoutButton;
+        private UserControlDashboard userControlDashboard1;
     }
 }
