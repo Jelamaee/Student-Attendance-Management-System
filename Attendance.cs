@@ -54,7 +54,7 @@ namespace Student_Attendance_Management_System
 
         private void departmentButton_Click(object sender, EventArgs e)
         {
-            Department department = new Department();   
+            Department department = new Department();
             department.Show();
         }
 
@@ -78,6 +78,9 @@ namespace Student_Attendance_Management_System
 
         }
 
-        
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

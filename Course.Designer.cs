@@ -30,7 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Course));
             dashboardPanel = new Panel();
-            button2 = new Button();
+            ReportButton = new Button();
             button1 = new Button();
             departmentButton = new Button();
             professorButton = new Button();
@@ -104,7 +104,7 @@
             // 
             dashboardPanel.Anchor = AnchorStyles.None;
             dashboardPanel.BackColor = Color.FromArgb(188, 234, 213);
-            dashboardPanel.Controls.Add(button2);
+            dashboardPanel.Controls.Add(ReportButton);
             dashboardPanel.Controls.Add(button1);
             dashboardPanel.Controls.Add(departmentButton);
             dashboardPanel.Controls.Add(professorButton);
@@ -120,22 +120,22 @@
             dashboardPanel.Size = new Size(330, 1033);
             dashboardPanel.TabIndex = 3;
             // 
-            // button2
+            // ReportButton
             // 
-            button2.Anchor = AnchorStyles.None;
-            button2.FlatAppearance.BorderSize = 0;
-            button2.FlatStyle = FlatStyle.Flat;
-            button2.Font = new Font("Century Gothic", 11F);
-            button2.Image = (Image)resources.GetObject("button2.Image");
-            button2.ImageAlign = ContentAlignment.MiddleLeft;
-            button2.Location = new Point(11, 600);
-            button2.Name = "button2";
-            button2.Size = new Size(220, 40);
-            button2.TabIndex = 18;
-            button2.Text = "                Archived";
-            button2.TextAlign = ContentAlignment.MiddleLeft;
-            button2.UseVisualStyleBackColor = true;
-            button2.Click += button2_Click;
+            ReportButton.Anchor = AnchorStyles.None;
+            ReportButton.FlatAppearance.BorderSize = 0;
+            ReportButton.FlatStyle = FlatStyle.Flat;
+            ReportButton.Font = new Font("Century Gothic", 11F);
+            ReportButton.Image = (Image)resources.GetObject("ReportButton.Image");
+            ReportButton.ImageAlign = ContentAlignment.MiddleLeft;
+            ReportButton.Location = new Point(11, 600);
+            ReportButton.Name = "ReportButton";
+            ReportButton.Size = new Size(220, 40);
+            ReportButton.TabIndex = 18;
+            ReportButton.Text = "                Report";
+            ReportButton.TextAlign = ContentAlignment.MiddleLeft;
+            ReportButton.UseVisualStyleBackColor = true;
+            ReportButton.Click += button2_Click;
             // 
             // button1
             // 
@@ -828,7 +828,7 @@
         private Label dashboardTitle;
         private PictureBox dashboardPictureBox;
         private Button archivedButton;
-        private Button button2;
+        private Button ReportButton;
         private TabControl TabControl;
         private TabPage addStudentTabPage;
         private Label addStudentLabel;

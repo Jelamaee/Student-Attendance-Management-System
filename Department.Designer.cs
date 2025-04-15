@@ -61,7 +61,7 @@
             textBox4 = new TextBox();
             panel13 = new Panel();
             dashboardPanel = new Panel();
-            button4 = new Button();
+            ReportButton = new Button();
             button3 = new Button();
             button2 = new Button();
             button1 = new Button();
@@ -77,6 +77,9 @@
             archivedButton = new Button();
             TabControl = new TabControl();
             addStudentTabPage = new TabPage();
+            panel4 = new Panel();
+            Departmentlabel = new Label();
+            DepartmentComboBox = new ComboBox();
             addStudentLabel = new Label();
             studentLNameTextBox = new TextBox();
             addButton = new Button();
@@ -435,7 +438,7 @@
             // 
             dashboardPanel.Anchor = AnchorStyles.None;
             dashboardPanel.BackColor = Color.FromArgb(188, 234, 213);
-            dashboardPanel.Controls.Add(button4);
+            dashboardPanel.Controls.Add(ReportButton);
             dashboardPanel.Controls.Add(button3);
             dashboardPanel.Controls.Add(button2);
             dashboardPanel.Controls.Add(button1);
@@ -453,22 +456,22 @@
             dashboardPanel.Size = new Size(330, 1033);
             dashboardPanel.TabIndex = 29;
             // 
-            // button4
+            // ReportButton
             // 
-            button4.Anchor = AnchorStyles.None;
-            button4.FlatAppearance.BorderSize = 0;
-            button4.FlatStyle = FlatStyle.Flat;
-            button4.Font = new Font("Century Gothic", 11F);
-            button4.Image = (Image)resources.GetObject("button4.Image");
-            button4.ImageAlign = ContentAlignment.MiddleLeft;
-            button4.Location = new Point(14, 588);
-            button4.Name = "button4";
-            button4.Size = new Size(220, 40);
-            button4.TabIndex = 32;
-            button4.Text = "                Archived";
-            button4.TextAlign = ContentAlignment.MiddleLeft;
-            button4.UseVisualStyleBackColor = true;
-            button4.Click += button4_Click;
+            ReportButton.Anchor = AnchorStyles.None;
+            ReportButton.FlatAppearance.BorderSize = 0;
+            ReportButton.FlatStyle = FlatStyle.Flat;
+            ReportButton.Font = new Font("Century Gothic", 11F);
+            ReportButton.Image = (Image)resources.GetObject("ReportButton.Image");
+            ReportButton.ImageAlign = ContentAlignment.MiddleLeft;
+            ReportButton.Location = new Point(14, 588);
+            ReportButton.Name = "ReportButton";
+            ReportButton.Size = new Size(220, 40);
+            ReportButton.TabIndex = 32;
+            ReportButton.Text = "                Report";
+            ReportButton.TextAlign = ContentAlignment.MiddleLeft;
+            ReportButton.UseVisualStyleBackColor = true;
+            ReportButton.Click += button4_Click;
             // 
             // button3
             // 
@@ -692,6 +695,9 @@
             // addStudentTabPage
             // 
             addStudentTabPage.BackColor = SystemColors.Window;
+            addStudentTabPage.Controls.Add(panel4);
+            addStudentTabPage.Controls.Add(Departmentlabel);
+            addStudentTabPage.Controls.Add(DepartmentComboBox);
             addStudentTabPage.Controls.Add(addStudentLabel);
             addStudentTabPage.Controls.Add(studentLNameTextBox);
             addStudentTabPage.Controls.Add(addButton);
@@ -710,6 +716,35 @@
             addStudentTabPage.Size = new Size(1570, 724);
             addStudentTabPage.TabIndex = 0;
             addStudentTabPage.Text = "Add Professor";
+            addStudentTabPage.Click += addStudentTabPage_Click;
+            // 
+            // panel4
+            // 
+            panel4.BackColor = Color.Black;
+            panel4.Location = new Point(776, 324);
+            panel4.Name = "panel4";
+            panel4.Size = new Size(270, 2);
+            panel4.TabIndex = 11;
+            // 
+            // Departmentlabel
+            // 
+            Departmentlabel.AutoSize = true;
+            Departmentlabel.Font = new Font("Century Gothic", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            Departmentlabel.Location = new Point(785, 272);
+            Departmentlabel.Name = "Departmentlabel";
+            Departmentlabel.Size = new Size(115, 22);
+            Departmentlabel.TabIndex = 24;
+            Departmentlabel.Text = "Department";
+            Departmentlabel.Click += Departmentlabel_Click;
+            // 
+            // DepartmentComboBox
+            // 
+            DepartmentComboBox.FlatStyle = FlatStyle.Flat;
+            DepartmentComboBox.FormattingEnabled = true;
+            DepartmentComboBox.Location = new Point(776, 297);
+            DepartmentComboBox.Name = "DepartmentComboBox";
+            DepartmentComboBox.Size = new Size(270, 29);
+            DepartmentComboBox.TabIndex = 23;
             // 
             // addStudentLabel
             // 
@@ -727,7 +762,7 @@
             studentLNameTextBox.BackColor = SystemColors.Window;
             studentLNameTextBox.BorderStyle = BorderStyle.None;
             studentLNameTextBox.Font = new Font("Century Gothic", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            studentLNameTextBox.Location = new Point(558, 140);
+            studentLNameTextBox.Location = new Point(776, 141);
             studentLNameTextBox.Name = "studentLNameTextBox";
             studentLNameTextBox.Size = new Size(270, 23);
             studentLNameTextBox.TabIndex = 9;
@@ -738,18 +773,19 @@
             addButton.FlatAppearance.BorderSize = 0;
             addButton.FlatStyle = FlatStyle.Flat;
             addButton.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            addButton.Location = new Point(180, 246);
+            addButton.Location = new Point(189, 396);
             addButton.Name = "addButton";
             addButton.Size = new Size(150, 40);
             addButton.TabIndex = 21;
             addButton.Text = "Add";
             addButton.UseVisualStyleBackColor = false;
+            addButton.Click += addButton_Click;
             // 
             // studentLNameLabel
             // 
             studentLNameLabel.AutoSize = true;
             studentLNameLabel.Font = new Font("Century Gothic", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            studentLNameLabel.Location = new Point(567, 121);
+            studentLNameLabel.Location = new Point(785, 122);
             studentLNameLabel.Name = "studentLNameLabel";
             studentLNameLabel.Size = new Size(106, 22);
             studentLNameLabel.TabIndex = 4;
@@ -769,7 +805,7 @@
             // 
             studFNameLabel.AutoSize = true;
             studFNameLabel.Font = new Font("Century Gothic", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            studFNameLabel.Location = new Point(955, 121);
+            studFNameLabel.Location = new Point(189, 272);
             studFNameLabel.Name = "studFNameLabel";
             studFNameLabel.Size = new Size(132, 22);
             studFNameLabel.TabIndex = 6;
@@ -796,7 +832,7 @@
             // panel2
             // 
             panel2.BackColor = Color.Black;
-            panel2.Location = new Point(558, 169);
+            panel2.Location = new Point(776, 170);
             panel2.Name = "panel2";
             panel2.Size = new Size(270, 2);
             panel2.TabIndex = 10;
@@ -806,7 +842,7 @@
             studentFNameTextBox.BackColor = SystemColors.Window;
             studentFNameTextBox.BorderStyle = BorderStyle.None;
             studentFNameTextBox.Font = new Font("Century Gothic", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            studentFNameTextBox.Location = new Point(946, 140);
+            studentFNameTextBox.Location = new Point(180, 291);
             studentFNameTextBox.Name = "studentFNameTextBox";
             studentFNameTextBox.Size = new Size(270, 23);
             studentFNameTextBox.TabIndex = 9;
@@ -814,7 +850,7 @@
             // panel3
             // 
             panel3.BackColor = Color.Black;
-            panel3.Location = new Point(946, 169);
+            panel3.Location = new Point(180, 320);
             panel3.Name = "panel3";
             panel3.Size = new Size(270, 2);
             panel3.TabIndex = 10;
@@ -909,6 +945,9 @@
         private Panel panel2;
         private TextBox studentFNameTextBox;
         private Panel panel3;
-        private Button button4;
+        private Button ReportButton;
+        private Label Departmentlabel;
+        private ComboBox DepartmentComboBox;
+        private Panel panel4;
     }
 }

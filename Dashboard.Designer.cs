@@ -30,7 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Dashboard));
             dashboardPanel = new Panel();
-            archivedButton = new Button();
+            ReportButton = new Button();
             departmentButton = new Button();
             professorButton = new Button();
             classButton = new Button();
@@ -65,7 +65,7 @@
             // 
             dashboardPanel.Anchor = AnchorStyles.None;
             dashboardPanel.BackColor = Color.FromArgb(188, 234, 213);
-            dashboardPanel.Controls.Add(archivedButton);
+            dashboardPanel.Controls.Add(ReportButton);
             dashboardPanel.Controls.Add(departmentButton);
             dashboardPanel.Controls.Add(professorButton);
             dashboardPanel.Controls.Add(classButton);
@@ -74,27 +74,27 @@
             dashboardPanel.Controls.Add(studentButton);
             dashboardPanel.Controls.Add(dashboardButton);
             dashboardPanel.Controls.Add(dashboardSmallpanel);
-            dashboardPanel.Location = new Point(8, -3);
+            dashboardPanel.Location = new Point(-1, 0);
             dashboardPanel.Name = "dashboardPanel";
             dashboardPanel.Size = new Size(330, 1033);
             dashboardPanel.TabIndex = 0;
             // 
-            // archivedButton
+            // ReportButton
             // 
-            archivedButton.Anchor = AnchorStyles.None;
-            archivedButton.FlatAppearance.BorderSize = 0;
-            archivedButton.FlatStyle = FlatStyle.Flat;
-            archivedButton.Font = new Font("Century Gothic", 11F);
-            archivedButton.Image = (Image)resources.GetObject("archivedButton.Image");
-            archivedButton.ImageAlign = ContentAlignment.MiddleLeft;
-            archivedButton.Location = new Point(0, 592);
-            archivedButton.Name = "archivedButton";
-            archivedButton.Size = new Size(220, 40);
-            archivedButton.TabIndex = 8;
-            archivedButton.Text = "                Archived";
-            archivedButton.TextAlign = ContentAlignment.MiddleLeft;
-            archivedButton.UseVisualStyleBackColor = true;
-            archivedButton.Click += archivedButton_Click;
+            ReportButton.Anchor = AnchorStyles.None;
+            ReportButton.FlatAppearance.BorderSize = 0;
+            ReportButton.FlatStyle = FlatStyle.Flat;
+            ReportButton.Font = new Font("Century Gothic", 11F);
+            ReportButton.Image = (Image)resources.GetObject("ReportButton.Image");
+            ReportButton.ImageAlign = ContentAlignment.MiddleLeft;
+            ReportButton.Location = new Point(0, 592);
+            ReportButton.Name = "ReportButton";
+            ReportButton.Size = new Size(220, 40);
+            ReportButton.TabIndex = 8;
+            ReportButton.Text = "                Report";
+            ReportButton.TextAlign = ContentAlignment.MiddleLeft;
+            ReportButton.UseVisualStyleBackColor = true;
+            ReportButton.Click += archivedButton_Click;
             // 
             // departmentButton
             // 
@@ -251,13 +251,13 @@
             // 
             // panelBack
             // 
-            panelBack.BackColor = SystemColors.Control;
+            panelBack.BackColor = SystemColors.Window;
             panelBack.Controls.Add(expandPictureBox);
             panelBack.Controls.Add(logoutPictureBox);
             panelBack.Controls.Add(panelTop);
-            panelBack.Location = new Point(335, 0);
+            panelBack.Location = new Point(328, 0);
             panelBack.Name = "panelBack";
-            panelBack.Size = new Size(1565, 221);
+            panelBack.Size = new Size(1572, 221);
             panelBack.TabIndex = 1;
             // 
             // expandPictureBox
@@ -270,6 +270,7 @@
             expandPictureBox.SizeMode = PictureBoxSizeMode.AutoSize;
             expandPictureBox.TabIndex = 2;
             expandPictureBox.TabStop = false;
+            expandPictureBox.Click += expandPictureBox_Click;
             // 
             // logoutPictureBox
             // 
@@ -288,7 +289,7 @@
             panelTop.Dock = DockStyle.Bottom;
             panelTop.Location = new Point(0, 95);
             panelTop.Name = "panelTop";
-            panelTop.Size = new Size(1565, 126);
+            panelTop.Size = new Size(1572, 126);
             panelTop.TabIndex = 0;
             // 
             // panelExpand
@@ -297,7 +298,7 @@
             panelExpand.BackColor = Color.FromArgb(188, 234, 213);
             panelExpand.Controls.Add(logoutButton);
             panelExpand.Controls.Add(minimizePanel);
-            panelExpand.Location = new Point(1263, 0);
+            panelExpand.Location = new Point(1270, 0);
             panelExpand.Name = "panelExpand";
             panelExpand.Size = new Size(200, 125);
             panelExpand.TabIndex = 0;
@@ -337,10 +338,11 @@
             // userControlDashboard1
             // 
             userControlDashboard1.AutoSize = true;
-            userControlDashboard1.Location = new Point(345, 225);
+            userControlDashboard1.BackColor = SystemColors.Window;
+            userControlDashboard1.Location = new Point(328, 220);
             userControlDashboard1.Margin = new Padding(4, 3, 4, 3);
             userControlDashboard1.Name = "userControlDashboard1";
-            userControlDashboard1.Size = new Size(1690, 729);
+            userControlDashboard1.Size = new Size(1707, 734);
             userControlDashboard1.TabIndex = 2;
             userControlDashboard1.Load += userControlDashboard1_Load;
             // 
@@ -348,6 +350,7 @@
             // 
             AutoScaleDimensions = new SizeF(14F, 27F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = SystemColors.Window;
             ClientSize = new Size(1902, 1033);
             Controls.Add(userControlDashboard1);
             Controls.Add(panelBack);
@@ -385,7 +388,7 @@
         private Button classButton;
         private Button professorButton;
         private Button departmentButton;
-        private Button archivedButton;
+        private Button ReportButton;
         private Panel panelBack;
         private Panel panelTop;
         private PictureBox logoutPictureBox;

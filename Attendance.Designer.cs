@@ -30,7 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Attendance));
             dashboardPanel = new Panel();
-            button1 = new Button();
+            ReportButton = new Button();
             archivedButton = new Button();
             departmentButton = new Button();
             professorButton = new Button();
@@ -47,6 +47,11 @@
             expandPictureBox = new PictureBox();
             logoutPictureBox = new PictureBox();
             markAttendanceTabPage = new TabPage();
+            SaveAttendanceButton = new Button();
+            comboBox3 = new ComboBox();
+            label3 = new Label();
+            panel8 = new Panel();
+            userControlDashboard2 = new UserControlDashboard();
             comboBox2 = new ComboBox();
             label2 = new Label();
             panel7 = new Panel();
@@ -57,17 +62,19 @@
             comboBox1 = new ComboBox();
             label1 = new Label();
             panel3 = new Panel();
-            markAttendanceDataGridView = new DataGridView();
-            dataGridViewTextBoxColumn1 = new DataGridViewTextBoxColumn();
-            dataGridViewTextBoxColumn2 = new DataGridViewTextBoxColumn();
-            dataGridViewTextBoxColumn3 = new DataGridViewTextBoxColumn();
-            dataGridViewTextBoxColumn4 = new DataGridViewTextBoxColumn();
-            dataGridViewTextBoxColumn5 = new DataGridViewTextBoxColumn();
             addStudentLabel = new Label();
             studentIDLabel = new Label();
             panel1 = new Panel();
             dateTimePicker1 = new DateTimePicker();
             TabControl = new TabControl();
+            viewAttendancetabPage = new TabPage();
+            label4 = new Label();
+            dataGridView1 = new DataGridView();
+            dataGridViewTextBoxColumn6 = new DataGridViewTextBoxColumn();
+            dataGridViewTextBoxColumn7 = new DataGridViewTextBoxColumn();
+            dataGridViewTextBoxColumn8 = new DataGridViewTextBoxColumn();
+            dataGridViewTextBoxColumn9 = new DataGridViewTextBoxColumn();
+            dataGridViewTextBoxColumn10 = new DataGridViewTextBoxColumn();
             dashboardPanel.SuspendLayout();
             dashboardSmallpanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dashboardPictureBox).BeginInit();
@@ -75,15 +82,16 @@
             ((System.ComponentModel.ISupportInitialize)expandPictureBox).BeginInit();
             ((System.ComponentModel.ISupportInitialize)logoutPictureBox).BeginInit();
             markAttendanceTabPage.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)markAttendanceDataGridView).BeginInit();
             TabControl.SuspendLayout();
+            viewAttendancetabPage.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
             // dashboardPanel
             // 
             dashboardPanel.Anchor = AnchorStyles.None;
             dashboardPanel.BackColor = Color.FromArgb(188, 234, 213);
-            dashboardPanel.Controls.Add(button1);
+            dashboardPanel.Controls.Add(ReportButton);
             dashboardPanel.Controls.Add(archivedButton);
             dashboardPanel.Controls.Add(departmentButton);
             dashboardPanel.Controls.Add(professorButton);
@@ -98,22 +106,22 @@
             dashboardPanel.Size = new Size(330, 1033);
             dashboardPanel.TabIndex = 1;
             // 
-            // button1
+            // ReportButton
             // 
-            button1.Anchor = AnchorStyles.None;
-            button1.FlatAppearance.BorderSize = 0;
-            button1.FlatStyle = FlatStyle.Flat;
-            button1.Font = new Font("Century Gothic", 11F);
-            button1.Image = (Image)resources.GetObject("button1.Image");
-            button1.ImageAlign = ContentAlignment.MiddleLeft;
-            button1.Location = new Point(3, 582);
-            button1.Name = "button1";
-            button1.Size = new Size(220, 40);
-            button1.TabIndex = 9;
-            button1.Text = "                Archived";
-            button1.TextAlign = ContentAlignment.MiddleLeft;
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
+            ReportButton.Anchor = AnchorStyles.None;
+            ReportButton.FlatAppearance.BorderSize = 0;
+            ReportButton.FlatStyle = FlatStyle.Flat;
+            ReportButton.Font = new Font("Century Gothic", 11F);
+            ReportButton.Image = (Image)resources.GetObject("ReportButton.Image");
+            ReportButton.ImageAlign = ContentAlignment.MiddleLeft;
+            ReportButton.Location = new Point(3, 582);
+            ReportButton.Name = "ReportButton";
+            ReportButton.Size = new Size(220, 40);
+            ReportButton.TabIndex = 9;
+            ReportButton.Text = "                Report";
+            ReportButton.TextAlign = ContentAlignment.MiddleLeft;
+            ReportButton.UseVisualStyleBackColor = true;
+            ReportButton.Click += button1_Click;
             // 
             // archivedButton
             // 
@@ -326,6 +334,11 @@
             // markAttendanceTabPage
             // 
             markAttendanceTabPage.BackColor = SystemColors.Window;
+            markAttendanceTabPage.Controls.Add(SaveAttendanceButton);
+            markAttendanceTabPage.Controls.Add(comboBox3);
+            markAttendanceTabPage.Controls.Add(label3);
+            markAttendanceTabPage.Controls.Add(panel8);
+            markAttendanceTabPage.Controls.Add(userControlDashboard2);
             markAttendanceTabPage.Controls.Add(comboBox2);
             markAttendanceTabPage.Controls.Add(label2);
             markAttendanceTabPage.Controls.Add(panel7);
@@ -336,7 +349,6 @@
             markAttendanceTabPage.Controls.Add(comboBox1);
             markAttendanceTabPage.Controls.Add(label1);
             markAttendanceTabPage.Controls.Add(panel3);
-            markAttendanceTabPage.Controls.Add(markAttendanceDataGridView);
             markAttendanceTabPage.Controls.Add(addStudentLabel);
             markAttendanceTabPage.Controls.Add(studentIDLabel);
             markAttendanceTabPage.Controls.Add(panel1);
@@ -349,6 +361,56 @@
             markAttendanceTabPage.TabIndex = 0;
             markAttendanceTabPage.Text = "Mark Attendance";
             markAttendanceTabPage.Click += markAttendanceTabPage_Click;
+            // 
+            // SaveAttendanceButton
+            // 
+            SaveAttendanceButton.BackColor = Color.FromArgb(142, 195, 176);
+            SaveAttendanceButton.FlatAppearance.BorderSize = 0;
+            SaveAttendanceButton.FlatStyle = FlatStyle.Flat;
+            SaveAttendanceButton.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            SaveAttendanceButton.Location = new Point(321, 472);
+            SaveAttendanceButton.Name = "SaveAttendanceButton";
+            SaveAttendanceButton.Size = new Size(150, 40);
+            SaveAttendanceButton.TabIndex = 38;
+            SaveAttendanceButton.Text = "Save";
+            SaveAttendanceButton.UseVisualStyleBackColor = false;
+            // 
+            // comboBox3
+            // 
+            comboBox3.BackColor = SystemColors.Window;
+            comboBox3.FlatStyle = FlatStyle.Flat;
+            comboBox3.FormattingEnabled = true;
+            comboBox3.Location = new Point(1004, 338);
+            comboBox3.Name = "comboBox3";
+            comboBox3.Size = new Size(240, 29);
+            comboBox3.TabIndex = 37;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("Century Gothic", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label3.Location = new Point(1004, 306);
+            label3.Name = "label3";
+            label3.Size = new Size(65, 22);
+            label3.TabIndex = 35;
+            label3.Text = "Status:";
+            // 
+            // panel8
+            // 
+            panel8.BackColor = Color.Black;
+            panel8.Location = new Point(1004, 369);
+            panel8.Name = "panel8";
+            panel8.Size = new Size(240, 2);
+            panel8.TabIndex = 36;
+            // 
+            // userControlDashboard2
+            // 
+            userControlDashboard2.AutoSize = true;
+            userControlDashboard2.Location = new Point(1268, 306);
+            userControlDashboard2.Margin = new Padding(4, 3, 4, 3);
+            userControlDashboard2.Name = "userControlDashboard2";
+            userControlDashboard2.Size = new Size(0, 586);
+            userControlDashboard2.TabIndex = 34;
             // 
             // comboBox2
             // 
@@ -366,9 +428,9 @@
             label2.Font = new Font("Century Gothic", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label2.Location = new Point(1004, 96);
             label2.Name = "label2";
-            label2.Size = new Size(65, 22);
+            label2.Size = new Size(78, 22);
             label2.TabIndex = 31;
-            label2.Text = "Status:";
+            label2.Text = "Course:";
             // 
             // panel7
             // 
@@ -381,7 +443,7 @@
             // panel6
             // 
             panel6.BackColor = Color.Transparent;
-            panel6.Location = new Point(462, 135);
+            panel6.Location = new Point(559, 344);
             panel6.Name = "panel6";
             panel6.Size = new Size(10, 27);
             panel6.TabIndex = 30;
@@ -389,7 +451,7 @@
             // panel5
             // 
             panel5.BackColor = Color.Transparent;
-            panel5.Location = new Point(174, 134);
+            panel5.Location = new Point(312, 344);
             panel5.Name = "panel5";
             panel5.Size = new Size(10, 30);
             panel5.TabIndex = 10;
@@ -397,9 +459,9 @@
             // panel4
             // 
             panel4.BackColor = Color.Black;
-            panel4.Location = new Point(183, 159);
+            panel4.Location = new Point(321, 369);
             panel4.Name = "panel4";
-            panel4.Size = new Size(279, 2);
+            panel4.Size = new Size(240, 2);
             panel4.TabIndex = 9;
             // 
             // userControlDashboard1
@@ -416,7 +478,7 @@
             comboBox1.BackColor = SystemColors.Window;
             comboBox1.FlatStyle = FlatStyle.Flat;
             comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(590, 128);
+            comboBox1.Location = new Point(317, 128);
             comboBox1.Name = "comboBox1";
             comboBox1.Size = new Size(240, 29);
             comboBox1.TabIndex = 28;
@@ -425,7 +487,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Century Gothic", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(590, 96);
+            label1.Location = new Point(317, 96);
             label1.Name = "label1";
             label1.Size = new Size(103, 22);
             label1.TabIndex = 25;
@@ -434,66 +496,10 @@
             // panel3
             // 
             panel3.BackColor = Color.Black;
-            panel3.Location = new Point(590, 159);
+            panel3.Location = new Point(317, 159);
             panel3.Name = "panel3";
             panel3.Size = new Size(240, 2);
             panel3.TabIndex = 27;
-            // 
-            // markAttendanceDataGridView
-            // 
-            markAttendanceDataGridView.AllowUserToAddRows = false;
-            markAttendanceDataGridView.AllowUserToDeleteRows = false;
-            markAttendanceDataGridView.AllowUserToResizeColumns = false;
-            markAttendanceDataGridView.AllowUserToResizeRows = false;
-            markAttendanceDataGridView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            markAttendanceDataGridView.BackgroundColor = Color.White;
-            markAttendanceDataGridView.BorderStyle = BorderStyle.None;
-            markAttendanceDataGridView.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single;
-            markAttendanceDataGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            markAttendanceDataGridView.Columns.AddRange(new DataGridViewColumn[] { dataGridViewTextBoxColumn1, dataGridViewTextBoxColumn2, dataGridViewTextBoxColumn3, dataGridViewTextBoxColumn4, dataGridViewTextBoxColumn5 });
-            markAttendanceDataGridView.Location = new Point(64, 206);
-            markAttendanceDataGridView.Name = "markAttendanceDataGridView";
-            markAttendanceDataGridView.ReadOnly = true;
-            markAttendanceDataGridView.RowHeadersWidth = 51;
-            markAttendanceDataGridView.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            markAttendanceDataGridView.ScrollBars = ScrollBars.Vertical;
-            markAttendanceDataGridView.Size = new Size(1421, 456);
-            markAttendanceDataGridView.TabIndex = 24;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            dataGridViewTextBoxColumn1.HeaderText = "Attendance ID";
-            dataGridViewTextBoxColumn1.MinimumWidth = 6;
-            dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            dataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            dataGridViewTextBoxColumn2.HeaderText = "Student ID";
-            dataGridViewTextBoxColumn2.MinimumWidth = 6;
-            dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            dataGridViewTextBoxColumn2.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            dataGridViewTextBoxColumn3.HeaderText = "Course ID";
-            dataGridViewTextBoxColumn3.MinimumWidth = 6;
-            dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            dataGridViewTextBoxColumn3.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            dataGridViewTextBoxColumn4.HeaderText = "Attendance Date";
-            dataGridViewTextBoxColumn4.MinimumWidth = 6;
-            dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            dataGridViewTextBoxColumn4.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            dataGridViewTextBoxColumn5.HeaderText = "Status";
-            dataGridViewTextBoxColumn5.MinimumWidth = 6;
-            dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            dataGridViewTextBoxColumn5.ReadOnly = true;
             // 
             // addStudentLabel
             // 
@@ -510,7 +516,7 @@
             // 
             studentIDLabel.AutoSize = true;
             studentIDLabel.Font = new Font("Century Gothic", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            studentIDLabel.Location = new Point(179, 96);
+            studentIDLabel.Location = new Point(317, 306);
             studentIDLabel.Name = "studentIDLabel";
             studentIDLabel.Size = new Size(57, 22);
             studentIDLabel.TabIndex = 5;
@@ -520,9 +526,9 @@
             // panel1
             // 
             panel1.BackColor = Color.Transparent;
-            panel1.Location = new Point(179, 125);
+            panel1.Location = new Point(317, 335);
             panel1.Name = "panel1";
-            panel1.Size = new Size(288, 10);
+            panel1.Size = new Size(250, 10);
             panel1.TabIndex = 8;
             // 
             // dateTimePicker1
@@ -531,9 +537,9 @@
             dateTimePicker1.CalendarTrailingForeColor = SystemColors.Control;
             dateTimePicker1.CustomFormat = "MM/dd/yyyy";
             dateTimePicker1.Format = DateTimePickerFormat.Custom;
-            dateTimePicker1.Location = new Point(183, 131);
+            dateTimePicker1.Location = new Point(321, 341);
             dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(281, 30);
+            dateTimePicker1.Size = new Size(242, 30);
             dateTimePicker1.TabIndex = 23;
             dateTimePicker1.ValueChanged += dateTimePicker1_ValueChanged;
             // 
@@ -541,6 +547,7 @@
             // 
             TabControl.Alignment = TabAlignment.Bottom;
             TabControl.Controls.Add(markAttendanceTabPage);
+            TabControl.Controls.Add(viewAttendancetabPage);
             TabControl.Font = new Font("Century Gothic", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             TabControl.ImeMode = ImeMode.NoControl;
             TabControl.Location = new Point(329, 214);
@@ -548,6 +555,86 @@
             TabControl.SelectedIndex = 0;
             TabControl.Size = new Size(1576, 760);
             TabControl.TabIndex = 23;
+            // 
+            // viewAttendancetabPage
+            // 
+            viewAttendancetabPage.BackColor = SystemColors.Window;
+            viewAttendancetabPage.Controls.Add(label4);
+            viewAttendancetabPage.Controls.Add(dataGridView1);
+            viewAttendancetabPage.Location = new Point(4, 4);
+            viewAttendancetabPage.Name = "viewAttendancetabPage";
+            viewAttendancetabPage.Padding = new Padding(3);
+            viewAttendancetabPage.Size = new Size(1568, 726);
+            viewAttendancetabPage.TabIndex = 1;
+            viewAttendancetabPage.Text = "View Attendance";
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label4.ForeColor = Color.FromArgb(142, 195, 176);
+            label4.Location = new Point(3, 3);
+            label4.Name = "label4";
+            label4.Size = new Size(186, 23);
+            label4.TabIndex = 26;
+            label4.Text = "View Attendance:";
+            label4.Click += label4_Click;
+            // 
+            // dataGridView1
+            // 
+            dataGridView1.AllowUserToAddRows = false;
+            dataGridView1.AllowUserToDeleteRows = false;
+            dataGridView1.AllowUserToResizeColumns = false;
+            dataGridView1.AllowUserToResizeRows = false;
+            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridView1.BackgroundColor = Color.White;
+            dataGridView1.BorderStyle = BorderStyle.None;
+            dataGridView1.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single;
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { dataGridViewTextBoxColumn6, dataGridViewTextBoxColumn7, dataGridViewTextBoxColumn8, dataGridViewTextBoxColumn9, dataGridViewTextBoxColumn10 });
+            dataGridView1.Location = new Point(74, 135);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.ReadOnly = true;
+            dataGridView1.RowHeadersWidth = 51;
+            dataGridView1.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            dataGridView1.ScrollBars = ScrollBars.Vertical;
+            dataGridView1.Size = new Size(1421, 456);
+            dataGridView1.TabIndex = 25;
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            dataGridViewTextBoxColumn6.HeaderText = "Attendance ID";
+            dataGridViewTextBoxColumn6.MinimumWidth = 6;
+            dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            dataGridViewTextBoxColumn6.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn7
+            // 
+            dataGridViewTextBoxColumn7.HeaderText = "Student ID";
+            dataGridViewTextBoxColumn7.MinimumWidth = 6;
+            dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            dataGridViewTextBoxColumn7.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn8
+            // 
+            dataGridViewTextBoxColumn8.HeaderText = "Course ID";
+            dataGridViewTextBoxColumn8.MinimumWidth = 6;
+            dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+            dataGridViewTextBoxColumn8.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn9
+            // 
+            dataGridViewTextBoxColumn9.HeaderText = "Attendance Date";
+            dataGridViewTextBoxColumn9.MinimumWidth = 6;
+            dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
+            dataGridViewTextBoxColumn9.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn10
+            // 
+            dataGridViewTextBoxColumn10.HeaderText = "Status";
+            dataGridViewTextBoxColumn10.MinimumWidth = 6;
+            dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
+            dataGridViewTextBoxColumn10.ReadOnly = true;
             // 
             // Attendance
             // 
@@ -569,8 +656,10 @@
             ((System.ComponentModel.ISupportInitialize)logoutPictureBox).EndInit();
             markAttendanceTabPage.ResumeLayout(false);
             markAttendanceTabPage.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)markAttendanceDataGridView).EndInit();
             TabControl.ResumeLayout(false);
+            viewAttendancetabPage.ResumeLayout(false);
+            viewAttendancetabPage.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
         }
 
@@ -588,18 +677,12 @@
         private Panel dashboardSmallpanel;
         private Label dashboardTitle;
         private PictureBox dashboardPictureBox;
-        private Button button1;
+        private Button ReportButton;
         private Panel panelBack;
         private PictureBox expandPictureBox;
         private PictureBox logoutPictureBox;
         private Panel panel2;
         private TabPage markAttendanceTabPage;
-        private DataGridView markAttendanceDataGridView;
-        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
         private Label addStudentLabel;
         private Label studentIDLabel;
         private Panel panel1;
@@ -615,5 +698,18 @@
         private ComboBox comboBox2;
         private Label label2;
         private Panel panel7;
+        private TabPage viewAttendancetabPage;
+        private ComboBox comboBox3;
+        private Label label3;
+        private Panel panel8;
+        private UserControlDashboard userControlDashboard2;
+        private DataGridView dataGridView1;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
+        private Button SaveAttendanceButton;
+        private Label label4;
     }
 }

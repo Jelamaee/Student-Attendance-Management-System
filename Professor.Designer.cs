@@ -33,6 +33,10 @@
             totalStudentslabel = new Label();
             searchPictureBox = new PictureBox();
             SearchdataGridView = new DataGridView();
+            Column1 = new DataGridViewTextBoxColumn();
+            Column2 = new DataGridViewTextBoxColumn();
+            Column3 = new DataGridViewTextBoxColumn();
+            Column4 = new DataGridViewTextBoxColumn();
             label1 = new Label();
             panel7 = new Panel();
             addStudentTabPage = new TabPage();
@@ -68,7 +72,7 @@
             searchStudentTabPage = new TabPage();
             tabPage1 = new TabPage();
             dashboardPanel = new Panel();
-            button3 = new Button();
+            ReportButton = new Button();
             button2 = new Button();
             button1 = new Button();
             departmentButton = new Button();
@@ -83,10 +87,6 @@
             dashboardPictureBox = new PictureBox();
             archivedButton = new Button();
             TabControl = new TabControl();
-            Column1 = new DataGridViewTextBoxColumn();
-            Column2 = new DataGridViewTextBoxColumn();
-            Column3 = new DataGridViewTextBoxColumn();
-            Column4 = new DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)searchPictureBox).BeginInit();
             ((System.ComponentModel.ISupportInitialize)SearchdataGridView).BeginInit();
             addStudentTabPage.SuspendLayout();
@@ -151,6 +151,34 @@
             SearchdataGridView.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             SearchdataGridView.Size = new Size(1421, 456);
             SearchdataGridView.TabIndex = 12;
+            // 
+            // Column1
+            // 
+            Column1.HeaderText = "Professor ID";
+            Column1.MinimumWidth = 6;
+            Column1.Name = "Column1";
+            Column1.ReadOnly = true;
+            // 
+            // Column2
+            // 
+            Column2.HeaderText = "Last Name";
+            Column2.MinimumWidth = 6;
+            Column2.Name = "Column2";
+            Column2.ReadOnly = true;
+            // 
+            // Column3
+            // 
+            Column3.HeaderText = "First Name";
+            Column3.MinimumWidth = 6;
+            Column3.Name = "Column3";
+            Column3.ReadOnly = true;
+            // 
+            // Column4
+            // 
+            Column4.HeaderText = "Email";
+            Column4.MinimumWidth = 6;
+            Column4.Name = "Column4";
+            Column4.ReadOnly = true;
             // 
             // label1
             // 
@@ -525,7 +553,7 @@
             // 
             dashboardPanel.Anchor = AnchorStyles.None;
             dashboardPanel.BackColor = Color.FromArgb(188, 234, 213);
-            dashboardPanel.Controls.Add(button3);
+            dashboardPanel.Controls.Add(ReportButton);
             dashboardPanel.Controls.Add(button2);
             dashboardPanel.Controls.Add(button1);
             dashboardPanel.Controls.Add(departmentButton);
@@ -542,22 +570,22 @@
             dashboardPanel.Size = new Size(330, 1033);
             dashboardPanel.TabIndex = 26;
             // 
-            // button3
+            // ReportButton
             // 
-            button3.Anchor = AnchorStyles.None;
-            button3.FlatAppearance.BorderSize = 0;
-            button3.FlatStyle = FlatStyle.Flat;
-            button3.Font = new Font("Century Gothic", 11F);
-            button3.Image = (Image)resources.GetObject("button3.Image");
-            button3.ImageAlign = ContentAlignment.MiddleLeft;
-            button3.Location = new Point(14, 595);
-            button3.Name = "button3";
-            button3.Size = new Size(220, 40);
-            button3.TabIndex = 23;
-            button3.Text = "                Archived";
-            button3.TextAlign = ContentAlignment.MiddleLeft;
-            button3.UseVisualStyleBackColor = true;
-            button3.Click += button3_Click;
+            ReportButton.Anchor = AnchorStyles.None;
+            ReportButton.FlatAppearance.BorderSize = 0;
+            ReportButton.FlatStyle = FlatStyle.Flat;
+            ReportButton.Font = new Font("Century Gothic", 11F);
+            ReportButton.Image = (Image)resources.GetObject("ReportButton.Image");
+            ReportButton.ImageAlign = ContentAlignment.MiddleLeft;
+            ReportButton.Location = new Point(14, 595);
+            ReportButton.Name = "ReportButton";
+            ReportButton.Size = new Size(220, 40);
+            ReportButton.TabIndex = 23;
+            ReportButton.Text = "                Report";
+            ReportButton.TextAlign = ContentAlignment.MiddleLeft;
+            ReportButton.UseVisualStyleBackColor = true;
+            ReportButton.Click += button3_Click;
             // 
             // button2
             // 
@@ -773,34 +801,6 @@
             TabControl.Size = new Size(1578, 758);
             TabControl.TabIndex = 27;
             // 
-            // Column1
-            // 
-            Column1.HeaderText = "Professor ID";
-            Column1.MinimumWidth = 6;
-            Column1.Name = "Column1";
-            Column1.ReadOnly = true;
-            // 
-            // Column2
-            // 
-            Column2.HeaderText = "Last Name";
-            Column2.MinimumWidth = 6;
-            Column2.Name = "Column2";
-            Column2.ReadOnly = true;
-            // 
-            // Column3
-            // 
-            Column3.HeaderText = "First Name";
-            Column3.MinimumWidth = 6;
-            Column3.Name = "Column3";
-            Column3.ReadOnly = true;
-            // 
-            // Column4
-            // 
-            Column4.HeaderText = "Email";
-            Column4.MinimumWidth = 6;
-            Column4.Name = "Column4";
-            Column4.ReadOnly = true;
-            // 
             // Professor
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -886,7 +886,7 @@
         private PictureBox dashboardPictureBox;
         private Button archivedButton;
         private TabControl TabControl;
-        private Button button3;
+        private Button ReportButton;
         private DataGridViewTextBoxColumn Column1;
         private DataGridViewTextBoxColumn Column2;
         private DataGridViewTextBoxColumn Column3;

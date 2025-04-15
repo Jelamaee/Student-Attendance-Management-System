@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Student_Attendance_Management_System
 {
-    public partial class Archived : Form
+    public partial class Report : Form
     {
-        public Archived()
+        public Report()
         {
             InitializeComponent();
         }

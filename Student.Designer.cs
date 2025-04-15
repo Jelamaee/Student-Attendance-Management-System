@@ -39,7 +39,7 @@
             panelBack = new Panel();
             expandPictureBox = new PictureBox();
             dashboardPanel = new Panel();
-            button1 = new Button();
+            ReportButton = new Button();
             departmentButton = new Button();
             professorButton = new Button();
             classButton = new Button();
@@ -178,7 +178,7 @@
             panelExpand.BackColor = Color.FromArgb(188, 234, 213);
             panelExpand.Controls.Add(logoutButton);
             panelExpand.Controls.Add(minimizePanel);
-            panelExpand.Location = new Point(2615, 0);
+            panelExpand.Location = new Point(2617, 0);
             panelExpand.Name = "panelExpand";
             panelExpand.Size = new Size(200, 125);
             panelExpand.TabIndex = 0;
@@ -207,20 +207,20 @@
             panelTop.BackColor = Color.FromArgb(188, 234, 213);
             panelTop.Controls.Add(panelExpand);
             panelTop.Dock = DockStyle.Bottom;
-            panelTop.Location = new Point(0, 92);
+            panelTop.Location = new Point(0, 95);
             panelTop.Name = "panelTop";
-            panelTop.Size = new Size(1574, 126);
+            panelTop.Size = new Size(1576, 126);
             panelTop.TabIndex = 0;
             // 
             // panelBack
             // 
-            panelBack.BackColor = SystemColors.Control;
+            panelBack.BackColor = SystemColors.Window;
             panelBack.Controls.Add(expandPictureBox);
             panelBack.Controls.Add(logoutPictureBox);
             panelBack.Controls.Add(panelTop);
-            panelBack.Location = new Point(324, 0);
+            panelBack.Location = new Point(328, 0);
             panelBack.Name = "panelBack";
-            panelBack.Size = new Size(1574, 218);
+            panelBack.Size = new Size(1576, 221);
             panelBack.TabIndex = 3;
             // 
             // expandPictureBox
@@ -238,7 +238,7 @@
             // 
             dashboardPanel.Anchor = AnchorStyles.None;
             dashboardPanel.BackColor = Color.FromArgb(188, 234, 213);
-            dashboardPanel.Controls.Add(button1);
+            dashboardPanel.Controls.Add(ReportButton);
             dashboardPanel.Controls.Add(departmentButton);
             dashboardPanel.Controls.Add(professorButton);
             dashboardPanel.Controls.Add(classButton);
@@ -248,27 +248,27 @@
             dashboardPanel.Controls.Add(dashboardButton);
             dashboardPanel.Controls.Add(dashboardSmallpanel);
             dashboardPanel.Controls.Add(archivedButton);
-            dashboardPanel.Location = new Point(4, 0);
+            dashboardPanel.Location = new Point(-1, 0);
             dashboardPanel.Name = "dashboardPanel";
             dashboardPanel.Size = new Size(330, 1033);
             dashboardPanel.TabIndex = 2;
             // 
-            // button1
+            // ReportButton
             // 
-            button1.Anchor = AnchorStyles.None;
-            button1.FlatAppearance.BorderSize = 0;
-            button1.FlatStyle = FlatStyle.Flat;
-            button1.Font = new Font("Century Gothic", 11F);
-            button1.Image = (Image)resources.GetObject("button1.Image");
-            button1.ImageAlign = ContentAlignment.MiddleLeft;
-            button1.Location = new Point(0, 592);
-            button1.Name = "button1";
-            button1.Size = new Size(220, 40);
-            button1.TabIndex = 17;
-            button1.Text = "                Archived";
-            button1.TextAlign = ContentAlignment.MiddleLeft;
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
+            ReportButton.Anchor = AnchorStyles.None;
+            ReportButton.FlatAppearance.BorderSize = 0;
+            ReportButton.FlatStyle = FlatStyle.Flat;
+            ReportButton.Font = new Font("Century Gothic", 11F);
+            ReportButton.Image = (Image)resources.GetObject("ReportButton.Image");
+            ReportButton.ImageAlign = ContentAlignment.MiddleLeft;
+            ReportButton.Location = new Point(0, 592);
+            ReportButton.Name = "ReportButton";
+            ReportButton.Size = new Size(220, 40);
+            ReportButton.TabIndex = 17;
+            ReportButton.Text = "                Reports";
+            ReportButton.TextAlign = ContentAlignment.MiddleLeft;
+            ReportButton.UseVisualStyleBackColor = true;
+            ReportButton.Click += button1_Click;
             // 
             // departmentButton
             // 
@@ -625,10 +625,10 @@
             TabControl.Controls.Add(tabPage1);
             TabControl.Font = new Font("Century Gothic", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             TabControl.ImeMode = ImeMode.NoControl;
-            TabControl.Location = new Point(327, 215);
+            TabControl.Location = new Point(328, 220);
             TabControl.Name = "TabControl";
             TabControl.SelectedIndex = 0;
-            TabControl.Size = new Size(1573, 750);
+            TabControl.Size = new Size(1580, 750);
             TabControl.TabIndex = 22;
             // 
             // addStudentTabPage
@@ -661,7 +661,7 @@
             addStudentTabPage.Location = new Point(4, 4);
             addStudentTabPage.Name = "addStudentTabPage";
             addStudentTabPage.Padding = new Padding(3);
-            addStudentTabPage.Size = new Size(1565, 716);
+            addStudentTabPage.Size = new Size(1572, 716);
             addStudentTabPage.TabIndex = 0;
             addStudentTabPage.Text = "Add Student";
             addStudentTabPage.Click += tabPage1_Click;
@@ -714,7 +714,7 @@
             searchStudentTabPage.Location = new Point(4, 4);
             searchStudentTabPage.Name = "searchStudentTabPage";
             searchStudentTabPage.Padding = new Padding(3);
-            searchStudentTabPage.Size = new Size(1565, 716);
+            searchStudentTabPage.Size = new Size(1572, 716);
             searchStudentTabPage.TabIndex = 1;
             searchStudentTabPage.Text = "Search Student";
             // 
@@ -887,7 +887,7 @@
             tabPage1.Location = new Point(4, 4);
             tabPage1.Name = "tabPage1";
             tabPage1.Padding = new Padding(3);
-            tabPage1.Size = new Size(1565, 716);
+            tabPage1.Size = new Size(1572, 716);
             tabPage1.TabIndex = 2;
             tabPage1.Text = "Update and Delete Student";
             // 
@@ -1132,6 +1132,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = SystemColors.Window;
             ClientSize = new Size(1902, 1033);
             Controls.Add(TabControl);
             Controls.Add(panelBack);
@@ -1173,7 +1174,7 @@
         private Panel panelBack;
         private PictureBox expandPictureBox;
         private Panel dashboardPanel;
-        private Button button1;
+        private Button ReportButton;
         private Button departmentButton;
         private Button professorButton;
         private Button classButton;

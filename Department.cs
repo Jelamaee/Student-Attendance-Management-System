@@ -63,5 +63,20 @@ namespace Student_Attendance_Management_System
         {
 
         }
+
+        private void addStudentTabPage_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void addButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Departmentlabel_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

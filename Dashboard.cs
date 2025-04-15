@@ -29,7 +29,7 @@ namespace Student_Attendance_Management_System
 
         private void dashboardButton_Click(object sender, EventArgs e)
         {
-           
+
         }
 
         private void studentButton_Click(object sender, EventArgs e)
@@ -70,13 +70,18 @@ namespace Student_Attendance_Management_System
 
         private void archivedButton_Click(object sender, EventArgs e)
         {
-            Archived archived = new Archived();
+            Report archived = new Report();
             archived.Show();
         }
 
         private void userControlDashboard1_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void expandPictureBox_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }
