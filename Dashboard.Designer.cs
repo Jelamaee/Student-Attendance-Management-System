@@ -87,7 +87,7 @@
             ReportButton.Font = new Font("Century Gothic", 11F);
             ReportButton.Image = (Image)resources.GetObject("ReportButton.Image");
             ReportButton.ImageAlign = ContentAlignment.MiddleLeft;
-            ReportButton.Location = new Point(0, 592);
+            ReportButton.Location = new Point(14, 592);
             ReportButton.Name = "ReportButton";
             ReportButton.Size = new Size(220, 40);
             ReportButton.TabIndex = 8;
@@ -104,7 +104,7 @@
             departmentButton.Font = new Font("Century Gothic", 11F);
             departmentButton.Image = (Image)resources.GetObject("departmentButton.Image");
             departmentButton.ImageAlign = ContentAlignment.MiddleLeft;
-            departmentButton.Location = new Point(0, 542);
+            departmentButton.Location = new Point(14, 542);
             departmentButton.Name = "departmentButton";
             departmentButton.Size = new Size(220, 40);
             departmentButton.TabIndex = 7;
@@ -121,7 +121,7 @@
             professorButton.Font = new Font("Century Gothic", 11F);
             professorButton.Image = (Image)resources.GetObject("professorButton.Image");
             professorButton.ImageAlign = ContentAlignment.MiddleLeft;
-            professorButton.Location = new Point(0, 492);
+            professorButton.Location = new Point(14, 492);
             professorButton.Name = "professorButton";
             professorButton.Size = new Size(220, 40);
             professorButton.TabIndex = 6;
@@ -138,7 +138,7 @@
             classButton.Font = new Font("Century Gothic", 11F);
             classButton.Image = (Image)resources.GetObject("classButton.Image");
             classButton.ImageAlign = ContentAlignment.MiddleLeft;
-            classButton.Location = new Point(0, 442);
+            classButton.Location = new Point(14, 442);
             classButton.Name = "classButton";
             classButton.Size = new Size(220, 40);
             classButton.TabIndex = 5;
@@ -155,7 +155,7 @@
             courseButton.Font = new Font("Century Gothic", 11F);
             courseButton.Image = (Image)resources.GetObject("courseButton.Image");
             courseButton.ImageAlign = ContentAlignment.MiddleLeft;
-            courseButton.Location = new Point(0, 392);
+            courseButton.Location = new Point(14, 392);
             courseButton.Name = "courseButton";
             courseButton.Size = new Size(220, 40);
             courseButton.TabIndex = 4;
@@ -172,7 +172,7 @@
             attendanceButton.Font = new Font("Century Gothic", 11F);
             attendanceButton.Image = (Image)resources.GetObject("attendanceButton.Image");
             attendanceButton.ImageAlign = ContentAlignment.MiddleLeft;
-            attendanceButton.Location = new Point(0, 342);
+            attendanceButton.Location = new Point(14, 342);
             attendanceButton.Name = "attendanceButton";
             attendanceButton.Size = new Size(220, 40);
             attendanceButton.TabIndex = 3;
@@ -190,7 +190,7 @@
             studentButton.Font = new Font("Century Gothic", 11F);
             studentButton.Image = (Image)resources.GetObject("studentButton.Image");
             studentButton.ImageAlign = ContentAlignment.MiddleLeft;
-            studentButton.Location = new Point(0, 292);
+            studentButton.Location = new Point(14, 292);
             studentButton.Name = "studentButton";
             studentButton.Size = new Size(220, 40);
             studentButton.TabIndex = 2;
@@ -207,7 +207,7 @@
             dashboardButton.Font = new Font("Century Gothic", 11F);
             dashboardButton.Image = (Image)resources.GetObject("dashboardButton.Image");
             dashboardButton.ImageAlign = ContentAlignment.MiddleLeft;
-            dashboardButton.Location = new Point(0, 242);
+            dashboardButton.Location = new Point(14, 242);
             dashboardButton.Name = "dashboardButton";
             dashboardButton.Size = new Size(220, 40);
             dashboardButton.TabIndex = 1;
@@ -221,9 +221,9 @@
             dashboardSmallpanel.Anchor = AnchorStyles.None;
             dashboardSmallpanel.Controls.Add(dashboardTitle);
             dashboardSmallpanel.Controls.Add(dashboardPictureBox);
-            dashboardSmallpanel.Location = new Point(-8, 0);
+            dashboardSmallpanel.Location = new Point(0, 0);
             dashboardSmallpanel.Name = "dashboardSmallpanel";
-            dashboardSmallpanel.Size = new Size(365, 224);
+            dashboardSmallpanel.Size = new Size(330, 224);
             dashboardSmallpanel.TabIndex = 0;
             // 
             // dashboardTitle
@@ -231,7 +231,7 @@
             dashboardTitle.Anchor = AnchorStyles.None;
             dashboardTitle.BackColor = Color.Transparent;
             dashboardTitle.Font = new Font("Century Gothic", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            dashboardTitle.Location = new Point(34, 129);
+            dashboardTitle.Location = new Point(34, 122);
             dashboardTitle.Name = "dashboardTitle";
             dashboardTitle.Size = new Size(286, 67);
             dashboardTitle.TabIndex = 1;
@@ -242,7 +242,7 @@
             // 
             dashboardPictureBox.Anchor = AnchorStyles.None;
             dashboardPictureBox.Image = (Image)resources.GetObject("dashboardPictureBox.Image");
-            dashboardPictureBox.Location = new Point(123, 48);
+            dashboardPictureBox.Location = new Point(123, 41);
             dashboardPictureBox.Name = "dashboardPictureBox";
             dashboardPictureBox.Size = new Size(64, 64);
             dashboardPictureBox.SizeMode = PictureBoxSizeMode.AutoSize;

@@ -34,7 +34,13 @@
             logoutPictureBox = new PictureBox();
             panelBack = new Panel();
             TabControl = new TabControl();
-            markAttendanceTabPage = new TabPage();
+            AddClassTabPage = new TabPage();
+            panel8 = new Panel();
+            panel9 = new Panel();
+            panel10 = new Panel();
+            label4 = new Label();
+            panel11 = new Panel();
+            dateTimePicker2 = new DateTimePicker();
             comboBox3 = new ComboBox();
             label3 = new Label();
             panel2 = new Panel();
@@ -48,7 +54,7 @@
             comboBox1 = new ComboBox();
             label1 = new Label();
             panel3 = new Panel();
-            addStudentLabel = new Label();
+            AddClassLabel = new Label();
             studentIDLabel = new Label();
             panel1 = new Panel();
             dateTimePicker1 = new DateTimePicker();
@@ -76,7 +82,7 @@
             ((System.ComponentModel.ISupportInitialize)logoutPictureBox).BeginInit();
             panelBack.SuspendLayout();
             TabControl.SuspendLayout();
-            markAttendanceTabPage.SuspendLayout();
+            AddClassTabPage.SuspendLayout();
             viewAttendancetabPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)markAttendanceDataGridView).BeginInit();
             dashboardPanel.SuspendLayout();
@@ -89,7 +95,7 @@
             panel14.BackColor = Color.FromArgb(188, 234, 213);
             panel14.Location = new Point(0, 92);
             panel14.Name = "panel14";
-            panel14.Size = new Size(1574, 126);
+            panel14.Size = new Size(1574, 137);
             panel14.TabIndex = 3;
             // 
             // expandPictureBox
@@ -115,62 +121,122 @@
             // 
             // panelBack
             // 
-            panelBack.BackColor = SystemColors.Control;
+            panelBack.BackColor = SystemColors.Window;
             panelBack.Controls.Add(panel14);
             panelBack.Controls.Add(expandPictureBox);
             panelBack.Controls.Add(logoutPictureBox);
-            panelBack.Location = new Point(328, 0);
+            panelBack.Location = new Point(323, 0);
             panelBack.Name = "panelBack";
-            panelBack.Size = new Size(1574, 218);
+            panelBack.Size = new Size(1579, 229);
             panelBack.TabIndex = 31;
             // 
             // TabControl
             // 
             TabControl.Alignment = TabAlignment.Bottom;
-            TabControl.Controls.Add(markAttendanceTabPage);
+            TabControl.Controls.Add(AddClassTabPage);
             TabControl.Controls.Add(viewAttendancetabPage);
             TabControl.Font = new Font("Century Gothic", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             TabControl.ImeMode = ImeMode.NoControl;
-            TabControl.Location = new Point(328, 224);
+            TabControl.Location = new Point(323, 224);
             TabControl.Name = "TabControl";
             TabControl.SelectedIndex = 0;
-            TabControl.Size = new Size(1576, 760);
+            TabControl.Size = new Size(1581, 760);
             TabControl.TabIndex = 32;
             // 
-            // markAttendanceTabPage
+            // AddClassTabPage
             // 
-            markAttendanceTabPage.BackColor = SystemColors.Window;
-            markAttendanceTabPage.Controls.Add(comboBox3);
-            markAttendanceTabPage.Controls.Add(label3);
-            markAttendanceTabPage.Controls.Add(panel2);
-            markAttendanceTabPage.Controls.Add(comboBox2);
-            markAttendanceTabPage.Controls.Add(label2);
-            markAttendanceTabPage.Controls.Add(panel7);
-            markAttendanceTabPage.Controls.Add(panel6);
-            markAttendanceTabPage.Controls.Add(panel5);
-            markAttendanceTabPage.Controls.Add(panel4);
-            markAttendanceTabPage.Controls.Add(userControlDashboard1);
-            markAttendanceTabPage.Controls.Add(comboBox1);
-            markAttendanceTabPage.Controls.Add(label1);
-            markAttendanceTabPage.Controls.Add(panel3);
-            markAttendanceTabPage.Controls.Add(addStudentLabel);
-            markAttendanceTabPage.Controls.Add(studentIDLabel);
-            markAttendanceTabPage.Controls.Add(panel1);
-            markAttendanceTabPage.Controls.Add(dateTimePicker1);
-            markAttendanceTabPage.Font = new Font("Century Gothic", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            markAttendanceTabPage.Location = new Point(4, 4);
-            markAttendanceTabPage.Name = "markAttendanceTabPage";
-            markAttendanceTabPage.Padding = new Padding(3);
-            markAttendanceTabPage.Size = new Size(1568, 726);
-            markAttendanceTabPage.TabIndex = 0;
-            markAttendanceTabPage.Text = "Mark Attendance";
+            AddClassTabPage.BackColor = SystemColors.Window;
+            AddClassTabPage.Controls.Add(panel8);
+            AddClassTabPage.Controls.Add(panel9);
+            AddClassTabPage.Controls.Add(panel10);
+            AddClassTabPage.Controls.Add(label4);
+            AddClassTabPage.Controls.Add(panel11);
+            AddClassTabPage.Controls.Add(dateTimePicker2);
+            AddClassTabPage.Controls.Add(comboBox3);
+            AddClassTabPage.Controls.Add(label3);
+            AddClassTabPage.Controls.Add(panel2);
+            AddClassTabPage.Controls.Add(comboBox2);
+            AddClassTabPage.Controls.Add(label2);
+            AddClassTabPage.Controls.Add(panel7);
+            AddClassTabPage.Controls.Add(panel6);
+            AddClassTabPage.Controls.Add(panel5);
+            AddClassTabPage.Controls.Add(panel4);
+            AddClassTabPage.Controls.Add(userControlDashboard1);
+            AddClassTabPage.Controls.Add(comboBox1);
+            AddClassTabPage.Controls.Add(label1);
+            AddClassTabPage.Controls.Add(panel3);
+            AddClassTabPage.Controls.Add(AddClassLabel);
+            AddClassTabPage.Controls.Add(studentIDLabel);
+            AddClassTabPage.Controls.Add(panel1);
+            AddClassTabPage.Controls.Add(dateTimePicker1);
+            AddClassTabPage.Font = new Font("Century Gothic", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            AddClassTabPage.Location = new Point(4, 4);
+            AddClassTabPage.Name = "AddClassTabPage";
+            AddClassTabPage.Padding = new Padding(3);
+            AddClassTabPage.Size = new Size(1573, 726);
+            AddClassTabPage.TabIndex = 0;
+            AddClassTabPage.Text = "Add Class";
+            // 
+            // panel8
+            // 
+            panel8.BackColor = Color.Transparent;
+            panel8.Location = new Point(1062, 362);
+            panel8.Name = "panel8";
+            panel8.Size = new Size(10, 27);
+            panel8.TabIndex = 42;
+            // 
+            // panel9
+            // 
+            panel9.BackColor = Color.Transparent;
+            panel9.Location = new Point(774, 361);
+            panel9.Name = "panel9";
+            panel9.Size = new Size(10, 30);
+            panel9.TabIndex = 40;
+            // 
+            // panel10
+            // 
+            panel10.BackColor = Color.Black;
+            panel10.Location = new Point(783, 386);
+            panel10.Name = "panel10";
+            panel10.Size = new Size(279, 2);
+            panel10.TabIndex = 39;
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Font = new Font("Century Gothic", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label4.Location = new Point(782, 326);
+            label4.Name = "label4";
+            label4.Size = new Size(93, 22);
+            label4.TabIndex = 37;
+            label4.Text = "End Time:";
+            // 
+            // panel11
+            // 
+            panel11.BackColor = Color.Transparent;
+            panel11.Location = new Point(779, 352);
+            panel11.Name = "panel11";
+            panel11.Size = new Size(288, 10);
+            panel11.TabIndex = 38;
+            // 
+            // dateTimePicker2
+            // 
+            dateTimePicker2.CalendarTitleForeColor = SystemColors.Window;
+            dateTimePicker2.CalendarTrailingForeColor = SystemColors.Control;
+            dateTimePicker2.CustomFormat = "MM/dd/yyyy";
+            dateTimePicker2.Format = DateTimePickerFormat.Time;
+            dateTimePicker2.Location = new Point(783, 358);
+            dateTimePicker2.Name = "dateTimePicker2";
+            dateTimePicker2.Size = new Size(281, 30);
+            dateTimePicker2.TabIndex = 41;
+            dateTimePicker2.Value = new DateTime(2025, 4, 15, 14, 50, 0, 0);
             // 
             // comboBox3
             // 
             comboBox3.BackColor = SystemColors.Window;
             comboBox3.FlatStyle = FlatStyle.Flat;
             comboBox3.FormattingEnabled = true;
-            comboBox3.Location = new Point(879, 352);
+            comboBox3.Location = new Point(1247, 358);
             comboBox3.Name = "comboBox3";
             comboBox3.Size = new Size(240, 29);
             comboBox3.TabIndex = 36;
@@ -179,16 +245,16 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Century Gothic", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label3.Location = new Point(882, 323);
+            label3.Location = new Point(1250, 329);
             label3.Name = "label3";
-            label3.Size = new Size(65, 22);
+            label3.Size = new Size(101, 22);
             label3.TabIndex = 34;
-            label3.Text = "Status:";
+            label3.Text = "Class Day:";
             // 
             // panel2
             // 
             panel2.BackColor = Color.Black;
-            panel2.Location = new Point(879, 383);
+            panel2.Location = new Point(1247, 389);
             panel2.Name = "panel2";
             panel2.Size = new Size(240, 2);
             panel2.TabIndex = 35;
@@ -198,7 +264,7 @@
             comboBox2.BackColor = SystemColors.Window;
             comboBox2.FlatStyle = FlatStyle.Flat;
             comboBox2.FormattingEnabled = true;
-            comboBox2.Location = new Point(879, 152);
+            comboBox2.Location = new Point(778, 152);
             comboBox2.Name = "comboBox2";
             comboBox2.Size = new Size(240, 29);
             comboBox2.TabIndex = 33;
@@ -207,16 +273,16 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Century Gothic", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label2.Location = new Point(882, 123);
+            label2.Location = new Point(781, 123);
             label2.Name = "label2";
-            label2.Size = new Size(78, 22);
+            label2.Size = new Size(94, 22);
             label2.TabIndex = 31;
-            label2.Text = "Course:";
+            label2.Text = "Professor:";
             // 
             // panel7
             // 
             panel7.BackColor = Color.Black;
-            panel7.Location = new Point(879, 183);
+            panel7.Location = new Point(778, 183);
             panel7.Name = "panel7";
             panel7.Size = new Size(240, 2);
             panel7.TabIndex = 32;
@@ -248,7 +314,7 @@
             // userControlDashboard1
             // 
             userControlDashboard1.AutoSize = true;
-            userControlDashboard1.Location = new Point(1449, 99);
+            userControlDashboard1.Location = new Point(1447, 105);
             userControlDashboard1.Margin = new Padding(4, 3, 4, 3);
             userControlDashboard1.Name = "userControlDashboard1";
             userControlDashboard1.Size = new Size(0, 586);
@@ -270,9 +336,9 @@
             label1.Font = new Font("Century Gothic", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.Location = new Point(316, 123);
             label1.Name = "label1";
-            label1.Size = new Size(103, 22);
+            label1.Size = new Size(78, 22);
             label1.TabIndex = 25;
-            label1.Text = "Student ID:";
+            label1.Text = "Course:";
             // 
             // panel3
             // 
@@ -282,16 +348,16 @@
             panel3.Size = new Size(240, 2);
             panel3.TabIndex = 27;
             // 
-            // addStudentLabel
+            // AddClassLabel
             // 
-            addStudentLabel.AutoSize = true;
-            addStudentLabel.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            addStudentLabel.ForeColor = Color.FromArgb(142, 195, 176);
-            addStudentLabel.Location = new Point(9, 9);
-            addStudentLabel.Name = "addStudentLabel";
-            addStudentLabel.Size = new Size(187, 23);
-            addStudentLabel.TabIndex = 22;
-            addStudentLabel.Text = "Mark Attendance:";
+            AddClassLabel.AutoSize = true;
+            AddClassLabel.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            AddClassLabel.ForeColor = Color.FromArgb(142, 195, 176);
+            AddClassLabel.Location = new Point(9, 9);
+            AddClassLabel.Name = "AddClassLabel";
+            AddClassLabel.Size = new Size(115, 23);
+            AddClassLabel.TabIndex = 22;
+            AddClassLabel.Text = "Add Class:";
             // 
             // studentIDLabel
             // 
@@ -299,9 +365,9 @@
             studentIDLabel.Font = new Font("Century Gothic", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             studentIDLabel.Location = new Point(316, 323);
             studentIDLabel.Name = "studentIDLabel";
-            studentIDLabel.Size = new Size(57, 22);
+            studentIDLabel.Size = new Size(98, 22);
             studentIDLabel.TabIndex = 5;
-            studentIDLabel.Text = "Date:";
+            studentIDLabel.Text = "Start Time:";
             // 
             // panel1
             // 
@@ -329,7 +395,7 @@
             viewAttendancetabPage.Location = new Point(4, 4);
             viewAttendancetabPage.Name = "viewAttendancetabPage";
             viewAttendancetabPage.Padding = new Padding(3);
-            viewAttendancetabPage.Size = new Size(1568, 726);
+            viewAttendancetabPage.Size = new Size(1573, 726);
             viewAttendancetabPage.TabIndex = 1;
             viewAttendancetabPage.Text = "View Attendance";
             viewAttendancetabPage.UseVisualStyleBackColor = true;
@@ -404,7 +470,7 @@
             dashboardPanel.Controls.Add(studentButton);
             dashboardPanel.Controls.Add(dashboardButton);
             dashboardPanel.Controls.Add(dashboardSmallpanel);
-            dashboardPanel.Location = new Point(-4, 3);
+            dashboardPanel.Location = new Point(-1, 0);
             dashboardPanel.Name = "dashboardPanel";
             dashboardPanel.Size = new Size(330, 1033);
             dashboardPanel.TabIndex = 33;
@@ -417,7 +483,7 @@
             buttonReport.Font = new Font("Century Gothic", 11F);
             buttonReport.Image = (Image)resources.GetObject("buttonReport.Image");
             buttonReport.ImageAlign = ContentAlignment.MiddleLeft;
-            buttonReport.Location = new Point(11, 591);
+            buttonReport.Location = new Point(14, 592);
             buttonReport.Name = "buttonReport";
             buttonReport.Size = new Size(220, 40);
             buttonReport.TabIndex = 10;
@@ -449,7 +515,7 @@
             departmentButton.Font = new Font("Century Gothic", 11F);
             departmentButton.Image = (Image)resources.GetObject("departmentButton.Image");
             departmentButton.ImageAlign = ContentAlignment.MiddleLeft;
-            departmentButton.Location = new Point(11, 545);
+            departmentButton.Location = new Point(14, 542);
             departmentButton.Name = "departmentButton";
             departmentButton.Size = new Size(220, 40);
             departmentButton.TabIndex = 7;
@@ -465,7 +531,7 @@
             professorButton.Font = new Font("Century Gothic", 11F);
             professorButton.Image = (Image)resources.GetObject("professorButton.Image");
             professorButton.ImageAlign = ContentAlignment.MiddleLeft;
-            professorButton.Location = new Point(11, 495);
+            professorButton.Location = new Point(14, 492);
             professorButton.Name = "professorButton";
             professorButton.Size = new Size(220, 40);
             professorButton.TabIndex = 6;
@@ -481,7 +547,7 @@
             classButton.Font = new Font("Century Gothic", 11F);
             classButton.Image = (Image)resources.GetObject("classButton.Image");
             classButton.ImageAlign = ContentAlignment.MiddleLeft;
-            classButton.Location = new Point(11, 445);
+            classButton.Location = new Point(14, 442);
             classButton.Name = "classButton";
             classButton.Size = new Size(220, 40);
             classButton.TabIndex = 5;
@@ -497,7 +563,7 @@
             courseButton.Font = new Font("Century Gothic", 11F);
             courseButton.Image = (Image)resources.GetObject("courseButton.Image");
             courseButton.ImageAlign = ContentAlignment.MiddleLeft;
-            courseButton.Location = new Point(11, 395);
+            courseButton.Location = new Point(11, 392);
             courseButton.Name = "courseButton";
             courseButton.Size = new Size(220, 40);
             courseButton.TabIndex = 4;
@@ -513,7 +579,7 @@
             attendanceButton.Font = new Font("Century Gothic", 11F);
             attendanceButton.Image = (Image)resources.GetObject("attendanceButton.Image");
             attendanceButton.ImageAlign = ContentAlignment.MiddleLeft;
-            attendanceButton.Location = new Point(11, 345);
+            attendanceButton.Location = new Point(11, 342);
             attendanceButton.Name = "attendanceButton";
             attendanceButton.Size = new Size(220, 40);
             attendanceButton.TabIndex = 3;
@@ -530,7 +596,7 @@
             studentButton.Font = new Font("Century Gothic", 11F);
             studentButton.Image = (Image)resources.GetObject("studentButton.Image");
             studentButton.ImageAlign = ContentAlignment.MiddleLeft;
-            studentButton.Location = new Point(11, 295);
+            studentButton.Location = new Point(14, 292);
             studentButton.Name = "studentButton";
             studentButton.Size = new Size(220, 40);
             studentButton.TabIndex = 2;
@@ -546,7 +612,7 @@
             dashboardButton.Font = new Font("Century Gothic", 11F);
             dashboardButton.Image = (Image)resources.GetObject("dashboardButton.Image");
             dashboardButton.ImageAlign = ContentAlignment.MiddleLeft;
-            dashboardButton.Location = new Point(11, 245);
+            dashboardButton.Location = new Point(14, 242);
             dashboardButton.Name = "dashboardButton";
             dashboardButton.Size = new Size(220, 40);
             dashboardButton.TabIndex = 1;
@@ -559,9 +625,9 @@
             dashboardSmallpanel.Anchor = AnchorStyles.None;
             dashboardSmallpanel.Controls.Add(dashboardTitle);
             dashboardSmallpanel.Controls.Add(dashboardPictureBox);
-            dashboardSmallpanel.Location = new Point(3, 3);
+            dashboardSmallpanel.Location = new Point(0, 0);
             dashboardSmallpanel.Name = "dashboardSmallpanel";
-            dashboardSmallpanel.Size = new Size(365, 224);
+            dashboardSmallpanel.Size = new Size(330, 224);
             dashboardSmallpanel.TabIndex = 0;
             // 
             // dashboardTitle
@@ -569,7 +635,7 @@
             dashboardTitle.Anchor = AnchorStyles.None;
             dashboardTitle.BackColor = Color.Transparent;
             dashboardTitle.Font = new Font("Century Gothic", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            dashboardTitle.Location = new Point(56, 105);
+            dashboardTitle.Location = new Point(39, 105);
             dashboardTitle.Name = "dashboardTitle";
             dashboardTitle.Size = new Size(286, 67);
             dashboardTitle.TabIndex = 1;
@@ -579,7 +645,7 @@
             // 
             dashboardPictureBox.Anchor = AnchorStyles.None;
             dashboardPictureBox.Image = (Image)resources.GetObject("dashboardPictureBox.Image");
-            dashboardPictureBox.Location = new Point(145, 24);
+            dashboardPictureBox.Location = new Point(128, 24);
             dashboardPictureBox.Name = "dashboardPictureBox";
             dashboardPictureBox.Size = new Size(64, 64);
             dashboardPictureBox.SizeMode = PictureBoxSizeMode.AutoSize;
@@ -601,8 +667,8 @@
             panelBack.ResumeLayout(false);
             panelBack.PerformLayout();
             TabControl.ResumeLayout(false);
-            markAttendanceTabPage.ResumeLayout(false);
-            markAttendanceTabPage.PerformLayout();
+            AddClassTabPage.ResumeLayout(false);
+            AddClassTabPage.PerformLayout();
             viewAttendancetabPage.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)markAttendanceDataGridView).EndInit();
             dashboardPanel.ResumeLayout(false);
@@ -618,7 +684,7 @@
         private PictureBox logoutPictureBox;
         private Panel panelBack;
         private TabControl TabControl;
-        private TabPage markAttendanceTabPage;
+        private TabPage AddClassTabPage;
         private ComboBox comboBox2;
         private Label label2;
         private Panel panel7;
@@ -629,7 +695,7 @@
         private ComboBox comboBox1;
         private Label label1;
         private Panel panel3;
-        private Label addStudentLabel;
+        private Label AddClassLabel;
         private Label studentIDLabel;
         private Panel panel1;
         private DateTimePicker dateTimePicker1;
@@ -656,5 +722,11 @@
         private Label dashboardTitle;
         private PictureBox dashboardPictureBox;
         private Button buttonReport;
+        private Panel panel8;
+        private Panel panel9;
+        private Panel panel10;
+        private Label label4;
+        private Panel panel11;
+        private DateTimePicker dateTimePicker2;
     }
 }

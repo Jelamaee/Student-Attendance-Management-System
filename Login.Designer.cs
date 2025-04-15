@@ -61,9 +61,9 @@
             // 
             emailTextBox.Anchor = AnchorStyles.None;
             emailTextBox.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            emailTextBox.Location = new Point(186, 102);
+            emailTextBox.Location = new Point(148, 136);
             emailTextBox.Name = "emailTextBox";
-            emailTextBox.Size = new Size(125, 32);
+            emailTextBox.Size = new Size(353, 32);
             emailTextBox.TabIndex = 1;
             emailTextBox.TextChanged += emailTextBox_TextChanged;
             // 
@@ -71,9 +71,9 @@
             // 
             passwordTextBox.Anchor = AnchorStyles.None;
             passwordTextBox.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            passwordTextBox.Location = new Point(186, 181);
+            passwordTextBox.Location = new Point(148, 238);
             passwordTextBox.Name = "passwordTextBox";
-            passwordTextBox.Size = new Size(125, 32);
+            passwordTextBox.Size = new Size(353, 32);
             passwordTextBox.TabIndex = 2;
             passwordTextBox.TextChanged += passwordTextBox_TextChanged;
             // 
@@ -82,7 +82,7 @@
             email.Anchor = AnchorStyles.None;
             email.AutoSize = true;
             email.Font = new Font("Century Gothic", 12F);
-            email.Location = new Point(66, 111);
+            email.Location = new Point(148, 99);
             email.Name = "email";
             email.Size = new Size(67, 23);
             email.TabIndex = 3;
@@ -94,7 +94,7 @@
             password.Anchor = AnchorStyles.None;
             password.AutoSize = true;
             password.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            password.Location = new Point(66, 184);
+            password.Location = new Point(148, 204);
             password.Name = "password";
             password.Size = new Size(108, 23);
             password.TabIndex = 4;
@@ -105,8 +105,9 @@
             // 
             loginButton.Anchor = AnchorStyles.None;
             loginButton.BackColor = Color.FromArgb(142, 195, 176);
+            loginButton.FlatAppearance.BorderColor = Color.FromArgb(142, 195, 176);
             loginButton.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            loginButton.Location = new Point(145, 264);
+            loginButton.Location = new Point(265, 350);
             loginButton.Name = "loginButton";
             loginButton.Size = new Size(104, 40);
             loginButton.TabIndex = 5;
@@ -140,7 +141,7 @@
             forgotPassLinkLabel.AutoSize = true;
             forgotPassLinkLabel.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             forgotPassLinkLabel.LinkColor = Color.Black;
-            forgotPassLinkLabel.Location = new Point(106, 323);
+            forgotPassLinkLabel.Location = new Point(226, 409);
             forgotPassLinkLabel.Name = "forgotPassLinkLabel";
             forgotPassLinkLabel.Size = new Size(183, 23);
             forgotPassLinkLabel.TabIndex = 8;
@@ -159,7 +160,7 @@
             loginGroupBox.Controls.Add(loginButton);
             loginGroupBox.Location = new Point(1025, 251);
             loginGroupBox.Name = "loginGroupBox";
-            loginGroupBox.Size = new Size(415, 373);
+            loginGroupBox.Size = new Size(630, 479);
             loginGroupBox.TabIndex = 9;
             loginGroupBox.TabStop = false;
             loginGroupBox.Text = "Please Login First";
@@ -170,7 +171,7 @@
             panel.BackColor = SystemColors.Control;
             panel.Location = new Point(883, 233);
             panel.Name = "panel";
-            panel.Size = new Size(5, 405);
+            panel.Size = new Size(5, 520);
             panel.TabIndex = 0;
             // 
             // title2

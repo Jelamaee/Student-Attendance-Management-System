@@ -64,6 +64,7 @@
             logoutPictureBox = new PictureBox();
             button2 = new Button();
             dashboardPanel = new Panel();
+            buttonReport = new Button();
             ReportButton = new Button();
             button1 = new Button();
             archivedButton = new Button();
@@ -77,7 +78,6 @@
             dashboardSmallpanel = new Panel();
             dashboardTitle = new Label();
             dashboardPictureBox = new PictureBox();
-            buttonReport = new Button();
             TabControl.SuspendLayout();
             StudentReportTabPage.SuspendLayout();
             viewAttendancetabPage.SuspendLayout();
@@ -469,6 +469,22 @@
             dashboardPanel.Size = new Size(330, 1033);
             dashboardPanel.TabIndex = 31;
             // 
+            // buttonReport
+            // 
+            buttonReport.Anchor = AnchorStyles.None;
+            buttonReport.FlatAppearance.BorderSize = 0;
+            buttonReport.FlatStyle = FlatStyle.Flat;
+            buttonReport.Font = new Font("Century Gothic", 11F);
+            buttonReport.Image = (Image)resources.GetObject("buttonReport.Image");
+            buttonReport.ImageAlign = ContentAlignment.MiddleLeft;
+            buttonReport.Location = new Point(14, 592);
+            buttonReport.Name = "buttonReport";
+            buttonReport.Size = new Size(220, 40);
+            buttonReport.TabIndex = 34;
+            buttonReport.Text = "                Report";
+            buttonReport.TextAlign = ContentAlignment.MiddleLeft;
+            buttonReport.UseVisualStyleBackColor = true;
+            // 
             // ReportButton
             // 
             ReportButton.Anchor = AnchorStyles.None;
@@ -525,7 +541,7 @@
             departmentButton.Font = new Font("Century Gothic", 11F);
             departmentButton.Image = (Image)resources.GetObject("departmentButton.Image");
             departmentButton.ImageAlign = ContentAlignment.MiddleLeft;
-            departmentButton.Location = new Point(6, 521);
+            departmentButton.Location = new Point(14, 542);
             departmentButton.Name = "departmentButton";
             departmentButton.Size = new Size(220, 40);
             departmentButton.TabIndex = 7;
@@ -541,7 +557,7 @@
             professorButton.Font = new Font("Century Gothic", 11F);
             professorButton.Image = (Image)resources.GetObject("professorButton.Image");
             professorButton.ImageAlign = ContentAlignment.MiddleLeft;
-            professorButton.Location = new Point(6, 471);
+            professorButton.Location = new Point(14, 492);
             professorButton.Name = "professorButton";
             professorButton.Size = new Size(220, 40);
             professorButton.TabIndex = 6;
@@ -557,7 +573,7 @@
             CclassButton.Font = new Font("Century Gothic", 11F);
             CclassButton.Image = (Image)resources.GetObject("CclassButton.Image");
             CclassButton.ImageAlign = ContentAlignment.MiddleLeft;
-            CclassButton.Location = new Point(6, 421);
+            CclassButton.Location = new Point(14, 442);
             CclassButton.Name = "CclassButton";
             CclassButton.Size = new Size(220, 40);
             CclassButton.TabIndex = 5;
@@ -573,7 +589,7 @@
             courseButton.Font = new Font("Century Gothic", 11F);
             courseButton.Image = (Image)resources.GetObject("courseButton.Image");
             courseButton.ImageAlign = ContentAlignment.MiddleLeft;
-            courseButton.Location = new Point(6, 371);
+            courseButton.Location = new Point(14, 392);
             courseButton.Name = "courseButton";
             courseButton.Size = new Size(220, 40);
             courseButton.TabIndex = 4;
@@ -589,7 +605,7 @@
             attendanceButton.Font = new Font("Century Gothic", 11F);
             attendanceButton.Image = (Image)resources.GetObject("attendanceButton.Image");
             attendanceButton.ImageAlign = ContentAlignment.MiddleLeft;
-            attendanceButton.Location = new Point(6, 321);
+            attendanceButton.Location = new Point(14, 342);
             attendanceButton.Name = "attendanceButton";
             attendanceButton.Size = new Size(220, 40);
             attendanceButton.TabIndex = 3;
@@ -606,7 +622,7 @@
             studentButton.Font = new Font("Century Gothic", 11F);
             studentButton.Image = (Image)resources.GetObject("studentButton.Image");
             studentButton.ImageAlign = ContentAlignment.MiddleLeft;
-            studentButton.Location = new Point(6, 271);
+            studentButton.Location = new Point(14, 292);
             studentButton.Name = "studentButton";
             studentButton.Size = new Size(220, 40);
             studentButton.TabIndex = 2;
@@ -622,7 +638,7 @@
             dashboardButton.Font = new Font("Century Gothic", 11F);
             dashboardButton.Image = (Image)resources.GetObject("dashboardButton.Image");
             dashboardButton.ImageAlign = ContentAlignment.MiddleLeft;
-            dashboardButton.Location = new Point(6, 221);
+            dashboardButton.Location = new Point(14, 242);
             dashboardButton.Name = "dashboardButton";
             dashboardButton.Size = new Size(220, 40);
             dashboardButton.TabIndex = 1;
@@ -661,22 +677,6 @@
             dashboardPictureBox.SizeMode = PictureBoxSizeMode.AutoSize;
             dashboardPictureBox.TabIndex = 0;
             dashboardPictureBox.TabStop = false;
-            // 
-            // buttonReport
-            // 
-            buttonReport.Anchor = AnchorStyles.None;
-            buttonReport.FlatAppearance.BorderSize = 0;
-            buttonReport.FlatStyle = FlatStyle.Flat;
-            buttonReport.Font = new Font("Century Gothic", 11F);
-            buttonReport.Image = (Image)resources.GetObject("buttonReport.Image");
-            buttonReport.ImageAlign = ContentAlignment.MiddleLeft;
-            buttonReport.Location = new Point(6, 567);
-            buttonReport.Name = "buttonReport";
-            buttonReport.Size = new Size(220, 40);
-            buttonReport.TabIndex = 34;
-            buttonReport.Text = "                Report";
-            buttonReport.TextAlign = ContentAlignment.MiddleLeft;
-            buttonReport.UseVisualStyleBackColor = true;
             // 
             // Report
             // 
