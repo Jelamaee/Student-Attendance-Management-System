@@ -93,9 +93,9 @@
             // panel14
             // 
             panel14.BackColor = Color.FromArgb(188, 234, 213);
-            panel14.Location = new Point(0, 92);
+            panel14.Location = new Point(0, 98);
             panel14.Name = "panel14";
-            panel14.Size = new Size(1574, 137);
+            panel14.Size = new Size(1628, 126);
             panel14.TabIndex = 3;
             // 
             // expandPictureBox
@@ -125,9 +125,9 @@
             panelBack.Controls.Add(panel14);
             panelBack.Controls.Add(expandPictureBox);
             panelBack.Controls.Add(logoutPictureBox);
-            panelBack.Location = new Point(323, 0);
+            panelBack.Location = new Point(274, 0);
             panelBack.Name = "panelBack";
-            panelBack.Size = new Size(1579, 229);
+            panelBack.Size = new Size(1628, 224);
             panelBack.TabIndex = 31;
             // 
             // TabControl
@@ -137,10 +137,10 @@
             TabControl.Controls.Add(viewAttendancetabPage);
             TabControl.Font = new Font("Century Gothic", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             TabControl.ImeMode = ImeMode.NoControl;
-            TabControl.Location = new Point(323, 224);
+            TabControl.Location = new Point(272, 220);
             TabControl.Name = "TabControl";
             TabControl.SelectedIndex = 0;
-            TabControl.Size = new Size(1581, 760);
+            TabControl.Size = new Size(1632, 760);
             TabControl.TabIndex = 32;
             // 
             // AddClassTabPage
@@ -173,7 +173,7 @@
             AddClassTabPage.Location = new Point(4, 4);
             AddClassTabPage.Name = "AddClassTabPage";
             AddClassTabPage.Padding = new Padding(3);
-            AddClassTabPage.Size = new Size(1573, 726);
+            AddClassTabPage.Size = new Size(1624, 726);
             AddClassTabPage.TabIndex = 0;
             AddClassTabPage.Text = "Add Class";
             // 
@@ -314,10 +314,10 @@
             // userControlDashboard1
             // 
             userControlDashboard1.AutoSize = true;
-            userControlDashboard1.Location = new Point(1447, 105);
-            userControlDashboard1.Margin = new Padding(4, 3, 4, 3);
+            userControlDashboard1.Location = new Point(1990, 110);
+            userControlDashboard1.Margin = new Padding(6, 3, 6, 3);
             userControlDashboard1.Name = "userControlDashboard1";
-            userControlDashboard1.Size = new Size(0, 586);
+            userControlDashboard1.Size = new Size(0, 615);
             userControlDashboard1.TabIndex = 29;
             // 
             // comboBox1
@@ -391,14 +391,14 @@
             // 
             // viewAttendancetabPage
             // 
+            viewAttendancetabPage.BackColor = SystemColors.Window;
             viewAttendancetabPage.Controls.Add(markAttendanceDataGridView);
             viewAttendancetabPage.Location = new Point(4, 4);
             viewAttendancetabPage.Name = "viewAttendancetabPage";
             viewAttendancetabPage.Padding = new Padding(3);
-            viewAttendancetabPage.Size = new Size(1573, 726);
+            viewAttendancetabPage.Size = new Size(1624, 726);
             viewAttendancetabPage.TabIndex = 1;
             viewAttendancetabPage.Text = "View Attendance";
-            viewAttendancetabPage.UseVisualStyleBackColor = true;
             // 
             // markAttendanceDataGridView
             // 
@@ -470,9 +470,9 @@
             dashboardPanel.Controls.Add(studentButton);
             dashboardPanel.Controls.Add(dashboardButton);
             dashboardPanel.Controls.Add(dashboardSmallpanel);
-            dashboardPanel.Location = new Point(-1, 0);
+            dashboardPanel.Location = new Point(0, 0);
             dashboardPanel.Name = "dashboardPanel";
-            dashboardPanel.Size = new Size(330, 1033);
+            dashboardPanel.Size = new Size(274, 1033);
             dashboardPanel.TabIndex = 33;
             // 
             // buttonReport
@@ -483,7 +483,7 @@
             buttonReport.Font = new Font("Century Gothic", 11F);
             buttonReport.Image = (Image)resources.GetObject("buttonReport.Image");
             buttonReport.ImageAlign = ContentAlignment.MiddleLeft;
-            buttonReport.Location = new Point(14, 592);
+            buttonReport.Location = new Point(13, 592);
             buttonReport.Name = "buttonReport";
             buttonReport.Size = new Size(220, 40);
             buttonReport.TabIndex = 10;
@@ -499,7 +499,7 @@
             ReportButton.Font = new Font("Century Gothic", 11F);
             ReportButton.Image = (Image)resources.GetObject("ReportButton.Image");
             ReportButton.ImageAlign = ContentAlignment.MiddleLeft;
-            ReportButton.Location = new Point(65, 1058);
+            ReportButton.Location = new Point(37, 1058);
             ReportButton.Name = "ReportButton";
             ReportButton.Size = new Size(220, 40);
             ReportButton.TabIndex = 8;
@@ -515,7 +515,7 @@
             departmentButton.Font = new Font("Century Gothic", 11F);
             departmentButton.Image = (Image)resources.GetObject("departmentButton.Image");
             departmentButton.ImageAlign = ContentAlignment.MiddleLeft;
-            departmentButton.Location = new Point(14, 542);
+            departmentButton.Location = new Point(13, 542);
             departmentButton.Name = "departmentButton";
             departmentButton.Size = new Size(220, 40);
             departmentButton.TabIndex = 7;
@@ -531,7 +531,7 @@
             professorButton.Font = new Font("Century Gothic", 11F);
             professorButton.Image = (Image)resources.GetObject("professorButton.Image");
             professorButton.ImageAlign = ContentAlignment.MiddleLeft;
-            professorButton.Location = new Point(14, 492);
+            professorButton.Location = new Point(13, 492);
             professorButton.Name = "professorButton";
             professorButton.Size = new Size(220, 40);
             professorButton.TabIndex = 6;
@@ -547,7 +547,7 @@
             classButton.Font = new Font("Century Gothic", 11F);
             classButton.Image = (Image)resources.GetObject("classButton.Image");
             classButton.ImageAlign = ContentAlignment.MiddleLeft;
-            classButton.Location = new Point(14, 442);
+            classButton.Location = new Point(13, 442);
             classButton.Name = "classButton";
             classButton.Size = new Size(220, 40);
             classButton.TabIndex = 5;
@@ -563,7 +563,7 @@
             courseButton.Font = new Font("Century Gothic", 11F);
             courseButton.Image = (Image)resources.GetObject("courseButton.Image");
             courseButton.ImageAlign = ContentAlignment.MiddleLeft;
-            courseButton.Location = new Point(11, 392);
+            courseButton.Location = new Point(13, 392);
             courseButton.Name = "courseButton";
             courseButton.Size = new Size(220, 40);
             courseButton.TabIndex = 4;
@@ -579,7 +579,7 @@
             attendanceButton.Font = new Font("Century Gothic", 11F);
             attendanceButton.Image = (Image)resources.GetObject("attendanceButton.Image");
             attendanceButton.ImageAlign = ContentAlignment.MiddleLeft;
-            attendanceButton.Location = new Point(11, 342);
+            attendanceButton.Location = new Point(13, 342);
             attendanceButton.Name = "attendanceButton";
             attendanceButton.Size = new Size(220, 40);
             attendanceButton.TabIndex = 3;
@@ -596,7 +596,7 @@
             studentButton.Font = new Font("Century Gothic", 11F);
             studentButton.Image = (Image)resources.GetObject("studentButton.Image");
             studentButton.ImageAlign = ContentAlignment.MiddleLeft;
-            studentButton.Location = new Point(14, 292);
+            studentButton.Location = new Point(13, 292);
             studentButton.Name = "studentButton";
             studentButton.Size = new Size(220, 40);
             studentButton.TabIndex = 2;
@@ -612,7 +612,7 @@
             dashboardButton.Font = new Font("Century Gothic", 11F);
             dashboardButton.Image = (Image)resources.GetObject("dashboardButton.Image");
             dashboardButton.ImageAlign = ContentAlignment.MiddleLeft;
-            dashboardButton.Location = new Point(14, 242);
+            dashboardButton.Location = new Point(13, 242);
             dashboardButton.Name = "dashboardButton";
             dashboardButton.Size = new Size(220, 40);
             dashboardButton.TabIndex = 1;
@@ -627,7 +627,7 @@
             dashboardSmallpanel.Controls.Add(dashboardPictureBox);
             dashboardSmallpanel.Location = new Point(0, 0);
             dashboardSmallpanel.Name = "dashboardSmallpanel";
-            dashboardSmallpanel.Size = new Size(330, 224);
+            dashboardSmallpanel.Size = new Size(274, 224);
             dashboardSmallpanel.TabIndex = 0;
             // 
             // dashboardTitle
@@ -635,9 +635,9 @@
             dashboardTitle.Anchor = AnchorStyles.None;
             dashboardTitle.BackColor = Color.Transparent;
             dashboardTitle.Font = new Font("Century Gothic", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            dashboardTitle.Location = new Point(39, 105);
+            dashboardTitle.Location = new Point(13, 124);
             dashboardTitle.Name = "dashboardTitle";
-            dashboardTitle.Size = new Size(286, 67);
+            dashboardTitle.Size = new Size(261, 67);
             dashboardTitle.TabIndex = 1;
             dashboardTitle.Text = "Student Attendance Management System";
             // 
@@ -645,7 +645,7 @@
             // 
             dashboardPictureBox.Anchor = AnchorStyles.None;
             dashboardPictureBox.Image = (Image)resources.GetObject("dashboardPictureBox.Image");
-            dashboardPictureBox.Location = new Point(128, 24);
+            dashboardPictureBox.Location = new Point(100, 24);
             dashboardPictureBox.Name = "dashboardPictureBox";
             dashboardPictureBox.Size = new Size(64, 64);
             dashboardPictureBox.SizeMode = PictureBoxSizeMode.AutoSize;
@@ -656,6 +656,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = SystemColors.Window;
             ClientSize = new Size(1902, 1033);
             Controls.Add(dashboardPanel);
             Controls.Add(TabControl);

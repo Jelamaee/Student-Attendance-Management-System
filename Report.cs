@@ -16,5 +16,17 @@ namespace Student_Attendance_Management_System
         {
             InitializeComponent();
         }
+
+        private void DashboardButton_Click(object sender, EventArgs e)
+        {
+            Dashboard dashboard = new Dashboard();
+            dashboard.Show();
+        }
+
+        private void StudentButton_Click(object sender, EventArgs e)
+        {
+            Student student = new Student();
+            student.Show();
+        }
     }
 }

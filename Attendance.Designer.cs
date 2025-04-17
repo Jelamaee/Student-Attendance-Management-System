@@ -29,19 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Attendance));
-            dashboardPanel = new Panel();
-            ReportButton = new Button();
-            archivedButton = new Button();
-            departmentButton = new Button();
-            professorButton = new Button();
-            CclassButton = new Button();
-            courseButton = new Button();
-            attendanceButton = new Button();
-            studentButton = new Button();
-            dashboardButton = new Button();
-            dashboardSmallpanel = new Panel();
-            dashboardTitle = new Label();
-            dashboardPictureBox = new PictureBox();
             panelBack = new Panel();
             panel2 = new Panel();
             expandPictureBox = new PictureBox();
@@ -75,9 +62,20 @@
             dataGridViewTextBoxColumn8 = new DataGridViewTextBoxColumn();
             dataGridViewTextBoxColumn9 = new DataGridViewTextBoxColumn();
             dataGridViewTextBoxColumn10 = new DataGridViewTextBoxColumn();
-            dashboardPanel.SuspendLayout();
-            dashboardSmallpanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dashboardPictureBox).BeginInit();
+            dashboardPanel = new Panel();
+            button1 = new Button();
+            ReportButton = new Button();
+            departmentButton = new Button();
+            professorButton = new Button();
+            classButton = new Button();
+            courseButton = new Button();
+            attendanceButton = new Button();
+            studentButton = new Button();
+            dashboardButton = new Button();
+            dashboardSmallpanel = new Panel();
+            dashboardTitle = new Label();
+            dashboardPictureBox = new PictureBox();
+            archivedButton = new Button();
             panelBack.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)expandPictureBox).BeginInit();
             ((System.ComponentModel.ISupportInitialize)logoutPictureBox).BeginInit();
@@ -85,229 +83,28 @@
             TabControl.SuspendLayout();
             viewAttendancetabPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            dashboardPanel.SuspendLayout();
+            dashboardSmallpanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dashboardPictureBox).BeginInit();
             SuspendLayout();
-            // 
-            // dashboardPanel
-            // 
-            dashboardPanel.Anchor = AnchorStyles.None;
-            dashboardPanel.BackColor = Color.FromArgb(188, 234, 213);
-            dashboardPanel.Controls.Add(ReportButton);
-            dashboardPanel.Controls.Add(archivedButton);
-            dashboardPanel.Controls.Add(departmentButton);
-            dashboardPanel.Controls.Add(professorButton);
-            dashboardPanel.Controls.Add(CclassButton);
-            dashboardPanel.Controls.Add(courseButton);
-            dashboardPanel.Controls.Add(attendanceButton);
-            dashboardPanel.Controls.Add(studentButton);
-            dashboardPanel.Controls.Add(dashboardButton);
-            dashboardPanel.Controls.Add(dashboardSmallpanel);
-            dashboardPanel.Location = new Point(-1, 0);
-            dashboardPanel.Name = "dashboardPanel";
-            dashboardPanel.Size = new Size(330, 1033);
-            dashboardPanel.TabIndex = 1;
-            // 
-            // ReportButton
-            // 
-            ReportButton.Anchor = AnchorStyles.None;
-            ReportButton.FlatAppearance.BorderSize = 0;
-            ReportButton.FlatStyle = FlatStyle.Flat;
-            ReportButton.Font = new Font("Century Gothic", 11F);
-            ReportButton.Image = (Image)resources.GetObject("ReportButton.Image");
-            ReportButton.ImageAlign = ContentAlignment.MiddleLeft;
-            ReportButton.Location = new Point(14, 592);
-            ReportButton.Name = "ReportButton";
-            ReportButton.Size = new Size(220, 40);
-            ReportButton.TabIndex = 9;
-            ReportButton.Text = "                Report";
-            ReportButton.TextAlign = ContentAlignment.MiddleLeft;
-            ReportButton.UseVisualStyleBackColor = true;
-            ReportButton.Click += button1_Click;
-            // 
-            // archivedButton
-            // 
-            archivedButton.Anchor = AnchorStyles.None;
-            archivedButton.FlatAppearance.BorderSize = 0;
-            archivedButton.FlatStyle = FlatStyle.Flat;
-            archivedButton.Font = new Font("Century Gothic", 11F);
-            archivedButton.Image = (Image)resources.GetObject("archivedButton.Image");
-            archivedButton.ImageAlign = ContentAlignment.MiddleLeft;
-            archivedButton.Location = new Point(65, 1058);
-            archivedButton.Name = "archivedButton";
-            archivedButton.Size = new Size(220, 40);
-            archivedButton.TabIndex = 8;
-            archivedButton.Text = "                Archived";
-            archivedButton.TextAlign = ContentAlignment.MiddleLeft;
-            archivedButton.UseVisualStyleBackColor = true;
-            // 
-            // departmentButton
-            // 
-            departmentButton.Anchor = AnchorStyles.None;
-            departmentButton.FlatAppearance.BorderSize = 0;
-            departmentButton.FlatStyle = FlatStyle.Flat;
-            departmentButton.Font = new Font("Century Gothic", 11F);
-            departmentButton.Image = (Image)resources.GetObject("departmentButton.Image");
-            departmentButton.ImageAlign = ContentAlignment.MiddleLeft;
-            departmentButton.Location = new Point(14, 542);
-            departmentButton.Name = "departmentButton";
-            departmentButton.Size = new Size(220, 40);
-            departmentButton.TabIndex = 7;
-            departmentButton.Text = "                Department";
-            departmentButton.TextAlign = ContentAlignment.MiddleLeft;
-            departmentButton.UseVisualStyleBackColor = true;
-            departmentButton.Click += departmentButton_Click;
-            // 
-            // professorButton
-            // 
-            professorButton.Anchor = AnchorStyles.None;
-            professorButton.FlatAppearance.BorderSize = 0;
-            professorButton.FlatStyle = FlatStyle.Flat;
-            professorButton.Font = new Font("Century Gothic", 11F);
-            professorButton.Image = (Image)resources.GetObject("professorButton.Image");
-            professorButton.ImageAlign = ContentAlignment.MiddleLeft;
-            professorButton.Location = new Point(14, 492);
-            professorButton.Name = "professorButton";
-            professorButton.Size = new Size(220, 40);
-            professorButton.TabIndex = 6;
-            professorButton.Text = "                Professor";
-            professorButton.TextAlign = ContentAlignment.MiddleLeft;
-            professorButton.UseVisualStyleBackColor = true;
-            professorButton.Click += professorButton_Click;
-            // 
-            // CclassButton
-            // 
-            CclassButton.Anchor = AnchorStyles.None;
-            CclassButton.FlatAppearance.BorderSize = 0;
-            CclassButton.FlatStyle = FlatStyle.Flat;
-            CclassButton.Font = new Font("Century Gothic", 11F);
-            CclassButton.Image = (Image)resources.GetObject("CclassButton.Image");
-            CclassButton.ImageAlign = ContentAlignment.MiddleLeft;
-            CclassButton.Location = new Point(14, 442);
-            CclassButton.Name = "CclassButton";
-            CclassButton.Size = new Size(220, 40);
-            CclassButton.TabIndex = 5;
-            CclassButton.Text = "                Class";
-            CclassButton.TextAlign = ContentAlignment.MiddleLeft;
-            CclassButton.UseVisualStyleBackColor = true;
-            CclassButton.Click += classButton_Click;
-            // 
-            // courseButton
-            // 
-            courseButton.Anchor = AnchorStyles.None;
-            courseButton.FlatAppearance.BorderSize = 0;
-            courseButton.FlatStyle = FlatStyle.Flat;
-            courseButton.Font = new Font("Century Gothic", 11F);
-            courseButton.Image = (Image)resources.GetObject("courseButton.Image");
-            courseButton.ImageAlign = ContentAlignment.MiddleLeft;
-            courseButton.Location = new Point(14, 392);
-            courseButton.Name = "courseButton";
-            courseButton.Size = new Size(220, 40);
-            courseButton.TabIndex = 4;
-            courseButton.Text = "                Course";
-            courseButton.TextAlign = ContentAlignment.MiddleLeft;
-            courseButton.UseVisualStyleBackColor = true;
-            courseButton.Click += courseButton_Click;
-            // 
-            // attendanceButton
-            // 
-            attendanceButton.Anchor = AnchorStyles.None;
-            attendanceButton.FlatAppearance.BorderSize = 0;
-            attendanceButton.FlatStyle = FlatStyle.Flat;
-            attendanceButton.Font = new Font("Century Gothic", 11F);
-            attendanceButton.Image = (Image)resources.GetObject("attendanceButton.Image");
-            attendanceButton.ImageAlign = ContentAlignment.MiddleLeft;
-            attendanceButton.Location = new Point(14, 342);
-            attendanceButton.Name = "attendanceButton";
-            attendanceButton.Size = new Size(220, 40);
-            attendanceButton.TabIndex = 3;
-            attendanceButton.Text = "                Attendance";
-            attendanceButton.TextAlign = ContentAlignment.MiddleLeft;
-            attendanceButton.UseVisualStyleBackColor = true;
-            attendanceButton.Click += attendanceButton_Click;
-            // 
-            // studentButton
-            // 
-            studentButton.Anchor = AnchorStyles.None;
-            studentButton.BackgroundImageLayout = ImageLayout.Zoom;
-            studentButton.FlatAppearance.BorderSize = 0;
-            studentButton.FlatStyle = FlatStyle.Flat;
-            studentButton.Font = new Font("Century Gothic", 11F);
-            studentButton.Image = (Image)resources.GetObject("studentButton.Image");
-            studentButton.ImageAlign = ContentAlignment.MiddleLeft;
-            studentButton.Location = new Point(14, 292);
-            studentButton.Name = "studentButton";
-            studentButton.Size = new Size(220, 40);
-            studentButton.TabIndex = 2;
-            studentButton.Text = "                Student";
-            studentButton.TextAlign = ContentAlignment.MiddleLeft;
-            studentButton.UseVisualStyleBackColor = true;
-            studentButton.Click += studentButton_Click;
-            // 
-            // dashboardButton
-            // 
-            dashboardButton.Anchor = AnchorStyles.None;
-            dashboardButton.FlatAppearance.BorderSize = 0;
-            dashboardButton.FlatStyle = FlatStyle.Flat;
-            dashboardButton.Font = new Font("Century Gothic", 11F);
-            dashboardButton.Image = (Image)resources.GetObject("dashboardButton.Image");
-            dashboardButton.ImageAlign = ContentAlignment.MiddleLeft;
-            dashboardButton.Location = new Point(14, 242);
-            dashboardButton.Name = "dashboardButton";
-            dashboardButton.Size = new Size(220, 40);
-            dashboardButton.TabIndex = 1;
-            dashboardButton.Text = "                Dashboard";
-            dashboardButton.TextAlign = ContentAlignment.MiddleLeft;
-            dashboardButton.UseVisualStyleBackColor = true;
-            dashboardButton.Click += dashboardButton_Click;
-            // 
-            // dashboardSmallpanel
-            // 
-            dashboardSmallpanel.Anchor = AnchorStyles.None;
-            dashboardSmallpanel.Controls.Add(dashboardTitle);
-            dashboardSmallpanel.Controls.Add(dashboardPictureBox);
-            dashboardSmallpanel.Location = new Point(0, 0);
-            dashboardSmallpanel.Name = "dashboardSmallpanel";
-            dashboardSmallpanel.Size = new Size(330, 224);
-            dashboardSmallpanel.TabIndex = 0;
-            // 
-            // dashboardTitle
-            // 
-            dashboardTitle.Anchor = AnchorStyles.None;
-            dashboardTitle.BackColor = Color.Transparent;
-            dashboardTitle.Font = new Font("Century Gothic", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            dashboardTitle.Location = new Point(24, 113);
-            dashboardTitle.Name = "dashboardTitle";
-            dashboardTitle.Size = new Size(286, 67);
-            dashboardTitle.TabIndex = 1;
-            dashboardTitle.Text = "Student Attendance Management System";
-            // 
-            // dashboardPictureBox
-            // 
-            dashboardPictureBox.Anchor = AnchorStyles.None;
-            dashboardPictureBox.Image = (Image)resources.GetObject("dashboardPictureBox.Image");
-            dashboardPictureBox.Location = new Point(113, 32);
-            dashboardPictureBox.Name = "dashboardPictureBox";
-            dashboardPictureBox.Size = new Size(64, 64);
-            dashboardPictureBox.SizeMode = PictureBoxSizeMode.AutoSize;
-            dashboardPictureBox.TabIndex = 0;
-            dashboardPictureBox.TabStop = false;
             // 
             // panelBack
             // 
-            panelBack.BackColor = SystemColors.Control;
+            panelBack.BackColor = SystemColors.Window;
             panelBack.Controls.Add(panel2);
             panelBack.Controls.Add(expandPictureBox);
             panelBack.Controls.Add(logoutPictureBox);
-            panelBack.Location = new Point(331, 0);
+            panelBack.Location = new Point(274, 0);
             panelBack.Name = "panelBack";
-            panelBack.Size = new Size(1574, 218);
+            panelBack.Size = new Size(1628, 224);
             panelBack.TabIndex = 24;
             // 
             // panel2
             // 
             panel2.BackColor = Color.FromArgb(188, 234, 213);
-            panel2.Location = new Point(0, 92);
+            panel2.Location = new Point(-9, 98);
             panel2.Name = "panel2";
-            panel2.Size = new Size(1574, 126);
+            panel2.Size = new Size(1637, 126);
             panel2.TabIndex = 3;
             // 
             // expandPictureBox
@@ -357,7 +154,7 @@
             markAttendanceTabPage.Location = new Point(4, 4);
             markAttendanceTabPage.Name = "markAttendanceTabPage";
             markAttendanceTabPage.Padding = new Padding(3);
-            markAttendanceTabPage.Size = new Size(1568, 726);
+            markAttendanceTabPage.Size = new Size(1624, 726);
             markAttendanceTabPage.TabIndex = 0;
             markAttendanceTabPage.Text = "Mark Attendance";
             markAttendanceTabPage.Click += markAttendanceTabPage_Click;
@@ -550,10 +347,10 @@
             TabControl.Controls.Add(viewAttendancetabPage);
             TabControl.Font = new Font("Century Gothic", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             TabControl.ImeMode = ImeMode.NoControl;
-            TabControl.Location = new Point(329, 214);
+            TabControl.Location = new Point(272, 220);
             TabControl.Name = "TabControl";
             TabControl.SelectedIndex = 0;
-            TabControl.Size = new Size(1576, 760);
+            TabControl.Size = new Size(1632, 760);
             TabControl.TabIndex = 23;
             // 
             // viewAttendancetabPage
@@ -564,7 +361,7 @@
             viewAttendancetabPage.Location = new Point(4, 4);
             viewAttendancetabPage.Name = "viewAttendancetabPage";
             viewAttendancetabPage.Padding = new Padding(3);
-            viewAttendancetabPage.Size = new Size(1568, 726);
+            viewAttendancetabPage.Size = new Size(1624, 726);
             viewAttendancetabPage.TabIndex = 1;
             viewAttendancetabPage.Text = "View Attendance";
             // 
@@ -636,20 +433,230 @@
             dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
             dataGridViewTextBoxColumn10.ReadOnly = true;
             // 
+            // dashboardPanel
+            // 
+            dashboardPanel.Anchor = AnchorStyles.None;
+            dashboardPanel.BackColor = Color.FromArgb(188, 234, 213);
+            dashboardPanel.Controls.Add(button1);
+            dashboardPanel.Controls.Add(ReportButton);
+            dashboardPanel.Controls.Add(departmentButton);
+            dashboardPanel.Controls.Add(professorButton);
+            dashboardPanel.Controls.Add(classButton);
+            dashboardPanel.Controls.Add(courseButton);
+            dashboardPanel.Controls.Add(attendanceButton);
+            dashboardPanel.Controls.Add(studentButton);
+            dashboardPanel.Controls.Add(dashboardButton);
+            dashboardPanel.Controls.Add(dashboardSmallpanel);
+            dashboardPanel.Controls.Add(archivedButton);
+            dashboardPanel.Location = new Point(2, 0);
+            dashboardPanel.Name = "dashboardPanel";
+            dashboardPanel.Size = new Size(274, 1033);
+            dashboardPanel.TabIndex = 25;
+            // 
+            // button1
+            // 
+            button1.Anchor = AnchorStyles.None;
+            button1.FlatAppearance.BorderSize = 0;
+            button1.FlatStyle = FlatStyle.Flat;
+            button1.Font = new Font("Century Gothic", 11F);
+            button1.Image = (Image)resources.GetObject("button1.Image");
+            button1.ImageAlign = ContentAlignment.MiddleLeft;
+            button1.Location = new Point(13, 592);
+            button1.Name = "button1";
+            button1.Size = new Size(220, 40);
+            button1.TabIndex = 19;
+            button1.Text = "                Report";
+            button1.TextAlign = ContentAlignment.MiddleLeft;
+            button1.UseVisualStyleBackColor = true;
+            // 
+            // ReportButton
+            // 
+            ReportButton.Anchor = AnchorStyles.None;
+            ReportButton.FlatAppearance.BorderSize = 0;
+            ReportButton.FlatStyle = FlatStyle.Flat;
+            ReportButton.Font = new Font("Century Gothic", 11F);
+            ReportButton.Image = (Image)resources.GetObject("ReportButton.Image");
+            ReportButton.ImageAlign = ContentAlignment.MiddleLeft;
+            ReportButton.Location = new Point(49, 1043);
+            ReportButton.Name = "ReportButton";
+            ReportButton.Size = new Size(220, 40);
+            ReportButton.TabIndex = 17;
+            ReportButton.Text = "                Reports";
+            ReportButton.TextAlign = ContentAlignment.MiddleLeft;
+            ReportButton.UseVisualStyleBackColor = true;
+            // 
+            // departmentButton
+            // 
+            departmentButton.Anchor = AnchorStyles.None;
+            departmentButton.FlatAppearance.BorderSize = 0;
+            departmentButton.FlatStyle = FlatStyle.Flat;
+            departmentButton.Font = new Font("Century Gothic", 11F);
+            departmentButton.Image = (Image)resources.GetObject("departmentButton.Image");
+            departmentButton.ImageAlign = ContentAlignment.MiddleLeft;
+            departmentButton.Location = new Point(13, 542);
+            departmentButton.Name = "departmentButton";
+            departmentButton.Size = new Size(220, 40);
+            departmentButton.TabIndex = 16;
+            departmentButton.Text = "                Department";
+            departmentButton.TextAlign = ContentAlignment.MiddleLeft;
+            departmentButton.UseVisualStyleBackColor = true;
+            // 
+            // professorButton
+            // 
+            professorButton.Anchor = AnchorStyles.None;
+            professorButton.FlatAppearance.BorderSize = 0;
+            professorButton.FlatStyle = FlatStyle.Flat;
+            professorButton.Font = new Font("Century Gothic", 11F);
+            professorButton.Image = (Image)resources.GetObject("professorButton.Image");
+            professorButton.ImageAlign = ContentAlignment.MiddleLeft;
+            professorButton.Location = new Point(13, 492);
+            professorButton.Name = "professorButton";
+            professorButton.Size = new Size(220, 40);
+            professorButton.TabIndex = 15;
+            professorButton.Text = "                Professor";
+            professorButton.TextAlign = ContentAlignment.MiddleLeft;
+            professorButton.UseVisualStyleBackColor = true;
+            // 
+            // classButton
+            // 
+            classButton.Anchor = AnchorStyles.None;
+            classButton.FlatAppearance.BorderSize = 0;
+            classButton.FlatStyle = FlatStyle.Flat;
+            classButton.Font = new Font("Century Gothic", 11F);
+            classButton.Image = (Image)resources.GetObject("classButton.Image");
+            classButton.ImageAlign = ContentAlignment.MiddleLeft;
+            classButton.Location = new Point(13, 442);
+            classButton.Name = "classButton";
+            classButton.Size = new Size(220, 40);
+            classButton.TabIndex = 14;
+            classButton.Text = "                Class";
+            classButton.TextAlign = ContentAlignment.MiddleLeft;
+            classButton.UseVisualStyleBackColor = true;
+            // 
+            // courseButton
+            // 
+            courseButton.Anchor = AnchorStyles.None;
+            courseButton.FlatAppearance.BorderSize = 0;
+            courseButton.FlatStyle = FlatStyle.Flat;
+            courseButton.Font = new Font("Century Gothic", 11F);
+            courseButton.Image = (Image)resources.GetObject("courseButton.Image");
+            courseButton.ImageAlign = ContentAlignment.MiddleLeft;
+            courseButton.Location = new Point(13, 392);
+            courseButton.Name = "courseButton";
+            courseButton.Size = new Size(220, 40);
+            courseButton.TabIndex = 13;
+            courseButton.Text = "                Course";
+            courseButton.TextAlign = ContentAlignment.MiddleLeft;
+            courseButton.UseVisualStyleBackColor = true;
+            // 
+            // attendanceButton
+            // 
+            attendanceButton.Anchor = AnchorStyles.None;
+            attendanceButton.FlatAppearance.BorderSize = 0;
+            attendanceButton.FlatStyle = FlatStyle.Flat;
+            attendanceButton.Font = new Font("Century Gothic", 11F);
+            attendanceButton.Image = (Image)resources.GetObject("attendanceButton.Image");
+            attendanceButton.ImageAlign = ContentAlignment.MiddleLeft;
+            attendanceButton.Location = new Point(13, 342);
+            attendanceButton.Name = "attendanceButton";
+            attendanceButton.Size = new Size(220, 40);
+            attendanceButton.TabIndex = 12;
+            attendanceButton.Text = "                Attendance";
+            attendanceButton.TextAlign = ContentAlignment.MiddleLeft;
+            attendanceButton.UseVisualStyleBackColor = true;
+            // 
+            // studentButton
+            // 
+            studentButton.Anchor = AnchorStyles.None;
+            studentButton.BackgroundImageLayout = ImageLayout.Zoom;
+            studentButton.FlatAppearance.BorderSize = 0;
+            studentButton.FlatStyle = FlatStyle.Flat;
+            studentButton.Font = new Font("Century Gothic", 11F);
+            studentButton.Image = (Image)resources.GetObject("studentButton.Image");
+            studentButton.ImageAlign = ContentAlignment.MiddleLeft;
+            studentButton.Location = new Point(13, 292);
+            studentButton.Name = "studentButton";
+            studentButton.Size = new Size(220, 40);
+            studentButton.TabIndex = 11;
+            studentButton.Text = "                Student";
+            studentButton.TextAlign = ContentAlignment.MiddleLeft;
+            studentButton.UseVisualStyleBackColor = true;
+            // 
+            // dashboardButton
+            // 
+            dashboardButton.Anchor = AnchorStyles.None;
+            dashboardButton.FlatAppearance.BorderSize = 0;
+            dashboardButton.FlatStyle = FlatStyle.Flat;
+            dashboardButton.Font = new Font("Century Gothic", 11F);
+            dashboardButton.Image = (Image)resources.GetObject("dashboardButton.Image");
+            dashboardButton.ImageAlign = ContentAlignment.MiddleLeft;
+            dashboardButton.Location = new Point(13, 242);
+            dashboardButton.Name = "dashboardButton";
+            dashboardButton.Size = new Size(220, 40);
+            dashboardButton.TabIndex = 10;
+            dashboardButton.Text = "                Dashboard";
+            dashboardButton.TextAlign = ContentAlignment.MiddleLeft;
+            dashboardButton.UseVisualStyleBackColor = true;
+            // 
+            // dashboardSmallpanel
+            // 
+            dashboardSmallpanel.Anchor = AnchorStyles.None;
+            dashboardSmallpanel.Controls.Add(dashboardTitle);
+            dashboardSmallpanel.Controls.Add(dashboardPictureBox);
+            dashboardSmallpanel.Location = new Point(0, 0);
+            dashboardSmallpanel.Name = "dashboardSmallpanel";
+            dashboardSmallpanel.Size = new Size(274, 224);
+            dashboardSmallpanel.TabIndex = 9;
+            // 
+            // dashboardTitle
+            // 
+            dashboardTitle.Anchor = AnchorStyles.None;
+            dashboardTitle.BackColor = Color.Transparent;
+            dashboardTitle.Font = new Font("Century Gothic", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dashboardTitle.Location = new Point(13, 124);
+            dashboardTitle.Name = "dashboardTitle";
+            dashboardTitle.Size = new Size(261, 67);
+            dashboardTitle.TabIndex = 3;
+            dashboardTitle.Text = "Student Attendance Management System";
+            // 
+            // dashboardPictureBox
+            // 
+            dashboardPictureBox.Anchor = AnchorStyles.None;
+            dashboardPictureBox.Image = (Image)resources.GetObject("dashboardPictureBox.Image");
+            dashboardPictureBox.Location = new Point(100, 42);
+            dashboardPictureBox.Name = "dashboardPictureBox";
+            dashboardPictureBox.Size = new Size(64, 64);
+            dashboardPictureBox.SizeMode = PictureBoxSizeMode.AutoSize;
+            dashboardPictureBox.TabIndex = 2;
+            dashboardPictureBox.TabStop = false;
+            // 
+            // archivedButton
+            // 
+            archivedButton.Anchor = AnchorStyles.None;
+            archivedButton.FlatAppearance.BorderSize = 0;
+            archivedButton.FlatStyle = FlatStyle.Flat;
+            archivedButton.Font = new Font("Century Gothic", 11F);
+            archivedButton.Image = (Image)resources.GetObject("archivedButton.Image");
+            archivedButton.ImageAlign = ContentAlignment.MiddleLeft;
+            archivedButton.Location = new Point(74, 1522);
+            archivedButton.Name = "archivedButton";
+            archivedButton.Size = new Size(220, 40);
+            archivedButton.TabIndex = 8;
+            archivedButton.Text = "                Archived";
+            archivedButton.TextAlign = ContentAlignment.MiddleLeft;
+            archivedButton.UseVisualStyleBackColor = true;
+            // 
             // Attendance
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = SystemColors.Window;
             ClientSize = new Size(1902, 1033);
+            Controls.Add(dashboardPanel);
             Controls.Add(panelBack);
             Controls.Add(TabControl);
-            Controls.Add(dashboardPanel);
             Name = "Attendance";
             Text = "Attendance";
-            dashboardPanel.ResumeLayout(false);
-            dashboardSmallpanel.ResumeLayout(false);
-            dashboardSmallpanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)dashboardPictureBox).EndInit();
             panelBack.ResumeLayout(false);
             panelBack.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)expandPictureBox).EndInit();
@@ -660,24 +667,14 @@
             viewAttendancetabPage.ResumeLayout(false);
             viewAttendancetabPage.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            dashboardPanel.ResumeLayout(false);
+            dashboardSmallpanel.ResumeLayout(false);
+            dashboardSmallpanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)dashboardPictureBox).EndInit();
             ResumeLayout(false);
         }
 
         #endregion
-
-        private Panel dashboardPanel;
-        private Button archivedButton;
-        private Button departmentButton;
-        private Button professorButton;
-        private Button CclassButton;
-        private Button courseButton;
-        private Button attendanceButton;
-        private Button studentButton;
-        private Button dashboardButton;
-        private Panel dashboardSmallpanel;
-        private Label dashboardTitle;
-        private PictureBox dashboardPictureBox;
-        private Button ReportButton;
         private Panel panelBack;
         private PictureBox expandPictureBox;
         private PictureBox logoutPictureBox;
@@ -711,5 +708,19 @@
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
         private Button SaveAttendanceButton;
         private Label label4;
+        private Panel dashboardPanel;
+        private Button ReportButton;
+        private Button departmentButton;
+        private Button professorButton;
+        private Button classButton;
+        private Button courseButton;
+        private Button attendanceButton;
+        private Button studentButton;
+        private Button dashboardButton;
+        private Panel dashboardSmallpanel;
+        private Label dashboardTitle;
+        private PictureBox dashboardPictureBox;
+        private Button archivedButton;
+        private Button button1;
     }
 }

@@ -72,7 +72,6 @@
             addButton = new Button();
             TabControl = new TabControl();
             addStudentTabPage = new TabPage();
-            userControlStudent1 = new UserControlStudent();
             addStudentLabel = new Label();
             maleRadioButton = new RadioButton();
             femaleRadioButton = new RadioButton();
@@ -154,7 +153,7 @@
             archivedButton.Font = new Font("Century Gothic", 11F);
             archivedButton.Image = (Image)resources.GetObject("archivedButton.Image");
             archivedButton.ImageAlign = ContentAlignment.MiddleLeft;
-            archivedButton.Location = new Point(65, 1056);
+            archivedButton.Location = new Point(37, 1056);
             archivedButton.Name = "archivedButton";
             archivedButton.Size = new Size(220, 40);
             archivedButton.TabIndex = 8;
@@ -179,7 +178,7 @@
             panelExpand.BackColor = Color.FromArgb(188, 234, 213);
             panelExpand.Controls.Add(logoutButton);
             panelExpand.Controls.Add(minimizePanel);
-            panelExpand.Location = new Point(2617, 0);
+            panelExpand.Location = new Point(2669, 0);
             panelExpand.Name = "panelExpand";
             panelExpand.Size = new Size(200, 125);
             panelExpand.TabIndex = 0;
@@ -208,9 +207,9 @@
             panelTop.BackColor = Color.FromArgb(188, 234, 213);
             panelTop.Controls.Add(panelExpand);
             panelTop.Dock = DockStyle.Bottom;
-            panelTop.Location = new Point(0, 95);
+            panelTop.Location = new Point(0, 98);
             panelTop.Name = "panelTop";
-            panelTop.Size = new Size(1576, 126);
+            panelTop.Size = new Size(1628, 126);
             panelTop.TabIndex = 0;
             // 
             // panelBack
@@ -219,9 +218,9 @@
             panelBack.Controls.Add(expandPictureBox);
             panelBack.Controls.Add(logoutPictureBox);
             panelBack.Controls.Add(panelTop);
-            panelBack.Location = new Point(328, 0);
+            panelBack.Location = new Point(274, 0);
             panelBack.Name = "panelBack";
-            panelBack.Size = new Size(1576, 221);
+            panelBack.Size = new Size(1628, 224);
             panelBack.TabIndex = 3;
             // 
             // expandPictureBox
@@ -249,9 +248,9 @@
             dashboardPanel.Controls.Add(dashboardButton);
             dashboardPanel.Controls.Add(dashboardSmallpanel);
             dashboardPanel.Controls.Add(archivedButton);
-            dashboardPanel.Location = new Point(-1, 0);
+            dashboardPanel.Location = new Point(0, 0);
             dashboardPanel.Name = "dashboardPanel";
-            dashboardPanel.Size = new Size(330, 1033);
+            dashboardPanel.Size = new Size(274, 1033);
             dashboardPanel.TabIndex = 2;
             // 
             // ReportButton
@@ -262,7 +261,7 @@
             ReportButton.Font = new Font("Century Gothic", 11F);
             ReportButton.Image = (Image)resources.GetObject("ReportButton.Image");
             ReportButton.ImageAlign = ContentAlignment.MiddleLeft;
-            ReportButton.Location = new Point(14, 592);
+            ReportButton.Location = new Point(13, 592);
             ReportButton.Name = "ReportButton";
             ReportButton.Size = new Size(220, 40);
             ReportButton.TabIndex = 17;
@@ -279,7 +278,7 @@
             departmentButton.Font = new Font("Century Gothic", 11F);
             departmentButton.Image = (Image)resources.GetObject("departmentButton.Image");
             departmentButton.ImageAlign = ContentAlignment.MiddleLeft;
-            departmentButton.Location = new Point(14, 542);
+            departmentButton.Location = new Point(13, 542);
             departmentButton.Name = "departmentButton";
             departmentButton.Size = new Size(220, 40);
             departmentButton.TabIndex = 16;
@@ -296,7 +295,7 @@
             professorButton.Font = new Font("Century Gothic", 11F);
             professorButton.Image = (Image)resources.GetObject("professorButton.Image");
             professorButton.ImageAlign = ContentAlignment.MiddleLeft;
-            professorButton.Location = new Point(14, 492);
+            professorButton.Location = new Point(13, 492);
             professorButton.Name = "professorButton";
             professorButton.Size = new Size(220, 40);
             professorButton.TabIndex = 15;
@@ -313,7 +312,7 @@
             classButton.Font = new Font("Century Gothic", 11F);
             classButton.Image = (Image)resources.GetObject("classButton.Image");
             classButton.ImageAlign = ContentAlignment.MiddleLeft;
-            classButton.Location = new Point(14, 442);
+            classButton.Location = new Point(13, 442);
             classButton.Name = "classButton";
             classButton.Size = new Size(220, 40);
             classButton.TabIndex = 14;
@@ -330,7 +329,7 @@
             courseButton.Font = new Font("Century Gothic", 11F);
             courseButton.Image = (Image)resources.GetObject("courseButton.Image");
             courseButton.ImageAlign = ContentAlignment.MiddleLeft;
-            courseButton.Location = new Point(14, 392);
+            courseButton.Location = new Point(13, 392);
             courseButton.Name = "courseButton";
             courseButton.Size = new Size(220, 40);
             courseButton.TabIndex = 13;
@@ -347,7 +346,7 @@
             attendanceButton.Font = new Font("Century Gothic", 11F);
             attendanceButton.Image = (Image)resources.GetObject("attendanceButton.Image");
             attendanceButton.ImageAlign = ContentAlignment.MiddleLeft;
-            attendanceButton.Location = new Point(14, 342);
+            attendanceButton.Location = new Point(13, 342);
             attendanceButton.Name = "attendanceButton";
             attendanceButton.Size = new Size(220, 40);
             attendanceButton.TabIndex = 12;
@@ -365,7 +364,7 @@
             studentButton.Font = new Font("Century Gothic", 11F);
             studentButton.Image = (Image)resources.GetObject("studentButton.Image");
             studentButton.ImageAlign = ContentAlignment.MiddleLeft;
-            studentButton.Location = new Point(14, 292);
+            studentButton.Location = new Point(13, 292);
             studentButton.Name = "studentButton";
             studentButton.Size = new Size(220, 40);
             studentButton.TabIndex = 11;
@@ -382,7 +381,7 @@
             dashboardButton.Font = new Font("Century Gothic", 11F);
             dashboardButton.Image = (Image)resources.GetObject("dashboardButton.Image");
             dashboardButton.ImageAlign = ContentAlignment.MiddleLeft;
-            dashboardButton.Location = new Point(14, 242);
+            dashboardButton.Location = new Point(13, 242);
             dashboardButton.Name = "dashboardButton";
             dashboardButton.Size = new Size(220, 40);
             dashboardButton.TabIndex = 10;
@@ -396,9 +395,9 @@
             dashboardSmallpanel.Anchor = AnchorStyles.None;
             dashboardSmallpanel.Controls.Add(dashboardTitle);
             dashboardSmallpanel.Controls.Add(dashboardPictureBox);
-            dashboardSmallpanel.Location = new Point(-9, 3);
+            dashboardSmallpanel.Location = new Point(0, 0);
             dashboardSmallpanel.Name = "dashboardSmallpanel";
-            dashboardSmallpanel.Size = new Size(336, 224);
+            dashboardSmallpanel.Size = new Size(274, 224);
             dashboardSmallpanel.TabIndex = 9;
             // 
             // dashboardTitle
@@ -406,9 +405,9 @@
             dashboardTitle.Anchor = AnchorStyles.None;
             dashboardTitle.BackColor = Color.Transparent;
             dashboardTitle.Font = new Font("Century Gothic", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            dashboardTitle.Location = new Point(25, 119);
+            dashboardTitle.Location = new Point(13, 124);
             dashboardTitle.Name = "dashboardTitle";
-            dashboardTitle.Size = new Size(286, 67);
+            dashboardTitle.Size = new Size(261, 67);
             dashboardTitle.TabIndex = 3;
             dashboardTitle.Text = "Student Attendance Management System";
             // 
@@ -416,7 +415,7 @@
             // 
             dashboardPictureBox.Anchor = AnchorStyles.None;
             dashboardPictureBox.Image = (Image)resources.GetObject("dashboardPictureBox.Image");
-            dashboardPictureBox.Location = new Point(114, 38);
+            dashboardPictureBox.Location = new Point(100, 42);
             dashboardPictureBox.Name = "dashboardPictureBox";
             dashboardPictureBox.Size = new Size(64, 64);
             dashboardPictureBox.SizeMode = PictureBoxSizeMode.AutoSize;
@@ -425,6 +424,7 @@
             // 
             // studentLNameLabel
             // 
+            studentLNameLabel.Anchor = AnchorStyles.None;
             studentLNameLabel.AutoSize = true;
             studentLNameLabel.Font = new Font("Century Gothic", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             studentLNameLabel.Location = new Point(558, 112);
@@ -435,6 +435,7 @@
             // 
             // studentIDLabel
             // 
+            studentIDLabel.Anchor = AnchorStyles.None;
             studentIDLabel.AutoSize = true;
             studentIDLabel.Font = new Font("Century Gothic", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             studentIDLabel.Location = new Point(180, 116);
@@ -446,6 +447,7 @@
             // 
             // studFNameLabel
             // 
+            studFNameLabel.Anchor = AnchorStyles.None;
             studFNameLabel.AutoSize = true;
             studFNameLabel.Font = new Font("Century Gothic", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             studFNameLabel.Location = new Point(946, 112);
@@ -456,6 +458,7 @@
             // 
             // studentIDTextBox
             // 
+            studentIDTextBox.Anchor = AnchorStyles.None;
             studentIDTextBox.BackColor = SystemColors.Window;
             studentIDTextBox.BorderStyle = BorderStyle.None;
             studentIDTextBox.Font = new Font("Century Gothic", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
@@ -466,6 +469,7 @@
             // 
             // panel1
             // 
+            panel1.Anchor = AnchorStyles.None;
             panel1.BackColor = Color.Black;
             panel1.Location = new Point(180, 169);
             panel1.Name = "panel1";
@@ -475,6 +479,7 @@
             // 
             // panel2
             // 
+            panel2.Anchor = AnchorStyles.None;
             panel2.BackColor = Color.Black;
             panel2.Location = new Point(558, 169);
             panel2.Name = "panel2";
@@ -483,6 +488,7 @@
             // 
             // studentLNameTextBox
             // 
+            studentLNameTextBox.Anchor = AnchorStyles.None;
             studentLNameTextBox.BackColor = SystemColors.Window;
             studentLNameTextBox.BorderStyle = BorderStyle.None;
             studentLNameTextBox.Font = new Font("Century Gothic", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
@@ -493,6 +499,7 @@
             // 
             // panel3
             // 
+            panel3.Anchor = AnchorStyles.None;
             panel3.BackColor = Color.Black;
             panel3.Location = new Point(946, 169);
             panel3.Name = "panel3";
@@ -501,6 +508,7 @@
             // 
             // studentFNameTextBox
             // 
+            studentFNameTextBox.Anchor = AnchorStyles.None;
             studentFNameTextBox.BackColor = SystemColors.Window;
             studentFNameTextBox.BorderStyle = BorderStyle.None;
             studentFNameTextBox.Font = new Font("Century Gothic", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
@@ -511,6 +519,7 @@
             // 
             // panel4
             // 
+            panel4.Anchor = AnchorStyles.None;
             panel4.BackColor = Color.Black;
             panel4.Location = new Point(946, 365);
             panel4.Name = "panel4";
@@ -519,6 +528,7 @@
             // 
             // studentEmailTextBox
             // 
+            studentEmailTextBox.Anchor = AnchorStyles.None;
             studentEmailTextBox.BackColor = SystemColors.Window;
             studentEmailTextBox.BorderStyle = BorderStyle.None;
             studentEmailTextBox.Font = new Font("Century Gothic", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
@@ -530,6 +540,7 @@
             // 
             // panel5
             // 
+            panel5.Anchor = AnchorStyles.None;
             panel5.BackColor = Color.Black;
             panel5.Location = new Point(558, 365);
             panel5.Name = "panel5";
@@ -538,6 +549,7 @@
             // 
             // dobTextBox
             // 
+            dobTextBox.Anchor = AnchorStyles.None;
             dobTextBox.BackColor = SystemColors.Window;
             dobTextBox.BorderStyle = BorderStyle.None;
             dobTextBox.Font = new Font("Century Gothic", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
@@ -548,6 +560,7 @@
             // 
             // panel6
             // 
+            panel6.Anchor = AnchorStyles.None;
             panel6.BackColor = Color.Black;
             panel6.Location = new Point(180, 365);
             panel6.Name = "panel6";
@@ -556,6 +569,7 @@
             // 
             // programAndYearTextBox
             // 
+            programAndYearTextBox.Anchor = AnchorStyles.None;
             programAndYearTextBox.BackColor = SystemColors.Window;
             programAndYearTextBox.BorderStyle = BorderStyle.None;
             programAndYearTextBox.Font = new Font("Century Gothic", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
@@ -566,6 +580,7 @@
             // 
             // genderLabel
             // 
+            genderLabel.Anchor = AnchorStyles.None;
             genderLabel.AutoSize = true;
             genderLabel.Font = new Font("Century Gothic", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             genderLabel.Location = new Point(1262, 106);
@@ -576,6 +591,7 @@
             // 
             // programAndYearLabel
             // 
+            programAndYearLabel.Anchor = AnchorStyles.None;
             programAndYearLabel.AutoSize = true;
             programAndYearLabel.Font = new Font("Century Gothic", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             programAndYearLabel.Location = new Point(180, 312);
@@ -586,6 +602,7 @@
             // 
             // dobLabel
             // 
+            dobLabel.Anchor = AnchorStyles.None;
             dobLabel.AutoSize = true;
             dobLabel.Font = new Font("Century Gothic", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             dobLabel.Location = new Point(558, 308);
@@ -596,6 +613,7 @@
             // 
             // emailLabel
             // 
+            emailLabel.Anchor = AnchorStyles.None;
             emailLabel.AutoSize = true;
             emailLabel.Font = new Font("Century Gothic", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             emailLabel.Location = new Point(946, 304);
@@ -606,6 +624,7 @@
             // 
             // addButton
             // 
+            addButton.Anchor = AnchorStyles.None;
             addButton.BackColor = Color.FromArgb(142, 195, 176);
             addButton.FlatAppearance.BorderSize = 0;
             addButton.FlatStyle = FlatStyle.Flat;
@@ -626,16 +645,15 @@
             TabControl.Controls.Add(tabPage1);
             TabControl.Font = new Font("Century Gothic", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             TabControl.ImeMode = ImeMode.NoControl;
-            TabControl.Location = new Point(328, 220);
+            TabControl.Location = new Point(272, 220);
             TabControl.Name = "TabControl";
             TabControl.SelectedIndex = 0;
-            TabControl.Size = new Size(1580, 750);
+            TabControl.Size = new Size(1632, 760);
             TabControl.TabIndex = 22;
             // 
             // addStudentTabPage
             // 
             addStudentTabPage.BackColor = SystemColors.Window;
-            addStudentTabPage.Controls.Add(userControlStudent1);
             addStudentTabPage.Controls.Add(addStudentLabel);
             addStudentTabPage.Controls.Add(maleRadioButton);
             addStudentTabPage.Controls.Add(femaleRadioButton);
@@ -663,22 +681,14 @@
             addStudentTabPage.Location = new Point(4, 4);
             addStudentTabPage.Name = "addStudentTabPage";
             addStudentTabPage.Padding = new Padding(3);
-            addStudentTabPage.Size = new Size(1572, 716);
+            addStudentTabPage.Size = new Size(1624, 726);
             addStudentTabPage.TabIndex = 0;
             addStudentTabPage.Text = "Add Student";
             addStudentTabPage.Click += tabPage1_Click;
             // 
-            // userControlStudent1
-            // 
-            userControlStudent1.BackColor = SystemColors.Window;
-            userControlStudent1.Location = new Point(0, 0);
-            userControlStudent1.Name = "userControlStudent1";
-            userControlStudent1.Size = new Size(1845, 1050);
-            userControlStudent1.TabIndex = 23;
-            userControlStudent1.Visible = false;
-            // 
             // addStudentLabel
             // 
+            addStudentLabel.Anchor = AnchorStyles.None;
             addStudentLabel.AutoSize = true;
             addStudentLabel.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             addStudentLabel.ForeColor = Color.FromArgb(142, 195, 176);
@@ -690,6 +700,7 @@
             // 
             // maleRadioButton
             // 
+            maleRadioButton.Anchor = AnchorStyles.None;
             maleRadioButton.AutoSize = true;
             maleRadioButton.Location = new Point(1316, 143);
             maleRadioButton.Name = "maleRadioButton";
@@ -701,6 +712,7 @@
             // 
             // femaleRadioButton
             // 
+            femaleRadioButton.Anchor = AnchorStyles.None;
             femaleRadioButton.AutoSize = true;
             femaleRadioButton.Checked = true;
             femaleRadioButton.Location = new Point(1316, 174);
@@ -725,12 +737,13 @@
             searchStudentTabPage.Location = new Point(4, 4);
             searchStudentTabPage.Name = "searchStudentTabPage";
             searchStudentTabPage.Padding = new Padding(3);
-            searchStudentTabPage.Size = new Size(192, 67);
+            searchStudentTabPage.Size = new Size(1624, 726);
             searchStudentTabPage.TabIndex = 1;
             searchStudentTabPage.Text = "Search Student";
             // 
             // searchStudentLabel
             // 
+            searchStudentLabel.Anchor = AnchorStyles.None;
             searchStudentLabel.AutoSize = true;
             searchStudentLabel.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             searchStudentLabel.ForeColor = Color.FromArgb(142, 195, 176);
@@ -742,9 +755,10 @@
             // 
             // totalStudOutputLabel
             // 
+            totalStudOutputLabel.Anchor = AnchorStyles.None;
             totalStudOutputLabel.AutoSize = true;
             totalStudOutputLabel.Font = new Font("Century Gothic", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            totalStudOutputLabel.Location = new Point(1405, 681);
+            totalStudOutputLabel.Location = new Point(1535, 701);
             totalStudOutputLabel.Name = "totalStudOutputLabel";
             totalStudOutputLabel.Size = new Size(33, 21);
             totalStudOutputLabel.TabIndex = 15;
@@ -752,9 +766,10 @@
             // 
             // totalStudentslabel
             // 
+            totalStudentslabel.Anchor = AnchorStyles.None;
             totalStudentslabel.AutoSize = true;
             totalStudentslabel.Font = new Font("Century Gothic", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            totalStudentslabel.Location = new Point(1265, 681);
+            totalStudentslabel.Location = new Point(1395, 701);
             totalStudentslabel.Name = "totalStudentslabel";
             totalStudentslabel.Size = new Size(134, 22);
             totalStudentslabel.TabIndex = 14;
@@ -763,8 +778,9 @@
             // 
             // searchPictureBox
             // 
+            searchPictureBox.Anchor = AnchorStyles.None;
             searchPictureBox.Image = (Image)resources.GetObject("searchPictureBox.Image");
-            searchPictureBox.Location = new Point(539, 95);
+            searchPictureBox.Location = new Point(389, 105);
             searchPictureBox.Name = "searchPictureBox";
             searchPictureBox.Size = new Size(24, 24);
             searchPictureBox.SizeMode = PictureBoxSizeMode.AutoSize;
@@ -777,13 +793,14 @@
             SearchdataGridView.AllowUserToDeleteRows = false;
             SearchdataGridView.AllowUserToResizeColumns = false;
             SearchdataGridView.AllowUserToResizeRows = false;
+            SearchdataGridView.Anchor = AnchorStyles.None;
             SearchdataGridView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             SearchdataGridView.BackgroundColor = Color.White;
             SearchdataGridView.BorderStyle = BorderStyle.None;
             SearchdataGridView.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single;
             SearchdataGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             SearchdataGridView.Columns.AddRange(new DataGridViewColumn[] { Column1, Column2, Column3, Column4, Column5, Column6, Column7 });
-            SearchdataGridView.Location = new Point(63, 211);
+            SearchdataGridView.Location = new Point(90, 211);
             SearchdataGridView.Name = "SearchdataGridView";
             SearchdataGridView.ReadOnly = true;
             SearchdataGridView.RowHeadersWidth = 51;
@@ -842,9 +859,10 @@
             // 
             // label1
             // 
+            label1.Anchor = AnchorStyles.None;
             label1.AutoSize = true;
             label1.Font = new Font("Century Gothic", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(293, 67);
+            label1.Location = new Point(143, 77);
             label1.Name = "label1";
             label1.Size = new Size(103, 22);
             label1.TabIndex = 9;
@@ -852,18 +870,20 @@
             // 
             // panel7
             // 
+            panel7.Anchor = AnchorStyles.None;
             panel7.BackColor = Color.Black;
-            panel7.Location = new Point(293, 120);
+            panel7.Location = new Point(143, 130);
             panel7.Name = "panel7";
             panel7.Size = new Size(270, 2);
             panel7.TabIndex = 11;
             // 
             // searchTextBox
             // 
+            searchTextBox.Anchor = AnchorStyles.None;
             searchTextBox.BackColor = SystemColors.Window;
             searchTextBox.BorderStyle = BorderStyle.None;
             searchTextBox.Font = new Font("Century Gothic", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            searchTextBox.Location = new Point(293, 91);
+            searchTextBox.Location = new Point(143, 101);
             searchTextBox.Name = "searchTextBox";
             searchTextBox.Size = new Size(270, 23);
             searchTextBox.TabIndex = 10;
@@ -898,7 +918,7 @@
             tabPage1.Location = new Point(4, 4);
             tabPage1.Name = "tabPage1";
             tabPage1.Padding = new Padding(3);
-            tabPage1.Size = new Size(192, 67);
+            tabPage1.Size = new Size(1624, 726);
             tabPage1.TabIndex = 2;
             tabPage1.Text = "Update and Delete Student";
             // 
@@ -1262,6 +1282,5 @@
         private Label label7;
         private Label label8;
         private Label label9;
-        private UserControlStudent userControlStudent1;
     }
 }

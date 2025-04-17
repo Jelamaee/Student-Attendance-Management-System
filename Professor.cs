@@ -61,7 +61,12 @@ namespace Student_Attendance_Management_System
 
         private void button3_Click(object sender, EventArgs e)
         {
-           
+
+        }
+
+        private void addStudentTabPage_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
