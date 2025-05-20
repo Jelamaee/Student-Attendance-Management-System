@@ -30,7 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             title = new Label();
-            emailTextBox = new TextBox();
+            UsernameTextBox = new TextBox();
             passwordTextBox = new TextBox();
             email = new Label();
             password = new Label();
@@ -57,15 +57,15 @@
             title.Text = "Student Attendance";
             title.Click += title_Click;
             // 
-            // emailTextBox
+            // UsernameTextBox
             // 
-            emailTextBox.Anchor = AnchorStyles.None;
-            emailTextBox.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            emailTextBox.Location = new Point(148, 136);
-            emailTextBox.Name = "emailTextBox";
-            emailTextBox.Size = new Size(353, 32);
-            emailTextBox.TabIndex = 1;
-            emailTextBox.TextChanged += emailTextBox_TextChanged;
+            UsernameTextBox.Anchor = AnchorStyles.None;
+            UsernameTextBox.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            UsernameTextBox.Location = new Point(148, 136);
+            UsernameTextBox.Name = "UsernameTextBox";
+            UsernameTextBox.Size = new Size(353, 32);
+            UsernameTextBox.TabIndex = 1;
+            UsernameTextBox.TextChanged += UsernameTextBox_TextChanged;
             // 
             // passwordTextBox
             // 
@@ -73,6 +73,7 @@
             passwordTextBox.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             passwordTextBox.Location = new Point(148, 238);
             passwordTextBox.Name = "passwordTextBox";
+            passwordTextBox.PasswordChar = '*';
             passwordTextBox.Size = new Size(353, 32);
             passwordTextBox.TabIndex = 2;
             passwordTextBox.TextChanged += passwordTextBox_TextChanged;
@@ -84,9 +85,9 @@
             email.Font = new Font("Century Gothic", 12F);
             email.Location = new Point(148, 99);
             email.Name = "email";
-            email.Size = new Size(67, 23);
+            email.Size = new Size(113, 23);
             email.TabIndex = 3;
-            email.Text = "Email:";
+            email.Text = "Username:";
             email.Click += email_Click;
             // 
             // password
@@ -147,13 +148,14 @@
             forgotPassLinkLabel.TabIndex = 8;
             forgotPassLinkLabel.TabStop = true;
             forgotPassLinkLabel.Text = "Forgot Password?";
+            forgotPassLinkLabel.LinkClicked += forgotPassLinkLabel_LinkClicked;
             // 
             // loginGroupBox
             // 
             loginGroupBox.Anchor = AnchorStyles.None;
             loginGroupBox.Controls.Add(email);
             loginGroupBox.Controls.Add(forgotPassLinkLabel);
-            loginGroupBox.Controls.Add(emailTextBox);
+            loginGroupBox.Controls.Add(UsernameTextBox);
             loginGroupBox.Controls.Add(label1);
             loginGroupBox.Controls.Add(passwordTextBox);
             loginGroupBox.Controls.Add(password);
@@ -211,7 +213,7 @@
         #endregion
 
         private Label title;
-        private TextBox emailTextBox;
+        private TextBox UsernameTextBox;
         private TextBox passwordTextBox;
         private Label email;
         private Label password;

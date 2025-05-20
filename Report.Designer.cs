@@ -50,7 +50,8 @@
             studentIDLabel = new Label();
             panel1 = new Panel();
             dateTimePicker1 = new DateTimePicker();
-            viewAttendancetabPage = new TabPage();
+            ClassReportTabPage = new TabPage();
+            pictureBox1 = new PictureBox();
             label4 = new Label();
             dataGridView1 = new DataGridView();
             dataGridViewTextBoxColumn6 = new DataGridViewTextBoxColumn();
@@ -80,7 +81,8 @@
             dashboardPictureBox = new PictureBox();
             TabControl.SuspendLayout();
             StudentReportTabPage.SuspendLayout();
-            viewAttendancetabPage.SuspendLayout();
+            ClassReportTabPage.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             panelBack.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)expandPictureBox).BeginInit();
@@ -94,7 +96,7 @@
             // 
             TabControl.Alignment = TabAlignment.Bottom;
             TabControl.Controls.Add(StudentReportTabPage);
-            TabControl.Controls.Add(viewAttendancetabPage);
+            TabControl.Controls.Add(ClassReportTabPage);
             TabControl.Font = new Font("Century Gothic", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             TabControl.ImeMode = ImeMode.NoControl;
             TabControl.Location = new Point(272, 220);
@@ -312,17 +314,29 @@
             dateTimePicker1.Size = new Size(242, 30);
             dateTimePicker1.TabIndex = 23;
             // 
-            // viewAttendancetabPage
+            // ClassReportTabPage
             // 
-            viewAttendancetabPage.BackColor = SystemColors.Window;
-            viewAttendancetabPage.Controls.Add(label4);
-            viewAttendancetabPage.Controls.Add(dataGridView1);
-            viewAttendancetabPage.Location = new Point(4, 4);
-            viewAttendancetabPage.Name = "viewAttendancetabPage";
-            viewAttendancetabPage.Padding = new Padding(3);
-            viewAttendancetabPage.Size = new Size(1624, 726);
-            viewAttendancetabPage.TabIndex = 1;
-            viewAttendancetabPage.Text = "View Attendance";
+            ClassReportTabPage.BackColor = SystemColors.Window;
+            ClassReportTabPage.Controls.Add(pictureBox1);
+            ClassReportTabPage.Controls.Add(label4);
+            ClassReportTabPage.Controls.Add(dataGridView1);
+            ClassReportTabPage.Location = new Point(4, 4);
+            ClassReportTabPage.Name = "ClassReportTabPage";
+            ClassReportTabPage.Padding = new Padding(3);
+            ClassReportTabPage.Size = new Size(1624, 726);
+            ClassReportTabPage.TabIndex = 1;
+            ClassReportTabPage.Text = "Class Report";
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Location = new Point(1417, 18);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(64, 64);
+            pictureBox1.SizeMode = PictureBoxSizeMode.AutoSize;
+            pictureBox1.TabIndex = 27;
+            pictureBox1.TabStop = false;
+            pictureBox1.Click += PictureBox1_Click;
             // 
             // label4
             // 
@@ -331,9 +345,9 @@
             label4.ForeColor = Color.FromArgb(142, 195, 176);
             label4.Location = new Point(12, 12);
             label4.Name = "label4";
-            label4.Size = new Size(186, 23);
+            label4.Size = new Size(79, 23);
             label4.TabIndex = 26;
-            label4.Text = "View Attendance:";
+            label4.Text = "Report:";
             // 
             // dataGridView1
             // 
@@ -347,7 +361,7 @@
             dataGridView1.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Columns.AddRange(new DataGridViewColumn[] { dataGridViewTextBoxColumn6, dataGridViewTextBoxColumn7, dataGridViewTextBoxColumn8, dataGridViewTextBoxColumn9, dataGridViewTextBoxColumn10 });
-            dataGridView1.Location = new Point(74, 135);
+            dataGridView1.Location = new Point(80, 130);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.ReadOnly = true;
             dataGridView1.RowHeadersWidth = 51;
@@ -694,8 +708,9 @@
             TabControl.ResumeLayout(false);
             StudentReportTabPage.ResumeLayout(false);
             StudentReportTabPage.PerformLayout();
-            viewAttendancetabPage.ResumeLayout(false);
-            viewAttendancetabPage.PerformLayout();
+            ClassReportTabPage.ResumeLayout(false);
+            ClassReportTabPage.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             panelBack.ResumeLayout(false);
             panelBack.PerformLayout();
@@ -711,27 +726,7 @@
         #endregion
 
         private TabControl TabControl;
-        private TabPage StudentReportTabPage;
-        private Button SaveAttendanceButton;
-        private ComboBox comboBox3;
-        private Label label3;
-        private Panel panel8;
-        private UserControlDashboard userControlDashboard2;
-        private ComboBox comboBox2;
-        private Label label2;
-        private Panel panel7;
-        private Panel panel6;
-        private Panel panel5;
-        private Panel panel4;
-        private UserControlDashboard userControlDashboard1;
-        private ComboBox comboBox1;
-        private Label label1;
-        private Panel panel3;
-        private Label StudentReportLabel;
-        private Label studentIDLabel;
-        private Panel panel1;
-        private DateTimePicker dateTimePicker1;
-        private TabPage viewAttendancetabPage;
+        private TabPage ClassReportTabPage;
         private Label label4;
         private DataGridView dataGridView1;
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
@@ -759,5 +754,26 @@
         private Label dashboardTitle;
         private PictureBox dashboardPictureBox;
         private Button buttonReport;
+        private TabPage StudentReportTabPage;
+        private Button SaveAttendanceButton;
+        private ComboBox comboBox3;
+        private Label label3;
+        private Panel panel8;
+        private UserControlDashboard userControlDashboard2;
+        private ComboBox comboBox2;
+        private Label label2;
+        private Panel panel7;
+        private Panel panel6;
+        private Panel panel5;
+        private Panel panel4;
+        private UserControlDashboard userControlDashboard1;
+        private ComboBox comboBox1;
+        private Label label1;
+        private Panel panel3;
+        private Label StudentReportLabel;
+        private Label studentIDLabel;
+        private Panel panel1;
+        private DateTimePicker dateTimePicker1;
+        private PictureBox pictureBox1;
     }
 }

@@ -1,4 +1,6 @@
-﻿namespace Student_Attendance_Management_System
+﻿using MySql.Data.MySqlClient;
+
+namespace Student_Attendance_Management_System
 {
     partial class Student
     {
@@ -61,8 +63,6 @@
             studentFNameTextBox = new TextBox();
             panel4 = new Panel();
             studentEmailTextBox = new TextBox();
-            panel5 = new Panel();
-            dobTextBox = new TextBox();
             panel6 = new Panel();
             programAndYearTextBox = new TextBox();
             genderLabel = new Label();
@@ -72,6 +72,11 @@
             addButton = new Button();
             TabControl = new TabControl();
             addStudentTabPage = new TabPage();
+            panel5 = new Panel();
+            panel14 = new Panel();
+            panel15 = new Panel();
+            panel16 = new Panel();
+            StudentdobdateTimePicker = new DateTimePicker();
             addStudentLabel = new Label();
             maleRadioButton = new RadioButton();
             femaleRadioButton = new RadioButton();
@@ -81,38 +86,34 @@
             totalStudentslabel = new Label();
             searchPictureBox = new PictureBox();
             SearchdataGridView = new DataGridView();
-            Column1 = new DataGridViewTextBoxColumn();
-            Column2 = new DataGridViewTextBoxColumn();
-            Column3 = new DataGridViewTextBoxColumn();
-            Column4 = new DataGridViewTextBoxColumn();
-            Column5 = new DataGridViewTextBoxColumn();
-            Column6 = new DataGridViewTextBoxColumn();
-            Column7 = new DataGridViewTextBoxColumn();
             label1 = new Label();
             panel7 = new Panel();
             searchTextBox = new TextBox();
             tabPage1 = new TabPage();
+            panel11 = new Panel();
+            panel17 = new Panel();
+            panel18 = new Panel();
+            panel19 = new Panel();
+            UDdobdateTimePicker = new DateTimePicker();
             deleteStudentbutton = new Button();
             label2 = new Label();
             radioButton1 = new RadioButton();
             radioButton2 = new RadioButton();
-            textBox1 = new TextBox();
+            UDStudentLNametextBox = new TextBox();
             updateStudentButton = new Button();
             label3 = new Label();
             label4 = new Label();
             panel8 = new Panel();
             label5 = new Label();
-            textBox2 = new TextBox();
-            textBox3 = new TextBox();
+            UDStudentIDtextBox = new TextBox();
+            UDStudentEmailtextBox = new TextBox();
             panel9 = new Panel();
             label6 = new Label();
             panel10 = new Panel();
-            panel11 = new Panel();
-            textBox4 = new TextBox();
-            textBox5 = new TextBox();
+            UDStudentFNametextBox = new TextBox();
             panel12 = new Panel();
             panel13 = new Panel();
-            textBox6 = new TextBox();
+            UDProgramYeartextBox = new TextBox();
             label7 = new Label();
             label8 = new Label();
             label9 = new Label();
@@ -399,6 +400,7 @@
             dashboardSmallpanel.Name = "dashboardSmallpanel";
             dashboardSmallpanel.Size = new Size(274, 224);
             dashboardSmallpanel.TabIndex = 9;
+            dashboardSmallpanel.Paint += dashboardSmallpanel_Paint;
             // 
             // dashboardTitle
             // 
@@ -466,6 +468,7 @@
             studentIDTextBox.Name = "studentIDTextBox";
             studentIDTextBox.Size = new Size(270, 23);
             studentIDTextBox.TabIndex = 7;
+            studentIDTextBox.TextChanged += studentIDTextBox_TextChanged;
             // 
             // panel1
             // 
@@ -496,6 +499,7 @@
             studentLNameTextBox.Name = "studentLNameTextBox";
             studentLNameTextBox.Size = new Size(270, 23);
             studentLNameTextBox.TabIndex = 9;
+            studentLNameTextBox.TextChanged += studentLNameTextBox_TextChanged;
             // 
             // panel3
             // 
@@ -516,6 +520,7 @@
             studentFNameTextBox.Name = "studentFNameTextBox";
             studentFNameTextBox.Size = new Size(270, 23);
             studentFNameTextBox.TabIndex = 9;
+            studentFNameTextBox.TextChanged += studentFNameTextBox_TextChanged;
             // 
             // panel4
             // 
@@ -538,26 +543,6 @@
             studentEmailTextBox.TabIndex = 16;
             studentEmailTextBox.TextChanged += studentEmailTextBox_TextChanged;
             // 
-            // panel5
-            // 
-            panel5.Anchor = AnchorStyles.None;
-            panel5.BackColor = Color.Black;
-            panel5.Location = new Point(558, 365);
-            panel5.Name = "panel5";
-            panel5.Size = new Size(270, 2);
-            panel5.TabIndex = 19;
-            // 
-            // dobTextBox
-            // 
-            dobTextBox.Anchor = AnchorStyles.None;
-            dobTextBox.BackColor = SystemColors.Window;
-            dobTextBox.BorderStyle = BorderStyle.None;
-            dobTextBox.Font = new Font("Century Gothic", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dobTextBox.Location = new Point(558, 336);
-            dobTextBox.Name = "dobTextBox";
-            dobTextBox.Size = new Size(270, 23);
-            dobTextBox.TabIndex = 17;
-            // 
             // panel6
             // 
             panel6.Anchor = AnchorStyles.None;
@@ -577,6 +562,7 @@
             programAndYearTextBox.Name = "programAndYearTextBox";
             programAndYearTextBox.Size = new Size(270, 23);
             programAndYearTextBox.TabIndex = 14;
+            programAndYearTextBox.TextChanged += programAndYearTextBox_TextChanged;
             // 
             // genderLabel
             // 
@@ -588,6 +574,7 @@
             genderLabel.Size = new Size(83, 22);
             genderLabel.TabIndex = 13;
             genderLabel.Text = "Gender:";
+            genderLabel.Click += genderLabel_Click;
             // 
             // programAndYearLabel
             // 
@@ -654,6 +641,11 @@
             // addStudentTabPage
             // 
             addStudentTabPage.BackColor = SystemColors.Window;
+            addStudentTabPage.Controls.Add(panel5);
+            addStudentTabPage.Controls.Add(panel14);
+            addStudentTabPage.Controls.Add(panel15);
+            addStudentTabPage.Controls.Add(panel16);
+            addStudentTabPage.Controls.Add(StudentdobdateTimePicker);
             addStudentTabPage.Controls.Add(addStudentLabel);
             addStudentTabPage.Controls.Add(maleRadioButton);
             addStudentTabPage.Controls.Add(femaleRadioButton);
@@ -668,9 +660,7 @@
             addStudentTabPage.Controls.Add(panel1);
             addStudentTabPage.Controls.Add(emailLabel);
             addStudentTabPage.Controls.Add(panel2);
-            addStudentTabPage.Controls.Add(panel5);
             addStudentTabPage.Controls.Add(studentFNameTextBox);
-            addStudentTabPage.Controls.Add(dobTextBox);
             addStudentTabPage.Controls.Add(panel6);
             addStudentTabPage.Controls.Add(panel3);
             addStudentTabPage.Controls.Add(programAndYearTextBox);
@@ -685,6 +675,49 @@
             addStudentTabPage.TabIndex = 0;
             addStudentTabPage.Text = "Add Student";
             addStudentTabPage.Click += tabPage1_Click;
+            // 
+            // panel5
+            // 
+            panel5.BackColor = Color.Transparent;
+            panel5.Location = new Point(796, 340);
+            panel5.Name = "panel5";
+            panel5.Size = new Size(10, 27);
+            panel5.TabIndex = 35;
+            // 
+            // panel14
+            // 
+            panel14.BackColor = Color.Transparent;
+            panel14.Location = new Point(549, 340);
+            panel14.Name = "panel14";
+            panel14.Size = new Size(10, 30);
+            panel14.TabIndex = 33;
+            // 
+            // panel15
+            // 
+            panel15.BackColor = Color.Black;
+            panel15.Location = new Point(558, 365);
+            panel15.Name = "panel15";
+            panel15.Size = new Size(240, 2);
+            panel15.TabIndex = 32;
+            // 
+            // panel16
+            // 
+            panel16.BackColor = Color.Transparent;
+            panel16.Location = new Point(554, 331);
+            panel16.Name = "panel16";
+            panel16.Size = new Size(250, 10);
+            panel16.TabIndex = 31;
+            // 
+            // StudentdobdateTimePicker
+            // 
+            StudentdobdateTimePicker.CalendarTitleForeColor = SystemColors.Window;
+            StudentdobdateTimePicker.CalendarTrailingForeColor = SystemColors.Control;
+            StudentdobdateTimePicker.CustomFormat = "MM/dd/yyyy";
+            StudentdobdateTimePicker.Format = DateTimePickerFormat.Custom;
+            StudentdobdateTimePicker.Location = new Point(558, 337);
+            StudentdobdateTimePicker.Name = "StudentdobdateTimePicker";
+            StudentdobdateTimePicker.Size = new Size(242, 30);
+            StudentdobdateTimePicker.TabIndex = 34;
             // 
             // addStudentLabel
             // 
@@ -722,6 +755,7 @@
             femaleRadioButton.TabStop = true;
             femaleRadioButton.Text = "Female";
             femaleRadioButton.UseVisualStyleBackColor = true;
+            femaleRadioButton.CheckedChanged += femaleRadioButton_CheckedChanged;
             // 
             // searchStudentTabPage
             // 
@@ -763,6 +797,7 @@
             totalStudOutputLabel.Size = new Size(33, 21);
             totalStudOutputLabel.TabIndex = 15;
             totalStudOutputLabel.Text = "(?)";
+            totalStudOutputLabel.Click += totalStudOutputLabel_Click;
             // 
             // totalStudentslabel
             // 
@@ -786,6 +821,7 @@
             searchPictureBox.SizeMode = PictureBoxSizeMode.AutoSize;
             searchPictureBox.TabIndex = 13;
             searchPictureBox.TabStop = false;
+            searchPictureBox.Click += searchPictureBox_Click;
             // 
             // SearchdataGridView
             // 
@@ -799,7 +835,6 @@
             SearchdataGridView.BorderStyle = BorderStyle.None;
             SearchdataGridView.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single;
             SearchdataGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            SearchdataGridView.Columns.AddRange(new DataGridViewColumn[] { Column1, Column2, Column3, Column4, Column5, Column6, Column7 });
             SearchdataGridView.Location = new Point(90, 211);
             SearchdataGridView.Name = "SearchdataGridView";
             SearchdataGridView.ReadOnly = true;
@@ -807,55 +842,6 @@
             SearchdataGridView.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             SearchdataGridView.Size = new Size(1421, 456);
             SearchdataGridView.TabIndex = 12;
-            // 
-            // Column1
-            // 
-            Column1.HeaderText = "Student ID";
-            Column1.MinimumWidth = 6;
-            Column1.Name = "Column1";
-            Column1.ReadOnly = true;
-            // 
-            // Column2
-            // 
-            Column2.HeaderText = "Last Name";
-            Column2.MinimumWidth = 6;
-            Column2.Name = "Column2";
-            Column2.ReadOnly = true;
-            // 
-            // Column3
-            // 
-            Column3.HeaderText = "First Name";
-            Column3.MinimumWidth = 6;
-            Column3.Name = "Column3";
-            Column3.ReadOnly = true;
-            // 
-            // Column4
-            // 
-            Column4.HeaderText = "Program and Year";
-            Column4.MinimumWidth = 6;
-            Column4.Name = "Column4";
-            Column4.ReadOnly = true;
-            // 
-            // Column5
-            // 
-            Column5.HeaderText = "Date of Birth";
-            Column5.MinimumWidth = 6;
-            Column5.Name = "Column5";
-            Column5.ReadOnly = true;
-            // 
-            // Column6
-            // 
-            Column6.HeaderText = "Gender";
-            Column6.MinimumWidth = 6;
-            Column6.Name = "Column6";
-            Column6.ReadOnly = true;
-            // 
-            // Column7
-            // 
-            Column7.HeaderText = "Email";
-            Column7.MinimumWidth = 6;
-            Column7.Name = "Column7";
-            Column7.ReadOnly = true;
             // 
             // label1
             // 
@@ -887,31 +873,35 @@
             searchTextBox.Name = "searchTextBox";
             searchTextBox.Size = new Size(270, 23);
             searchTextBox.TabIndex = 10;
+            searchTextBox.TextChanged += searchTextBox_TextChanged;
             // 
             // tabPage1
             // 
             tabPage1.BackColor = SystemColors.Window;
+            tabPage1.Controls.Add(panel11);
+            tabPage1.Controls.Add(panel17);
+            tabPage1.Controls.Add(panel18);
+            tabPage1.Controls.Add(panel19);
+            tabPage1.Controls.Add(UDdobdateTimePicker);
             tabPage1.Controls.Add(deleteStudentbutton);
             tabPage1.Controls.Add(label2);
             tabPage1.Controls.Add(radioButton1);
             tabPage1.Controls.Add(radioButton2);
-            tabPage1.Controls.Add(textBox1);
+            tabPage1.Controls.Add(UDStudentLNametextBox);
             tabPage1.Controls.Add(updateStudentButton);
             tabPage1.Controls.Add(label3);
             tabPage1.Controls.Add(label4);
             tabPage1.Controls.Add(panel8);
             tabPage1.Controls.Add(label5);
-            tabPage1.Controls.Add(textBox2);
-            tabPage1.Controls.Add(textBox3);
+            tabPage1.Controls.Add(UDStudentIDtextBox);
+            tabPage1.Controls.Add(UDStudentEmailtextBox);
             tabPage1.Controls.Add(panel9);
             tabPage1.Controls.Add(label6);
             tabPage1.Controls.Add(panel10);
-            tabPage1.Controls.Add(panel11);
-            tabPage1.Controls.Add(textBox4);
-            tabPage1.Controls.Add(textBox5);
+            tabPage1.Controls.Add(UDStudentFNametextBox);
             tabPage1.Controls.Add(panel12);
             tabPage1.Controls.Add(panel13);
-            tabPage1.Controls.Add(textBox6);
+            tabPage1.Controls.Add(UDProgramYeartextBox);
             tabPage1.Controls.Add(label7);
             tabPage1.Controls.Add(label8);
             tabPage1.Controls.Add(label9);
@@ -921,6 +911,49 @@
             tabPage1.Size = new Size(1624, 726);
             tabPage1.TabIndex = 2;
             tabPage1.Text = "Update and Delete Student";
+            // 
+            // panel11
+            // 
+            panel11.BackColor = Color.Transparent;
+            panel11.Location = new Point(793, 337);
+            panel11.Name = "panel11";
+            panel11.Size = new Size(10, 27);
+            panel11.TabIndex = 51;
+            // 
+            // panel17
+            // 
+            panel17.BackColor = Color.Transparent;
+            panel17.Location = new Point(546, 337);
+            panel17.Name = "panel17";
+            panel17.Size = new Size(10, 30);
+            panel17.TabIndex = 49;
+            // 
+            // panel18
+            // 
+            panel18.BackColor = Color.Black;
+            panel18.Location = new Point(555, 362);
+            panel18.Name = "panel18";
+            panel18.Size = new Size(240, 2);
+            panel18.TabIndex = 48;
+            // 
+            // panel19
+            // 
+            panel19.BackColor = Color.Transparent;
+            panel19.Location = new Point(551, 328);
+            panel19.Name = "panel19";
+            panel19.Size = new Size(250, 10);
+            panel19.TabIndex = 47;
+            // 
+            // UDdobdateTimePicker
+            // 
+            UDdobdateTimePicker.CalendarTitleForeColor = SystemColors.Window;
+            UDdobdateTimePicker.CalendarTrailingForeColor = SystemColors.Control;
+            UDdobdateTimePicker.CustomFormat = "MM/dd/yyyy";
+            UDdobdateTimePicker.Format = DateTimePickerFormat.Custom;
+            UDdobdateTimePicker.Location = new Point(555, 334);
+            UDdobdateTimePicker.Name = "UDdobdateTimePicker";
+            UDdobdateTimePicker.Size = new Size(242, 30);
+            UDdobdateTimePicker.TabIndex = 50;
             // 
             // deleteStudentbutton
             // 
@@ -934,6 +967,7 @@
             deleteStudentbutton.TabIndex = 46;
             deleteStudentbutton.Text = "Delete";
             deleteStudentbutton.UseVisualStyleBackColor = false;
+            deleteStudentbutton.Click += deleteStudentbutton_Click;
             // 
             // label2
             // 
@@ -968,15 +1002,15 @@
             radioButton2.Text = "Female";
             radioButton2.UseVisualStyleBackColor = true;
             // 
-            // textBox1
+            // UDStudentLNametextBox
             // 
-            textBox1.BackColor = SystemColors.Window;
-            textBox1.BorderStyle = BorderStyle.None;
-            textBox1.Font = new Font("Century Gothic", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox1.Location = new Point(555, 137);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(270, 23);
-            textBox1.TabIndex = 30;
+            UDStudentLNametextBox.BackColor = SystemColors.Window;
+            UDStudentLNametextBox.BorderStyle = BorderStyle.None;
+            UDStudentLNametextBox.Font = new Font("Century Gothic", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            UDStudentLNametextBox.Location = new Point(555, 137);
+            UDStudentLNametextBox.Name = "UDStudentLNametextBox";
+            UDStudentLNametextBox.Size = new Size(270, 23);
+            UDStudentLNametextBox.TabIndex = 30;
             // 
             // updateStudentButton
             // 
@@ -990,6 +1024,7 @@
             updateStudentButton.TabIndex = 44;
             updateStudentButton.Text = "Update";
             updateStudentButton.UseVisualStyleBackColor = false;
+            updateStudentButton.Click += updateStudentButton_Click;
             // 
             // label3
             // 
@@ -1029,25 +1064,25 @@
             label5.TabIndex = 27;
             label5.Text = "First Name:";
             // 
-            // textBox2
+            // UDStudentIDtextBox
             // 
-            textBox2.BackColor = SystemColors.Window;
-            textBox2.BorderStyle = BorderStyle.None;
-            textBox2.Font = new Font("Century Gothic", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox2.Location = new Point(177, 137);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(270, 23);
-            textBox2.TabIndex = 28;
+            UDStudentIDtextBox.BackColor = SystemColors.Window;
+            UDStudentIDtextBox.BorderStyle = BorderStyle.None;
+            UDStudentIDtextBox.Font = new Font("Century Gothic", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            UDStudentIDtextBox.Location = new Point(177, 137);
+            UDStudentIDtextBox.Name = "UDStudentIDtextBox";
+            UDStudentIDtextBox.Size = new Size(270, 23);
+            UDStudentIDtextBox.TabIndex = 28;
             // 
-            // textBox3
+            // UDStudentEmailtextBox
             // 
-            textBox3.BackColor = SystemColors.Window;
-            textBox3.BorderStyle = BorderStyle.None;
-            textBox3.Font = new Font("Century Gothic", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox3.Location = new Point(943, 333);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(270, 23);
-            textBox3.TabIndex = 39;
+            UDStudentEmailtextBox.BackColor = SystemColors.Window;
+            UDStudentEmailtextBox.BorderStyle = BorderStyle.None;
+            UDStudentEmailtextBox.Font = new Font("Century Gothic", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            UDStudentEmailtextBox.Location = new Point(943, 333);
+            UDStudentEmailtextBox.Name = "UDStudentEmailtextBox";
+            UDStudentEmailtextBox.Size = new Size(270, 23);
+            UDStudentEmailtextBox.TabIndex = 39;
             // 
             // panel9
             // 
@@ -1075,33 +1110,15 @@
             panel10.Size = new Size(270, 2);
             panel10.TabIndex = 33;
             // 
-            // panel11
+            // UDStudentFNametextBox
             // 
-            panel11.BackColor = Color.Black;
-            panel11.Location = new Point(555, 362);
-            panel11.Name = "panel11";
-            panel11.Size = new Size(270, 2);
-            panel11.TabIndex = 43;
-            // 
-            // textBox4
-            // 
-            textBox4.BackColor = SystemColors.Window;
-            textBox4.BorderStyle = BorderStyle.None;
-            textBox4.Font = new Font("Century Gothic", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox4.Location = new Point(943, 137);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(270, 23);
-            textBox4.TabIndex = 31;
-            // 
-            // textBox5
-            // 
-            textBox5.BackColor = SystemColors.Window;
-            textBox5.BorderStyle = BorderStyle.None;
-            textBox5.Font = new Font("Century Gothic", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox5.Location = new Point(555, 333);
-            textBox5.Name = "textBox5";
-            textBox5.Size = new Size(270, 23);
-            textBox5.TabIndex = 40;
+            UDStudentFNametextBox.BackColor = SystemColors.Window;
+            UDStudentFNametextBox.BorderStyle = BorderStyle.None;
+            UDStudentFNametextBox.Font = new Font("Century Gothic", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            UDStudentFNametextBox.Location = new Point(943, 137);
+            UDStudentFNametextBox.Name = "UDStudentFNametextBox";
+            UDStudentFNametextBox.Size = new Size(270, 23);
+            UDStudentFNametextBox.TabIndex = 31;
             // 
             // panel12
             // 
@@ -1119,15 +1136,15 @@
             panel13.Size = new Size(270, 2);
             panel13.TabIndex = 32;
             // 
-            // textBox6
+            // UDProgramYeartextBox
             // 
-            textBox6.BackColor = SystemColors.Window;
-            textBox6.BorderStyle = BorderStyle.None;
-            textBox6.Font = new Font("Century Gothic", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox6.Location = new Point(177, 333);
-            textBox6.Name = "textBox6";
-            textBox6.Size = new Size(270, 23);
-            textBox6.TabIndex = 37;
+            UDProgramYeartextBox.BackColor = SystemColors.Window;
+            UDProgramYeartextBox.BorderStyle = BorderStyle.None;
+            UDProgramYeartextBox.Font = new Font("Century Gothic", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            UDProgramYeartextBox.Location = new Point(177, 333);
+            UDProgramYeartextBox.Name = "UDProgramYeartextBox";
+            UDProgramYeartextBox.Size = new Size(270, 23);
+            UDProgramYeartextBox.TabIndex = 37;
             // 
             // label7
             // 
@@ -1170,6 +1187,7 @@
             Controls.Add(dashboardPanel);
             Name = "Student";
             Text = "Student";
+            Load += Student_Load;
             panelExpand.ResumeLayout(false);
             minimizePanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)logoutPictureBox).EndInit();
@@ -1227,8 +1245,6 @@
         private TextBox studentFNameTextBox;
         private Panel panel4;
         private TextBox studentEmailTextBox;
-        private Panel panel5;
-        private TextBox dobTextBox;
         private Panel panel6;
         private TextBox programAndYearTextBox;
         private Label genderLabel;
@@ -1246,13 +1262,6 @@
         private TextBox searchTextBox;
         private Panel panel7;
         private DataGridView SearchdataGridView;
-        private DataGridViewTextBoxColumn Column1;
-        private DataGridViewTextBoxColumn Column2;
-        private DataGridViewTextBoxColumn Column3;
-        private DataGridViewTextBoxColumn Column4;
-        private DataGridViewTextBoxColumn Column5;
-        private DataGridViewTextBoxColumn Column6;
-        private DataGridViewTextBoxColumn Column7;
         private PictureBox searchPictureBox;
         private Label totalStudentslabel;
         private Label totalStudOutputLabel;
@@ -1262,25 +1271,33 @@
         private Label label2;
         private RadioButton radioButton1;
         private RadioButton radioButton2;
-        private TextBox textBox1;
+        private TextBox UDStudentLNametextBox;
         private Button updateStudentButton;
         private Label label3;
         private Label label4;
         private Panel panel8;
         private Label label5;
-        private TextBox textBox2;
-        private TextBox textBox3;
+        private TextBox UDStudentIDtextBox;
+        private TextBox UDStudentEmailtextBox;
         private Panel panel9;
         private Label label6;
         private Panel panel10;
-        private Panel panel11;
-        private TextBox textBox4;
-        private TextBox textBox5;
+        private TextBox UDStudentFNametextBox;
         private Panel panel12;
         private Panel panel13;
-        private TextBox textBox6;
+        private TextBox UDProgramYeartextBox;
         private Label label7;
         private Label label8;
         private Label label9;
+        private Panel panel5;
+        private Panel panel14;
+        private Panel panel15;
+        private Panel panel16;
+        private DateTimePicker StudentdobdateTimePicker;
+        private Panel panel11;
+        private Panel panel17;
+        private Panel panel18;
+        private Panel panel19;
+        private DateTimePicker UDdobdateTimePicker;
     }
 }

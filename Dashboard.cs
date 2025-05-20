@@ -74,6 +74,12 @@ namespace Student_Attendance_Management_System
             report.Show();
         }
 
+        private void RegisterButton_Click(object sender, EventArgs e)
+        {
+            Register register = new Register();
+            register.Show();
+        }
+
         private void userControlDashboard1_Load(object sender, EventArgs e)
         {
 
@@ -81,7 +87,7 @@ namespace Student_Attendance_Management_System
 
         private void expandPictureBox_Click(object sender, EventArgs e)
         {
-            
+
         }
     }
 }

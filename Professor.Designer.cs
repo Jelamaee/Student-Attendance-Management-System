@@ -32,44 +32,40 @@
             searchStudentLabel = new Label();
             totalStudentslabel = new Label();
             searchPictureBox = new PictureBox();
-            SearchdataGridView = new DataGridView();
-            Column1 = new DataGridViewTextBoxColumn();
-            Column2 = new DataGridViewTextBoxColumn();
-            Column3 = new DataGridViewTextBoxColumn();
-            Column4 = new DataGridViewTextBoxColumn();
+            SearchProfessorDataGridView = new DataGridView();
             ProfessorLabel = new Label();
             panel7 = new Panel();
-            addStudentTabPage = new TabPage();
+            AddProfessorTabPage = new TabPage();
             addStudentLabel = new Label();
-            studentLNameTextBox = new TextBox();
+            ProfessorFNameTextBox = new TextBox();
             addButton = new Button();
-            studentLNameLabel = new Label();
-            studentIDLabel = new Label();
-            studFNameLabel = new Label();
-            studentIDTextBox = new TextBox();
+            ProfessorFNameLabel = new Label();
+            ProfessorLNameLabel = new Label();
+            EmailLabel = new Label();
+            ProfessorLNameTextBox = new TextBox();
             panel1 = new Panel();
             panel2 = new Panel();
-            studentFNameTextBox = new TextBox();
+            EmailTextBox = new TextBox();
             panel3 = new Panel();
             searchTextBox = new TextBox();
-            deleteStudentbutton = new Button();
+            DeleteProfessorButton = new Button();
             label2 = new Label();
-            updateStudentButton = new Button();
+            UpdateProfessorButton = new Button();
             panelBack = new Panel();
             panel14 = new Panel();
             expandPictureBox = new PictureBox();
             logoutPictureBox = new PictureBox();
-            totalStudOutputLabel = new Label();
+            TotalProfOutputLabel = new Label();
             SearchProfessorTabPage = new TabPage();
             tabPage1 = new TabPage();
-            textBox1 = new TextBox();
+            UDProfessorFNameTextBox = new TextBox();
             label1 = new Label();
             label3 = new Label();
             label4 = new Label();
-            textBox2 = new TextBox();
+            UDProfessorLNameTextBox = new TextBox();
             panel6 = new Panel();
             panel4 = new Panel();
-            textBox3 = new TextBox();
+            UDEmailTextBox = new TextBox();
             panel5 = new Panel();
             dashboardPanel = new Panel();
             ReportButton = new Button();
@@ -88,8 +84,8 @@
             archivedButton = new Button();
             TabControl = new TabControl();
             ((System.ComponentModel.ISupportInitialize)searchPictureBox).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)SearchdataGridView).BeginInit();
-            addStudentTabPage.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)SearchProfessorDataGridView).BeginInit();
+            AddProfessorTabPage.SuspendLayout();
             panelBack.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)expandPictureBox).BeginInit();
             ((System.ComponentModel.ISupportInitialize)logoutPictureBox).BeginInit();
@@ -118,67 +114,39 @@
             totalStudentslabel.Font = new Font("Century Gothic", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             totalStudentslabel.Location = new Point(1271, 687);
             totalStudentslabel.Name = "totalStudentslabel";
-            totalStudentslabel.Size = new Size(124, 22);
+            totalStudentslabel.Size = new Size(148, 22);
             totalStudentslabel.TabIndex = 14;
-            totalStudentslabel.Text = "Total Course:";
+            totalStudentslabel.Text = "Total Professors:";
             // 
             // searchPictureBox
             // 
             searchPictureBox.Image = (Image)resources.GetObject("searchPictureBox.Image");
-            searchPictureBox.Location = new Point(545, 101);
+            searchPictureBox.Location = new Point(539, 95);
             searchPictureBox.Name = "searchPictureBox";
             searchPictureBox.Size = new Size(24, 24);
             searchPictureBox.SizeMode = PictureBoxSizeMode.AutoSize;
             searchPictureBox.TabIndex = 13;
             searchPictureBox.TabStop = false;
+            searchPictureBox.Click += searchPictureBox_Click;
             // 
-            // SearchdataGridView
+            // SearchProfessorDataGridView
             // 
-            SearchdataGridView.AllowUserToAddRows = false;
-            SearchdataGridView.AllowUserToDeleteRows = false;
-            SearchdataGridView.AllowUserToResizeColumns = false;
-            SearchdataGridView.AllowUserToResizeRows = false;
-            SearchdataGridView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            SearchdataGridView.BackgroundColor = Color.White;
-            SearchdataGridView.BorderStyle = BorderStyle.None;
-            SearchdataGridView.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single;
-            SearchdataGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            SearchdataGridView.Columns.AddRange(new DataGridViewColumn[] { Column1, Column2, Column3, Column4 });
-            SearchdataGridView.Location = new Point(63, 211);
-            SearchdataGridView.Name = "SearchdataGridView";
-            SearchdataGridView.ReadOnly = true;
-            SearchdataGridView.RowHeadersWidth = 51;
-            SearchdataGridView.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            SearchdataGridView.Size = new Size(1421, 456);
-            SearchdataGridView.TabIndex = 12;
-            // 
-            // Column1
-            // 
-            Column1.HeaderText = "Professor ID";
-            Column1.MinimumWidth = 6;
-            Column1.Name = "Column1";
-            Column1.ReadOnly = true;
-            // 
-            // Column2
-            // 
-            Column2.HeaderText = "Last Name";
-            Column2.MinimumWidth = 6;
-            Column2.Name = "Column2";
-            Column2.ReadOnly = true;
-            // 
-            // Column3
-            // 
-            Column3.HeaderText = "First Name";
-            Column3.MinimumWidth = 6;
-            Column3.Name = "Column3";
-            Column3.ReadOnly = true;
-            // 
-            // Column4
-            // 
-            Column4.HeaderText = "Email";
-            Column4.MinimumWidth = 6;
-            Column4.Name = "Column4";
-            Column4.ReadOnly = true;
+            SearchProfessorDataGridView.AllowUserToAddRows = false;
+            SearchProfessorDataGridView.AllowUserToDeleteRows = false;
+            SearchProfessorDataGridView.AllowUserToResizeColumns = false;
+            SearchProfessorDataGridView.AllowUserToResizeRows = false;
+            SearchProfessorDataGridView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            SearchProfessorDataGridView.BackgroundColor = Color.White;
+            SearchProfessorDataGridView.BorderStyle = BorderStyle.None;
+            SearchProfessorDataGridView.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single;
+            SearchProfessorDataGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            SearchProfessorDataGridView.Location = new Point(63, 211);
+            SearchProfessorDataGridView.Name = "SearchProfessorDataGridView";
+            SearchProfessorDataGridView.ReadOnly = true;
+            SearchProfessorDataGridView.RowHeadersWidth = 51;
+            SearchProfessorDataGridView.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            SearchProfessorDataGridView.Size = new Size(1421, 456);
+            SearchProfessorDataGridView.TabIndex = 12;
             // 
             // ProfessorLabel
             // 
@@ -198,28 +166,28 @@
             panel7.Size = new Size(270, 2);
             panel7.TabIndex = 11;
             // 
-            // addStudentTabPage
+            // AddProfessorTabPage
             // 
-            addStudentTabPage.BackColor = SystemColors.Window;
-            addStudentTabPage.Controls.Add(addStudentLabel);
-            addStudentTabPage.Controls.Add(studentLNameTextBox);
-            addStudentTabPage.Controls.Add(addButton);
-            addStudentTabPage.Controls.Add(studentLNameLabel);
-            addStudentTabPage.Controls.Add(studentIDLabel);
-            addStudentTabPage.Controls.Add(studFNameLabel);
-            addStudentTabPage.Controls.Add(studentIDTextBox);
-            addStudentTabPage.Controls.Add(panel1);
-            addStudentTabPage.Controls.Add(panel2);
-            addStudentTabPage.Controls.Add(studentFNameTextBox);
-            addStudentTabPage.Controls.Add(panel3);
-            addStudentTabPage.Font = new Font("Century Gothic", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            addStudentTabPage.Location = new Point(4, 4);
-            addStudentTabPage.Name = "addStudentTabPage";
-            addStudentTabPage.Padding = new Padding(3);
-            addStudentTabPage.Size = new Size(1624, 726);
-            addStudentTabPage.TabIndex = 0;
-            addStudentTabPage.Text = "Add Professor";
-            addStudentTabPage.Click += addStudentTabPage_Click;
+            AddProfessorTabPage.BackColor = SystemColors.Window;
+            AddProfessorTabPage.Controls.Add(addStudentLabel);
+            AddProfessorTabPage.Controls.Add(ProfessorFNameTextBox);
+            AddProfessorTabPage.Controls.Add(addButton);
+            AddProfessorTabPage.Controls.Add(ProfessorFNameLabel);
+            AddProfessorTabPage.Controls.Add(ProfessorLNameLabel);
+            AddProfessorTabPage.Controls.Add(EmailLabel);
+            AddProfessorTabPage.Controls.Add(ProfessorLNameTextBox);
+            AddProfessorTabPage.Controls.Add(panel1);
+            AddProfessorTabPage.Controls.Add(panel2);
+            AddProfessorTabPage.Controls.Add(EmailTextBox);
+            AddProfessorTabPage.Controls.Add(panel3);
+            AddProfessorTabPage.Font = new Font("Century Gothic", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            AddProfessorTabPage.Location = new Point(4, 4);
+            AddProfessorTabPage.Name = "AddProfessorTabPage";
+            AddProfessorTabPage.Padding = new Padding(3);
+            AddProfessorTabPage.Size = new Size(1624, 726);
+            AddProfessorTabPage.TabIndex = 0;
+            AddProfessorTabPage.Text = "Add Professor";
+            AddProfessorTabPage.Click += addStudentTabPage_Click;
             // 
             // addStudentLabel
             // 
@@ -232,15 +200,15 @@
             addStudentLabel.TabIndex = 22;
             addStudentLabel.Text = "Add Professor:";
             // 
-            // studentLNameTextBox
+            // ProfessorFNameTextBox
             // 
-            studentLNameTextBox.BackColor = SystemColors.Window;
-            studentLNameTextBox.BorderStyle = BorderStyle.None;
-            studentLNameTextBox.Font = new Font("Century Gothic", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            studentLNameTextBox.Location = new Point(558, 140);
-            studentLNameTextBox.Name = "studentLNameTextBox";
-            studentLNameTextBox.Size = new Size(270, 23);
-            studentLNameTextBox.TabIndex = 9;
+            ProfessorFNameTextBox.BackColor = SystemColors.Window;
+            ProfessorFNameTextBox.BorderStyle = BorderStyle.None;
+            ProfessorFNameTextBox.Font = new Font("Century Gothic", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            ProfessorFNameTextBox.Location = new Point(558, 140);
+            ProfessorFNameTextBox.Name = "ProfessorFNameTextBox";
+            ProfessorFNameTextBox.Size = new Size(270, 23);
+            ProfessorFNameTextBox.TabIndex = 9;
             // 
             // addButton
             // 
@@ -254,46 +222,47 @@
             addButton.TabIndex = 21;
             addButton.Text = "Add";
             addButton.UseVisualStyleBackColor = false;
+            addButton.Click += addButton_Click;
             // 
-            // studentLNameLabel
+            // ProfessorFNameLabel
             // 
-            studentLNameLabel.AutoSize = true;
-            studentLNameLabel.Font = new Font("Century Gothic", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            studentLNameLabel.Location = new Point(564, 118);
-            studentLNameLabel.Name = "studentLNameLabel";
-            studentLNameLabel.Size = new Size(106, 22);
-            studentLNameLabel.TabIndex = 4;
-            studentLNameLabel.Text = "First Name:";
+            ProfessorFNameLabel.AutoSize = true;
+            ProfessorFNameLabel.Font = new Font("Century Gothic", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            ProfessorFNameLabel.Location = new Point(564, 118);
+            ProfessorFNameLabel.Name = "ProfessorFNameLabel";
+            ProfessorFNameLabel.Size = new Size(106, 22);
+            ProfessorFNameLabel.TabIndex = 4;
+            ProfessorFNameLabel.Text = "First Name:";
             // 
-            // studentIDLabel
+            // ProfessorLNameLabel
             // 
-            studentIDLabel.AutoSize = true;
-            studentIDLabel.Font = new Font("Century Gothic", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            studentIDLabel.Location = new Point(180, 122);
-            studentIDLabel.Name = "studentIDLabel";
-            studentIDLabel.Size = new Size(107, 22);
-            studentIDLabel.TabIndex = 5;
-            studentIDLabel.Text = "Last Name:";
+            ProfessorLNameLabel.AutoSize = true;
+            ProfessorLNameLabel.Font = new Font("Century Gothic", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            ProfessorLNameLabel.Location = new Point(180, 122);
+            ProfessorLNameLabel.Name = "ProfessorLNameLabel";
+            ProfessorLNameLabel.Size = new Size(107, 22);
+            ProfessorLNameLabel.TabIndex = 5;
+            ProfessorLNameLabel.Text = "Last Name:";
             // 
-            // studFNameLabel
+            // EmailLabel
             // 
-            studFNameLabel.AutoSize = true;
-            studFNameLabel.Font = new Font("Century Gothic", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            studFNameLabel.Location = new Point(952, 118);
-            studFNameLabel.Name = "studFNameLabel";
-            studFNameLabel.Size = new Size(132, 22);
-            studFNameLabel.TabIndex = 6;
-            studFNameLabel.Text = "Email Address";
+            EmailLabel.AutoSize = true;
+            EmailLabel.Font = new Font("Century Gothic", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            EmailLabel.Location = new Point(952, 118);
+            EmailLabel.Name = "EmailLabel";
+            EmailLabel.Size = new Size(132, 22);
+            EmailLabel.TabIndex = 6;
+            EmailLabel.Text = "Email Address";
             // 
-            // studentIDTextBox
+            // ProfessorLNameTextBox
             // 
-            studentIDTextBox.BackColor = SystemColors.Window;
-            studentIDTextBox.BorderStyle = BorderStyle.None;
-            studentIDTextBox.Font = new Font("Century Gothic", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            studentIDTextBox.Location = new Point(180, 140);
-            studentIDTextBox.Name = "studentIDTextBox";
-            studentIDTextBox.Size = new Size(270, 23);
-            studentIDTextBox.TabIndex = 7;
+            ProfessorLNameTextBox.BackColor = SystemColors.Window;
+            ProfessorLNameTextBox.BorderStyle = BorderStyle.None;
+            ProfessorLNameTextBox.Font = new Font("Century Gothic", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            ProfessorLNameTextBox.Location = new Point(180, 140);
+            ProfessorLNameTextBox.Name = "ProfessorLNameTextBox";
+            ProfessorLNameTextBox.Size = new Size(270, 23);
+            ProfessorLNameTextBox.TabIndex = 7;
             // 
             // panel1
             // 
@@ -311,15 +280,15 @@
             panel2.Size = new Size(270, 2);
             panel2.TabIndex = 10;
             // 
-            // studentFNameTextBox
+            // EmailTextBox
             // 
-            studentFNameTextBox.BackColor = SystemColors.Window;
-            studentFNameTextBox.BorderStyle = BorderStyle.None;
-            studentFNameTextBox.Font = new Font("Century Gothic", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            studentFNameTextBox.Location = new Point(946, 140);
-            studentFNameTextBox.Name = "studentFNameTextBox";
-            studentFNameTextBox.Size = new Size(270, 23);
-            studentFNameTextBox.TabIndex = 9;
+            EmailTextBox.BackColor = SystemColors.Window;
+            EmailTextBox.BorderStyle = BorderStyle.None;
+            EmailTextBox.Font = new Font("Century Gothic", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            EmailTextBox.Location = new Point(946, 140);
+            EmailTextBox.Name = "EmailTextBox";
+            EmailTextBox.Size = new Size(270, 23);
+            EmailTextBox.TabIndex = 9;
             // 
             // panel3
             // 
@@ -339,18 +308,19 @@
             searchTextBox.Size = new Size(270, 23);
             searchTextBox.TabIndex = 10;
             // 
-            // deleteStudentbutton
+            // DeleteProfessorButton
             // 
-            deleteStudentbutton.BackColor = Color.Red;
-            deleteStudentbutton.FlatAppearance.BorderSize = 0;
-            deleteStudentbutton.FlatStyle = FlatStyle.Flat;
-            deleteStudentbutton.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            deleteStudentbutton.Location = new Point(401, 256);
-            deleteStudentbutton.Name = "deleteStudentbutton";
-            deleteStudentbutton.Size = new Size(150, 40);
-            deleteStudentbutton.TabIndex = 46;
-            deleteStudentbutton.Text = "Delete";
-            deleteStudentbutton.UseVisualStyleBackColor = false;
+            DeleteProfessorButton.BackColor = Color.Red;
+            DeleteProfessorButton.FlatAppearance.BorderSize = 0;
+            DeleteProfessorButton.FlatStyle = FlatStyle.Flat;
+            DeleteProfessorButton.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            DeleteProfessorButton.Location = new Point(401, 256);
+            DeleteProfessorButton.Name = "DeleteProfessorButton";
+            DeleteProfessorButton.Size = new Size(150, 40);
+            DeleteProfessorButton.TabIndex = 46;
+            DeleteProfessorButton.Text = "Delete";
+            DeleteProfessorButton.UseVisualStyleBackColor = false;
+            DeleteProfessorButton.Click += DeleteProfessorButton_Click;
             // 
             // label2
             // 
@@ -363,18 +333,19 @@
             label2.TabIndex = 45;
             label2.Text = "Update and Delete Professor";
             // 
-            // updateStudentButton
+            // UpdateProfessorButton
             // 
-            updateStudentButton.BackColor = Color.FromArgb(142, 195, 176);
-            updateStudentButton.FlatAppearance.BorderSize = 0;
-            updateStudentButton.FlatStyle = FlatStyle.Flat;
-            updateStudentButton.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            updateStudentButton.Location = new Point(180, 256);
-            updateStudentButton.Name = "updateStudentButton";
-            updateStudentButton.Size = new Size(150, 40);
-            updateStudentButton.TabIndex = 44;
-            updateStudentButton.Text = "Update";
-            updateStudentButton.UseVisualStyleBackColor = false;
+            UpdateProfessorButton.BackColor = Color.FromArgb(142, 195, 176);
+            UpdateProfessorButton.FlatAppearance.BorderSize = 0;
+            UpdateProfessorButton.FlatStyle = FlatStyle.Flat;
+            UpdateProfessorButton.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            UpdateProfessorButton.Location = new Point(180, 256);
+            UpdateProfessorButton.Name = "UpdateProfessorButton";
+            UpdateProfessorButton.Size = new Size(150, 40);
+            UpdateProfessorButton.TabIndex = 44;
+            UpdateProfessorButton.Text = "Update";
+            UpdateProfessorButton.UseVisualStyleBackColor = false;
+            UpdateProfessorButton.Click += UpdateProfessorButton_Click;
             // 
             // panelBack
             // 
@@ -416,24 +387,24 @@
             logoutPictureBox.TabIndex = 1;
             logoutPictureBox.TabStop = false;
             // 
-            // totalStudOutputLabel
+            // TotalProfOutputLabel
             // 
-            totalStudOutputLabel.AutoSize = true;
-            totalStudOutputLabel.Font = new Font("Century Gothic", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            totalStudOutputLabel.Location = new Point(1411, 687);
-            totalStudOutputLabel.Name = "totalStudOutputLabel";
-            totalStudOutputLabel.Size = new Size(33, 21);
-            totalStudOutputLabel.TabIndex = 15;
-            totalStudOutputLabel.Text = "(?)";
+            TotalProfOutputLabel.AutoSize = true;
+            TotalProfOutputLabel.Font = new Font("Century Gothic", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            TotalProfOutputLabel.Location = new Point(1425, 688);
+            TotalProfOutputLabel.Name = "TotalProfOutputLabel";
+            TotalProfOutputLabel.Size = new Size(33, 21);
+            TotalProfOutputLabel.TabIndex = 15;
+            TotalProfOutputLabel.Text = "(?)";
             // 
             // SearchProfessorTabPage
             // 
             SearchProfessorTabPage.BackColor = SystemColors.Window;
             SearchProfessorTabPage.Controls.Add(searchStudentLabel);
-            SearchProfessorTabPage.Controls.Add(totalStudOutputLabel);
+            SearchProfessorTabPage.Controls.Add(TotalProfOutputLabel);
             SearchProfessorTabPage.Controls.Add(totalStudentslabel);
             SearchProfessorTabPage.Controls.Add(searchPictureBox);
-            SearchProfessorTabPage.Controls.Add(SearchdataGridView);
+            SearchProfessorTabPage.Controls.Add(SearchProfessorDataGridView);
             SearchProfessorTabPage.Controls.Add(ProfessorLabel);
             SearchProfessorTabPage.Controls.Add(panel7);
             SearchProfessorTabPage.Controls.Add(searchTextBox);
@@ -447,17 +418,17 @@
             // tabPage1
             // 
             tabPage1.BackColor = SystemColors.Window;
-            tabPage1.Controls.Add(textBox1);
-            tabPage1.Controls.Add(deleteStudentbutton);
+            tabPage1.Controls.Add(UDProfessorFNameTextBox);
+            tabPage1.Controls.Add(DeleteProfessorButton);
             tabPage1.Controls.Add(label1);
             tabPage1.Controls.Add(label2);
             tabPage1.Controls.Add(label3);
-            tabPage1.Controls.Add(updateStudentButton);
+            tabPage1.Controls.Add(UpdateProfessorButton);
             tabPage1.Controls.Add(label4);
-            tabPage1.Controls.Add(textBox2);
+            tabPage1.Controls.Add(UDProfessorLNameTextBox);
             tabPage1.Controls.Add(panel6);
             tabPage1.Controls.Add(panel4);
-            tabPage1.Controls.Add(textBox3);
+            tabPage1.Controls.Add(UDEmailTextBox);
             tabPage1.Controls.Add(panel5);
             tabPage1.Location = new Point(4, 4);
             tabPage1.Name = "tabPage1";
@@ -466,15 +437,15 @@
             tabPage1.TabIndex = 2;
             tabPage1.Text = "Update and Delete Professor";
             // 
-            // textBox1
+            // UDProfessorFNameTextBox
             // 
-            textBox1.BackColor = SystemColors.Window;
-            textBox1.BorderStyle = BorderStyle.None;
-            textBox1.Font = new Font("Century Gothic", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox1.Location = new Point(565, 149);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(270, 23);
-            textBox1.TabIndex = 34;
+            UDProfessorFNameTextBox.BackColor = SystemColors.Window;
+            UDProfessorFNameTextBox.BorderStyle = BorderStyle.None;
+            UDProfessorFNameTextBox.Font = new Font("Century Gothic", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            UDProfessorFNameTextBox.Location = new Point(565, 149);
+            UDProfessorFNameTextBox.Name = "UDProfessorFNameTextBox";
+            UDProfessorFNameTextBox.Size = new Size(270, 23);
+            UDProfessorFNameTextBox.TabIndex = 34;
             // 
             // label1
             // 
@@ -506,15 +477,15 @@
             label4.TabIndex = 31;
             label4.Text = "Email Address";
             // 
-            // textBox2
+            // UDProfessorLNameTextBox
             // 
-            textBox2.BackColor = SystemColors.Window;
-            textBox2.BorderStyle = BorderStyle.None;
-            textBox2.Font = new Font("Century Gothic", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox2.Location = new Point(180, 145);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(270, 23);
-            textBox2.TabIndex = 32;
+            UDProfessorLNameTextBox.BackColor = SystemColors.Window;
+            UDProfessorLNameTextBox.BorderStyle = BorderStyle.None;
+            UDProfessorLNameTextBox.Font = new Font("Century Gothic", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            UDProfessorLNameTextBox.Location = new Point(180, 145);
+            UDProfessorLNameTextBox.Name = "UDProfessorLNameTextBox";
+            UDProfessorLNameTextBox.Size = new Size(270, 23);
+            UDProfessorLNameTextBox.TabIndex = 32;
             // 
             // panel6
             // 
@@ -532,15 +503,15 @@
             panel4.Size = new Size(270, 2);
             panel4.TabIndex = 33;
             // 
-            // textBox3
+            // UDEmailTextBox
             // 
-            textBox3.BackColor = SystemColors.Window;
-            textBox3.BorderStyle = BorderStyle.None;
-            textBox3.Font = new Font("Century Gothic", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox3.Location = new Point(953, 149);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(270, 23);
-            textBox3.TabIndex = 35;
+            UDEmailTextBox.BackColor = SystemColors.Window;
+            UDEmailTextBox.BorderStyle = BorderStyle.None;
+            UDEmailTextBox.Font = new Font("Century Gothic", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            UDEmailTextBox.Location = new Point(953, 149);
+            UDEmailTextBox.Name = "UDEmailTextBox";
+            UDEmailTextBox.Size = new Size(270, 23);
+            UDEmailTextBox.TabIndex = 35;
             // 
             // panel5
             // 
@@ -791,7 +762,7 @@
             // TabControl
             // 
             TabControl.Alignment = TabAlignment.Bottom;
-            TabControl.Controls.Add(addStudentTabPage);
+            TabControl.Controls.Add(AddProfessorTabPage);
             TabControl.Controls.Add(SearchProfessorTabPage);
             TabControl.Controls.Add(tabPage1);
             TabControl.Font = new Font("Century Gothic", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
@@ -814,9 +785,9 @@
             Name = "Professor";
             Text = "Professor";
             ((System.ComponentModel.ISupportInitialize)searchPictureBox).EndInit();
-            ((System.ComponentModel.ISupportInitialize)SearchdataGridView).EndInit();
-            addStudentTabPage.ResumeLayout(false);
-            addStudentTabPage.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)SearchProfessorDataGridView).EndInit();
+            AddProfessorTabPage.ResumeLayout(false);
+            AddProfessorTabPage.PerformLayout();
             panelBack.ResumeLayout(false);
             panelBack.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)expandPictureBox).EndInit();
@@ -838,30 +809,30 @@
         private Label searchStudentLabel;
         private Label totalStudentslabel;
         private PictureBox searchPictureBox;
-        private DataGridView SearchdataGridView;
+        private DataGridView SearchProfessorDataGridView;
         private Label ProfessorLabel;
         private Panel panel7;
-        private TabPage addStudentTabPage;
+        private TabPage AddProfessorTabPage;
         private Label addStudentLabel;
-        private TextBox studentLNameTextBox;
+        private TextBox ProfessorFNameTextBox;
         private Button addButton;
-        private Label studentLNameLabel;
-        private Label studentIDLabel;
-        private Label studFNameLabel;
-        private TextBox studentIDTextBox;
+        private Label ProfessorFNameLabel;
+        private Label ProfessorLNameLabel;
+        private Label EmailLabel;
+        private TextBox ProfessorLNameTextBox;
         private Panel panel1;
         private Panel panel2;
-        private TextBox studentFNameTextBox;
+        private TextBox EmailTextBox;
         private Panel panel3;
         private TextBox searchTextBox;
-        private Button deleteStudentbutton;
+        private Button DeleteProfessorButton;
         private Label label2;
-        private Button updateStudentButton;
+        private Button UpdateProfessorButton;
         private Panel panelBack;
         private Panel panel14;
         private PictureBox expandPictureBox;
         private PictureBox logoutPictureBox;
-        private Label totalStudOutputLabel;
+        private Label TotalProfOutputLabel;
         private TabPage SearchProfessorTabPage;
         private TabPage tabPage1;
         private Panel dashboardPanel;
@@ -880,18 +851,14 @@
         private Button archivedButton;
         private TabControl TabControl;
         private Button ReportButton;
-        private DataGridViewTextBoxColumn Column1;
-        private DataGridViewTextBoxColumn Column2;
-        private DataGridViewTextBoxColumn Column3;
-        private DataGridViewTextBoxColumn Column4;
-        private TextBox textBox1;
+        private TextBox UDProfessorFNameTextBox;
         private Label label1;
         private Label label3;
         private Label label4;
-        private TextBox textBox2;
+        private TextBox UDProfessorLNameTextBox;
         private Panel panel6;
         private Panel panel4;
-        private TextBox textBox3;
+        private TextBox UDEmailTextBox;
         private Panel panel5;
     }
 }

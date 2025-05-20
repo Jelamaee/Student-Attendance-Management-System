@@ -30,36 +30,29 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Department));
             label2 = new Label();
-            textBox1 = new TextBox();
-            updateStudentButton = new Button();
+            UpdateDepartmentButton = new Button();
             dashboardPictureBox = new PictureBox();
             panelBack = new Panel();
             panel14 = new Panel();
             expandPictureBox = new PictureBox();
             logoutPictureBox = new PictureBox();
-            totalStudOutputLabel = new Label();
-            searchStudentTabPage = new TabPage();
+            TotalDeptNameOutputLabel = new Label();
+            SearchDepartmentTabPage = new TabPage();
             searchStudentLabel = new Label();
-            totalStudentslabel = new Label();
+            TotalDepartmentLabel = new Label();
             searchPictureBox = new PictureBox();
-            SearchdataGridView = new DataGridView();
-            Column1 = new DataGridViewTextBoxColumn();
-            Column2 = new DataGridViewTextBoxColumn();
-            Column3 = new DataGridViewTextBoxColumn();
-            Column4 = new DataGridViewTextBoxColumn();
+            SearchDataGridView = new DataGridView();
             label1 = new Label();
             panel7 = new Panel();
             searchTextBox = new TextBox();
             tabPage1 = new TabPage();
-            deleteStudentbutton = new Button();
+            UDdeptHeadTextBox = new TextBox();
+            DeleteDepartmentButton = new Button();
             label3 = new Label();
             label4 = new Label();
-            label5 = new Label();
-            textBox2 = new TextBox();
-            panel9 = new Panel();
-            panel10 = new Panel();
-            textBox4 = new TextBox();
-            panel13 = new Panel();
+            UDdeptNameTextBox = new TextBox();
+            panel3 = new Panel();
+            panel4 = new Panel();
             dashboardPanel = new Panel();
             ReportButton = new Button();
             button3 = new Button();
@@ -76,33 +69,27 @@
             dashboardTitle = new Label();
             archivedButton = new Button();
             TabControl = new TabControl();
-            addStudentTabPage = new TabPage();
-            panel4 = new Panel();
-            Departmentlabel = new Label();
-            DepartmentComboBox = new ComboBox();
+            AddDepartmentTabPage = new TabPage();
             addStudentLabel = new Label();
-            studentLNameTextBox = new TextBox();
-            addButton = new Button();
+            DeptHeadTextBox = new TextBox();
+            AddDepartmentButton = new Button();
             studentLNameLabel = new Label();
-            studentIDLabel = new Label();
-            studFNameLabel = new Label();
-            studentIDTextBox = new TextBox();
+            Label = new Label();
+            DeptNameTextBox = new TextBox();
             panel1 = new Panel();
             panel2 = new Panel();
-            studentFNameTextBox = new TextBox();
-            panel3 = new Panel();
             ((System.ComponentModel.ISupportInitialize)dashboardPictureBox).BeginInit();
             panelBack.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)expandPictureBox).BeginInit();
             ((System.ComponentModel.ISupportInitialize)logoutPictureBox).BeginInit();
-            searchStudentTabPage.SuspendLayout();
+            SearchDepartmentTabPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)searchPictureBox).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)SearchdataGridView).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)SearchDataGridView).BeginInit();
             tabPage1.SuspendLayout();
             dashboardPanel.SuspendLayout();
             dashboardSmallpanel.SuspendLayout();
             TabControl.SuspendLayout();
-            addStudentTabPage.SuspendLayout();
+            AddDepartmentTabPage.SuspendLayout();
             SuspendLayout();
             // 
             // label2
@@ -116,28 +103,19 @@
             label2.TabIndex = 45;
             label2.Text = "Update and Delete Course";
             // 
-            // textBox1
+            // UpdateDepartmentButton
             // 
-            textBox1.BackColor = SystemColors.Window;
-            textBox1.BorderStyle = BorderStyle.None;
-            textBox1.Font = new Font("Century Gothic", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox1.Location = new Point(555, 137);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(270, 23);
-            textBox1.TabIndex = 30;
-            // 
-            // updateStudentButton
-            // 
-            updateStudentButton.BackColor = Color.FromArgb(142, 195, 176);
-            updateStudentButton.FlatAppearance.BorderSize = 0;
-            updateStudentButton.FlatStyle = FlatStyle.Flat;
-            updateStudentButton.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            updateStudentButton.Location = new Point(180, 256);
-            updateStudentButton.Name = "updateStudentButton";
-            updateStudentButton.Size = new Size(150, 40);
-            updateStudentButton.TabIndex = 44;
-            updateStudentButton.Text = "Update";
-            updateStudentButton.UseVisualStyleBackColor = false;
+            UpdateDepartmentButton.BackColor = Color.FromArgb(142, 195, 176);
+            UpdateDepartmentButton.FlatAppearance.BorderSize = 0;
+            UpdateDepartmentButton.FlatStyle = FlatStyle.Flat;
+            UpdateDepartmentButton.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            UpdateDepartmentButton.Location = new Point(189, 396);
+            UpdateDepartmentButton.Name = "UpdateDepartmentButton";
+            UpdateDepartmentButton.Size = new Size(150, 40);
+            UpdateDepartmentButton.TabIndex = 44;
+            UpdateDepartmentButton.Text = "Update";
+            UpdateDepartmentButton.UseVisualStyleBackColor = false;
+            UpdateDepartmentButton.Click += UpdateDepartmentButton_Click;
             // 
             // dashboardPictureBox
             // 
@@ -190,33 +168,33 @@
             logoutPictureBox.TabIndex = 1;
             logoutPictureBox.TabStop = false;
             // 
-            // totalStudOutputLabel
+            // TotalDeptNameOutputLabel
             // 
-            totalStudOutputLabel.AutoSize = true;
-            totalStudOutputLabel.Font = new Font("Century Gothic", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            totalStudOutputLabel.Location = new Point(1414, 690);
-            totalStudOutputLabel.Name = "totalStudOutputLabel";
-            totalStudOutputLabel.Size = new Size(33, 21);
-            totalStudOutputLabel.TabIndex = 15;
-            totalStudOutputLabel.Text = "(?)";
+            TotalDeptNameOutputLabel.AutoSize = true;
+            TotalDeptNameOutputLabel.Font = new Font("Century Gothic", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            TotalDeptNameOutputLabel.Location = new Point(1467, 691);
+            TotalDeptNameOutputLabel.Name = "TotalDeptNameOutputLabel";
+            TotalDeptNameOutputLabel.Size = new Size(33, 21);
+            TotalDeptNameOutputLabel.TabIndex = 15;
+            TotalDeptNameOutputLabel.Text = "(?)";
             // 
-            // searchStudentTabPage
+            // SearchDepartmentTabPage
             // 
-            searchStudentTabPage.BackColor = SystemColors.Window;
-            searchStudentTabPage.Controls.Add(searchStudentLabel);
-            searchStudentTabPage.Controls.Add(totalStudOutputLabel);
-            searchStudentTabPage.Controls.Add(totalStudentslabel);
-            searchStudentTabPage.Controls.Add(searchPictureBox);
-            searchStudentTabPage.Controls.Add(SearchdataGridView);
-            searchStudentTabPage.Controls.Add(label1);
-            searchStudentTabPage.Controls.Add(panel7);
-            searchStudentTabPage.Controls.Add(searchTextBox);
-            searchStudentTabPage.Location = new Point(4, 4);
-            searchStudentTabPage.Name = "searchStudentTabPage";
-            searchStudentTabPage.Padding = new Padding(3);
-            searchStudentTabPage.Size = new Size(1624, 726);
-            searchStudentTabPage.TabIndex = 1;
-            searchStudentTabPage.Text = "Search Course";
+            SearchDepartmentTabPage.BackColor = SystemColors.Window;
+            SearchDepartmentTabPage.Controls.Add(searchStudentLabel);
+            SearchDepartmentTabPage.Controls.Add(TotalDeptNameOutputLabel);
+            SearchDepartmentTabPage.Controls.Add(TotalDepartmentLabel);
+            SearchDepartmentTabPage.Controls.Add(searchPictureBox);
+            SearchDepartmentTabPage.Controls.Add(SearchDataGridView);
+            SearchDepartmentTabPage.Controls.Add(label1);
+            SearchDepartmentTabPage.Controls.Add(panel7);
+            SearchDepartmentTabPage.Controls.Add(searchTextBox);
+            SearchDepartmentTabPage.Location = new Point(4, 4);
+            SearchDepartmentTabPage.Name = "SearchDepartmentTabPage";
+            SearchDepartmentTabPage.Padding = new Padding(3);
+            SearchDepartmentTabPage.Size = new Size(1624, 726);
+            SearchDepartmentTabPage.TabIndex = 1;
+            SearchDepartmentTabPage.Text = "Search Department";
             // 
             // searchStudentLabel
             // 
@@ -229,73 +207,46 @@
             searchStudentLabel.TabIndex = 16;
             searchStudentLabel.Text = "Search Course Code:";
             // 
-            // totalStudentslabel
+            // TotalDepartmentLabel
             // 
-            totalStudentslabel.AutoSize = true;
-            totalStudentslabel.Font = new Font("Century Gothic", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            totalStudentslabel.Location = new Point(1274, 690);
-            totalStudentslabel.Name = "totalStudentslabel";
-            totalStudentslabel.Size = new Size(124, 22);
-            totalStudentslabel.TabIndex = 14;
-            totalStudentslabel.Text = "Total Course:";
+            TotalDepartmentLabel.AutoSize = true;
+            TotalDepartmentLabel.Font = new Font("Century Gothic", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            TotalDepartmentLabel.Location = new Point(1274, 690);
+            TotalDepartmentLabel.Name = "TotalDepartmentLabel";
+            TotalDepartmentLabel.Size = new Size(174, 22);
+            TotalDepartmentLabel.TabIndex = 14;
+            TotalDepartmentLabel.Text = "Total Departments:";
             // 
             // searchPictureBox
             // 
             searchPictureBox.Image = (Image)resources.GetObject("searchPictureBox.Image");
-            searchPictureBox.Location = new Point(548, 104);
+            searchPictureBox.Location = new Point(539, 95);
             searchPictureBox.Name = "searchPictureBox";
             searchPictureBox.Size = new Size(24, 24);
             searchPictureBox.SizeMode = PictureBoxSizeMode.AutoSize;
             searchPictureBox.TabIndex = 13;
             searchPictureBox.TabStop = false;
+            searchPictureBox.Click += searchPictureBox_Click;
             // 
-            // SearchdataGridView
+            // SearchDataGridView
             // 
-            SearchdataGridView.AllowUserToAddRows = false;
-            SearchdataGridView.AllowUserToDeleteRows = false;
-            SearchdataGridView.AllowUserToResizeColumns = false;
-            SearchdataGridView.AllowUserToResizeRows = false;
-            SearchdataGridView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            SearchdataGridView.BackgroundColor = Color.White;
-            SearchdataGridView.BorderStyle = BorderStyle.None;
-            SearchdataGridView.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single;
-            SearchdataGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            SearchdataGridView.Columns.AddRange(new DataGridViewColumn[] { Column1, Column2, Column3, Column4 });
-            SearchdataGridView.Location = new Point(63, 211);
-            SearchdataGridView.Name = "SearchdataGridView";
-            SearchdataGridView.ReadOnly = true;
-            SearchdataGridView.RowHeadersWidth = 51;
-            SearchdataGridView.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            SearchdataGridView.Size = new Size(1421, 456);
-            SearchdataGridView.TabIndex = 12;
-            // 
-            // Column1
-            // 
-            Column1.HeaderText = "Course ID";
-            Column1.MinimumWidth = 6;
-            Column1.Name = "Column1";
-            Column1.ReadOnly = true;
-            // 
-            // Column2
-            // 
-            Column2.HeaderText = "Course Code";
-            Column2.MinimumWidth = 6;
-            Column2.Name = "Column2";
-            Column2.ReadOnly = true;
-            // 
-            // Column3
-            // 
-            Column3.HeaderText = "Course Name";
-            Column3.MinimumWidth = 6;
-            Column3.Name = "Column3";
-            Column3.ReadOnly = true;
-            // 
-            // Column4
-            // 
-            Column4.HeaderText = "Credit Hours";
-            Column4.MinimumWidth = 6;
-            Column4.Name = "Column4";
-            Column4.ReadOnly = true;
+            SearchDataGridView.AllowUserToAddRows = false;
+            SearchDataGridView.AllowUserToDeleteRows = false;
+            SearchDataGridView.AllowUserToResizeColumns = false;
+            SearchDataGridView.AllowUserToResizeRows = false;
+            SearchDataGridView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            SearchDataGridView.BackgroundColor = Color.White;
+            SearchDataGridView.BorderStyle = BorderStyle.None;
+            SearchDataGridView.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single;
+            SearchDataGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            SearchDataGridView.Location = new Point(63, 211);
+            SearchDataGridView.Name = "SearchDataGridView";
+            SearchDataGridView.ReadOnly = true;
+            SearchDataGridView.RowHeadersWidth = 51;
+            SearchDataGridView.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            SearchDataGridView.Size = new Size(1421, 456);
+            SearchDataGridView.TabIndex = 12;
+            SearchDataGridView.CellContentClick += SearchdataGridView_CellContentClick;
             // 
             // label1
             // 
@@ -303,9 +254,9 @@
             label1.Font = new Font("Century Gothic", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.Location = new Point(302, 76);
             label1.Name = "label1";
-            label1.Size = new Size(133, 22);
+            label1.Size = new Size(179, 22);
             label1.TabIndex = 9;
-            label1.Text = "Course Code:";
+            label1.Text = "Department Name:";
             // 
             // panel7
             // 
@@ -320,119 +271,101 @@
             searchTextBox.BackColor = SystemColors.Window;
             searchTextBox.BorderStyle = BorderStyle.None;
             searchTextBox.Font = new Font("Century Gothic", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            searchTextBox.Location = new Point(293, 91);
+            searchTextBox.Location = new Point(293, 101);
             searchTextBox.Name = "searchTextBox";
             searchTextBox.Size = new Size(270, 23);
             searchTextBox.TabIndex = 10;
+            searchTextBox.TextChanged += searchTextBox_TextChanged;
             // 
             // tabPage1
             // 
             tabPage1.BackColor = SystemColors.Window;
-            tabPage1.Controls.Add(deleteStudentbutton);
-            tabPage1.Controls.Add(label2);
-            tabPage1.Controls.Add(textBox1);
-            tabPage1.Controls.Add(updateStudentButton);
+            tabPage1.Controls.Add(UDdeptHeadTextBox);
+            tabPage1.Controls.Add(DeleteDepartmentButton);
             tabPage1.Controls.Add(label3);
+            tabPage1.Controls.Add(label2);
             tabPage1.Controls.Add(label4);
-            tabPage1.Controls.Add(label5);
-            tabPage1.Controls.Add(textBox2);
-            tabPage1.Controls.Add(panel9);
-            tabPage1.Controls.Add(panel10);
-            tabPage1.Controls.Add(textBox4);
-            tabPage1.Controls.Add(panel13);
+            tabPage1.Controls.Add(UpdateDepartmentButton);
+            tabPage1.Controls.Add(UDdeptNameTextBox);
+            tabPage1.Controls.Add(panel3);
+            tabPage1.Controls.Add(panel4);
             tabPage1.Location = new Point(4, 4);
             tabPage1.Name = "tabPage1";
             tabPage1.Padding = new Padding(3);
             tabPage1.Size = new Size(1624, 726);
             tabPage1.TabIndex = 2;
-            tabPage1.Text = "Update and Delete Course";
+            tabPage1.Text = "Update and Delete Department";
             // 
-            // deleteStudentbutton
+            // UDdeptHeadTextBox
             // 
-            deleteStudentbutton.BackColor = Color.Red;
-            deleteStudentbutton.FlatAppearance.BorderSize = 0;
-            deleteStudentbutton.FlatStyle = FlatStyle.Flat;
-            deleteStudentbutton.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            deleteStudentbutton.Location = new Point(401, 256);
-            deleteStudentbutton.Name = "deleteStudentbutton";
-            deleteStudentbutton.Size = new Size(150, 40);
-            deleteStudentbutton.TabIndex = 46;
-            deleteStudentbutton.Text = "Delete";
-            deleteStudentbutton.UseVisualStyleBackColor = false;
+            UDdeptHeadTextBox.BackColor = SystemColors.Window;
+            UDdeptHeadTextBox.BorderStyle = BorderStyle.None;
+            UDdeptHeadTextBox.Font = new Font("Century Gothic", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            UDdeptHeadTextBox.Location = new Point(776, 164);
+            UDdeptHeadTextBox.Name = "UDdeptHeadTextBox";
+            UDdeptHeadTextBox.Size = new Size(270, 23);
+            UDdeptHeadTextBox.TabIndex = 36;
+            // 
+            // DeleteDepartmentButton
+            // 
+            DeleteDepartmentButton.BackColor = Color.Red;
+            DeleteDepartmentButton.FlatAppearance.BorderSize = 0;
+            DeleteDepartmentButton.FlatStyle = FlatStyle.Flat;
+            DeleteDepartmentButton.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            DeleteDepartmentButton.Location = new Point(423, 396);
+            DeleteDepartmentButton.Name = "DeleteDepartmentButton";
+            DeleteDepartmentButton.Size = new Size(150, 40);
+            DeleteDepartmentButton.TabIndex = 46;
+            DeleteDepartmentButton.Text = "Delete";
+            DeleteDepartmentButton.UseVisualStyleBackColor = false;
+            DeleteDepartmentButton.Click += DeleteDepartmentButton_Click;
             // 
             // label3
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Century Gothic", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label3.Location = new Point(564, 118);
+            label3.Location = new Point(785, 145);
             label3.Name = "label3";
-            label3.Size = new Size(137, 22);
-            label3.TabIndex = 25;
-            label3.Text = "Course Name:";
+            label3.Size = new Size(173, 22);
+            label3.TabIndex = 32;
+            label3.Text = "Department Head:";
             // 
             // label4
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Century Gothic", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label4.Location = new Point(186, 122);
+            label4.Location = new Point(189, 148);
             label4.Name = "label4";
-            label4.Size = new Size(133, 22);
-            label4.TabIndex = 26;
-            label4.Text = "Course Code:";
+            label4.Size = new Size(185, 22);
+            label4.TabIndex = 33;
+            label4.Text = "Departmemt Name:";
             // 
-            // label5
+            // UDdeptNameTextBox
             // 
-            label5.AutoSize = true;
-            label5.Font = new Font("Century Gothic", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label5.Location = new Point(952, 118);
-            label5.Name = "label5";
-            label5.Size = new Size(122, 22);
-            label5.TabIndex = 27;
-            label5.Text = "Credit Hours:";
+            UDdeptNameTextBox.BackColor = SystemColors.Window;
+            UDdeptNameTextBox.BorderStyle = BorderStyle.None;
+            UDdeptNameTextBox.Font = new Font("Century Gothic", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            UDdeptNameTextBox.Location = new Point(180, 163);
+            UDdeptNameTextBox.Name = "UDdeptNameTextBox";
+            UDdeptNameTextBox.Size = new Size(270, 23);
+            UDdeptNameTextBox.TabIndex = 34;
+            UDdeptNameTextBox.TextChanged += UDdeptNameTextBox_TextChanged;
             // 
-            // textBox2
+            // panel3
             // 
-            textBox2.BackColor = SystemColors.Window;
-            textBox2.BorderStyle = BorderStyle.None;
-            textBox2.Font = new Font("Century Gothic", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox2.Location = new Point(177, 137);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(270, 23);
-            textBox2.TabIndex = 28;
+            panel3.BackColor = Color.Black;
+            panel3.Location = new Point(180, 192);
+            panel3.Name = "panel3";
+            panel3.Size = new Size(270, 2);
+            panel3.TabIndex = 35;
             // 
-            // panel9
+            // panel4
             // 
-            panel9.BackColor = Color.Black;
-            panel9.Location = new Point(177, 166);
-            panel9.Name = "panel9";
-            panel9.Size = new Size(270, 2);
-            panel9.TabIndex = 29;
-            // 
-            // panel10
-            // 
-            panel10.BackColor = Color.Black;
-            panel10.Location = new Point(555, 166);
-            panel10.Name = "panel10";
-            panel10.Size = new Size(270, 2);
-            panel10.TabIndex = 33;
-            // 
-            // textBox4
-            // 
-            textBox4.BackColor = SystemColors.Window;
-            textBox4.BorderStyle = BorderStyle.None;
-            textBox4.Font = new Font("Century Gothic", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox4.Location = new Point(943, 137);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(270, 23);
-            textBox4.TabIndex = 31;
-            // 
-            // panel13
-            // 
-            panel13.BackColor = Color.Black;
-            panel13.Location = new Point(943, 166);
-            panel13.Name = "panel13";
-            panel13.Size = new Size(270, 2);
-            panel13.TabIndex = 32;
+            panel4.BackColor = Color.Black;
+            panel4.Location = new Point(776, 193);
+            panel4.Name = "panel4";
+            panel4.Size = new Size(270, 2);
+            panel4.TabIndex = 37;
             // 
             // dashboardPanel
             // 
@@ -681,8 +614,8 @@
             // TabControl
             // 
             TabControl.Alignment = TabAlignment.Bottom;
-            TabControl.Controls.Add(addStudentTabPage);
-            TabControl.Controls.Add(searchStudentTabPage);
+            TabControl.Controls.Add(AddDepartmentTabPage);
+            TabControl.Controls.Add(SearchDepartmentTabPage);
             TabControl.Controls.Add(tabPage1);
             TabControl.Font = new Font("Century Gothic", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             TabControl.ImeMode = ImeMode.NoControl;
@@ -692,59 +625,25 @@
             TabControl.Size = new Size(1632, 760);
             TabControl.TabIndex = 30;
             // 
-            // addStudentTabPage
+            // AddDepartmentTabPage
             // 
-            addStudentTabPage.BackColor = SystemColors.Window;
-            addStudentTabPage.Controls.Add(panel4);
-            addStudentTabPage.Controls.Add(Departmentlabel);
-            addStudentTabPage.Controls.Add(DepartmentComboBox);
-            addStudentTabPage.Controls.Add(addStudentLabel);
-            addStudentTabPage.Controls.Add(studentLNameTextBox);
-            addStudentTabPage.Controls.Add(addButton);
-            addStudentTabPage.Controls.Add(studentLNameLabel);
-            addStudentTabPage.Controls.Add(studentIDLabel);
-            addStudentTabPage.Controls.Add(studFNameLabel);
-            addStudentTabPage.Controls.Add(studentIDTextBox);
-            addStudentTabPage.Controls.Add(panel1);
-            addStudentTabPage.Controls.Add(panel2);
-            addStudentTabPage.Controls.Add(studentFNameTextBox);
-            addStudentTabPage.Controls.Add(panel3);
-            addStudentTabPage.Font = new Font("Century Gothic", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            addStudentTabPage.Location = new Point(4, 4);
-            addStudentTabPage.Name = "addStudentTabPage";
-            addStudentTabPage.Padding = new Padding(3);
-            addStudentTabPage.Size = new Size(1624, 726);
-            addStudentTabPage.TabIndex = 0;
-            addStudentTabPage.Text = "Add Professor";
-            addStudentTabPage.Click += addStudentTabPage_Click;
-            // 
-            // panel4
-            // 
-            panel4.BackColor = Color.Black;
-            panel4.Location = new Point(776, 324);
-            panel4.Name = "panel4";
-            panel4.Size = new Size(270, 2);
-            panel4.TabIndex = 11;
-            // 
-            // Departmentlabel
-            // 
-            Departmentlabel.AutoSize = true;
-            Departmentlabel.Font = new Font("Century Gothic", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            Departmentlabel.Location = new Point(785, 272);
-            Departmentlabel.Name = "Departmentlabel";
-            Departmentlabel.Size = new Size(115, 22);
-            Departmentlabel.TabIndex = 24;
-            Departmentlabel.Text = "Department";
-            Departmentlabel.Click += Departmentlabel_Click;
-            // 
-            // DepartmentComboBox
-            // 
-            DepartmentComboBox.FlatStyle = FlatStyle.Flat;
-            DepartmentComboBox.FormattingEnabled = true;
-            DepartmentComboBox.Location = new Point(776, 297);
-            DepartmentComboBox.Name = "DepartmentComboBox";
-            DepartmentComboBox.Size = new Size(270, 29);
-            DepartmentComboBox.TabIndex = 23;
+            AddDepartmentTabPage.BackColor = SystemColors.Window;
+            AddDepartmentTabPage.Controls.Add(addStudentLabel);
+            AddDepartmentTabPage.Controls.Add(DeptHeadTextBox);
+            AddDepartmentTabPage.Controls.Add(AddDepartmentButton);
+            AddDepartmentTabPage.Controls.Add(studentLNameLabel);
+            AddDepartmentTabPage.Controls.Add(Label);
+            AddDepartmentTabPage.Controls.Add(DeptNameTextBox);
+            AddDepartmentTabPage.Controls.Add(panel1);
+            AddDepartmentTabPage.Controls.Add(panel2);
+            AddDepartmentTabPage.Font = new Font("Century Gothic", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            AddDepartmentTabPage.Location = new Point(4, 4);
+            AddDepartmentTabPage.Name = "AddDepartmentTabPage";
+            AddDepartmentTabPage.Padding = new Padding(3);
+            AddDepartmentTabPage.Size = new Size(1624, 726);
+            AddDepartmentTabPage.TabIndex = 0;
+            AddDepartmentTabPage.Text = "Add Department";
+            AddDepartmentTabPage.Click += addStudentTabPage_Click;
             // 
             // addStudentLabel
             // 
@@ -753,78 +652,71 @@
             addStudentLabel.ForeColor = Color.FromArgb(142, 195, 176);
             addStudentLabel.Location = new Point(12, 12);
             addStudentLabel.Name = "addStudentLabel";
-            addStudentLabel.Size = new Size(149, 23);
+            addStudentLabel.Size = new Size(178, 23);
             addStudentLabel.TabIndex = 22;
-            addStudentLabel.Text = "Add Professor:";
+            addStudentLabel.Text = "Add Department:";
             // 
-            // studentLNameTextBox
+            // DeptHeadTextBox
             // 
-            studentLNameTextBox.BackColor = SystemColors.Window;
-            studentLNameTextBox.BorderStyle = BorderStyle.None;
-            studentLNameTextBox.Font = new Font("Century Gothic", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            studentLNameTextBox.Location = new Point(776, 141);
-            studentLNameTextBox.Name = "studentLNameTextBox";
-            studentLNameTextBox.Size = new Size(270, 23);
-            studentLNameTextBox.TabIndex = 9;
+            DeptHeadTextBox.BackColor = SystemColors.Window;
+            DeptHeadTextBox.BorderStyle = BorderStyle.None;
+            DeptHeadTextBox.Font = new Font("Century Gothic", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            DeptHeadTextBox.Location = new Point(785, 171);
+            DeptHeadTextBox.Name = "DeptHeadTextBox";
+            DeptHeadTextBox.Size = new Size(270, 23);
+            DeptHeadTextBox.TabIndex = 9;
+            DeptHeadTextBox.TextChanged += DeptHeadTextBox_TextChanged;
             // 
-            // addButton
+            // AddDepartmentButton
             // 
-            addButton.BackColor = Color.FromArgb(142, 195, 176);
-            addButton.FlatAppearance.BorderSize = 0;
-            addButton.FlatStyle = FlatStyle.Flat;
-            addButton.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            addButton.Location = new Point(189, 396);
-            addButton.Name = "addButton";
-            addButton.Size = new Size(150, 40);
-            addButton.TabIndex = 21;
-            addButton.Text = "Add";
-            addButton.UseVisualStyleBackColor = false;
-            addButton.Click += addButton_Click;
+            AddDepartmentButton.BackColor = Color.FromArgb(142, 195, 176);
+            AddDepartmentButton.FlatAppearance.BorderSize = 0;
+            AddDepartmentButton.FlatStyle = FlatStyle.Flat;
+            AddDepartmentButton.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            AddDepartmentButton.Location = new Point(189, 396);
+            AddDepartmentButton.Name = "AddDepartmentButton";
+            AddDepartmentButton.Size = new Size(150, 40);
+            AddDepartmentButton.TabIndex = 21;
+            AddDepartmentButton.Text = "Add";
+            AddDepartmentButton.UseVisualStyleBackColor = false;
+            AddDepartmentButton.Click += addButton_Click;
             // 
             // studentLNameLabel
             // 
             studentLNameLabel.AutoSize = true;
             studentLNameLabel.Font = new Font("Century Gothic", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            studentLNameLabel.Location = new Point(785, 122);
+            studentLNameLabel.Location = new Point(785, 145);
             studentLNameLabel.Name = "studentLNameLabel";
-            studentLNameLabel.Size = new Size(106, 22);
+            studentLNameLabel.Size = new Size(173, 22);
             studentLNameLabel.TabIndex = 4;
-            studentLNameLabel.Text = "First Name:";
+            studentLNameLabel.Text = "Department Head:";
             // 
-            // studentIDLabel
+            // Label
             // 
-            studentIDLabel.AutoSize = true;
-            studentIDLabel.Font = new Font("Century Gothic", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            studentIDLabel.Location = new Point(189, 125);
-            studentIDLabel.Name = "studentIDLabel";
-            studentIDLabel.Size = new Size(107, 22);
-            studentIDLabel.TabIndex = 5;
-            studentIDLabel.Text = "Last Name:";
+            Label.AutoSize = true;
+            Label.Font = new Font("Century Gothic", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            Label.Location = new Point(189, 148);
+            Label.Name = "Label";
+            Label.Size = new Size(185, 22);
+            Label.TabIndex = 5;
+            Label.Text = "Departmemt Name:";
+            Label.Click += studentIDLabel_Click;
             // 
-            // studFNameLabel
+            // DeptNameTextBox
             // 
-            studFNameLabel.AutoSize = true;
-            studFNameLabel.Font = new Font("Century Gothic", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            studFNameLabel.Location = new Point(189, 272);
-            studFNameLabel.Name = "studFNameLabel";
-            studFNameLabel.Size = new Size(132, 22);
-            studFNameLabel.TabIndex = 6;
-            studFNameLabel.Text = "Email Address";
-            // 
-            // studentIDTextBox
-            // 
-            studentIDTextBox.BackColor = SystemColors.Window;
-            studentIDTextBox.BorderStyle = BorderStyle.None;
-            studentIDTextBox.Font = new Font("Century Gothic", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            studentIDTextBox.Location = new Point(180, 140);
-            studentIDTextBox.Name = "studentIDTextBox";
-            studentIDTextBox.Size = new Size(270, 23);
-            studentIDTextBox.TabIndex = 7;
+            DeptNameTextBox.BackColor = SystemColors.Window;
+            DeptNameTextBox.BorderStyle = BorderStyle.None;
+            DeptNameTextBox.Font = new Font("Century Gothic", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            DeptNameTextBox.Location = new Point(179, 178);
+            DeptNameTextBox.Name = "DeptNameTextBox";
+            DeptNameTextBox.Size = new Size(270, 23);
+            DeptNameTextBox.TabIndex = 7;
+            DeptNameTextBox.TextChanged += DeptNameTextBox_TextChanged;
             // 
             // panel1
             // 
             panel1.BackColor = Color.Black;
-            panel1.Location = new Point(180, 169);
+            panel1.Location = new Point(176, 202);
             panel1.Name = "panel1";
             panel1.Size = new Size(270, 2);
             panel1.TabIndex = 8;
@@ -832,28 +724,10 @@
             // panel2
             // 
             panel2.BackColor = Color.Black;
-            panel2.Location = new Point(776, 170);
+            panel2.Location = new Point(785, 200);
             panel2.Name = "panel2";
             panel2.Size = new Size(270, 2);
             panel2.TabIndex = 10;
-            // 
-            // studentFNameTextBox
-            // 
-            studentFNameTextBox.BackColor = SystemColors.Window;
-            studentFNameTextBox.BorderStyle = BorderStyle.None;
-            studentFNameTextBox.Font = new Font("Century Gothic", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            studentFNameTextBox.Location = new Point(180, 291);
-            studentFNameTextBox.Name = "studentFNameTextBox";
-            studentFNameTextBox.Size = new Size(270, 23);
-            studentFNameTextBox.TabIndex = 9;
-            // 
-            // panel3
-            // 
-            panel3.BackColor = Color.Black;
-            panel3.Location = new Point(180, 320);
-            panel3.Name = "panel3";
-            panel3.Size = new Size(270, 2);
-            panel3.TabIndex = 10;
             // 
             // Department
             // 
@@ -871,54 +745,41 @@
             panelBack.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)expandPictureBox).EndInit();
             ((System.ComponentModel.ISupportInitialize)logoutPictureBox).EndInit();
-            searchStudentTabPage.ResumeLayout(false);
-            searchStudentTabPage.PerformLayout();
+            SearchDepartmentTabPage.ResumeLayout(false);
+            SearchDepartmentTabPage.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)searchPictureBox).EndInit();
-            ((System.ComponentModel.ISupportInitialize)SearchdataGridView).EndInit();
+            ((System.ComponentModel.ISupportInitialize)SearchDataGridView).EndInit();
             tabPage1.ResumeLayout(false);
             tabPage1.PerformLayout();
             dashboardPanel.ResumeLayout(false);
             dashboardSmallpanel.ResumeLayout(false);
             dashboardSmallpanel.PerformLayout();
             TabControl.ResumeLayout(false);
-            addStudentTabPage.ResumeLayout(false);
-            addStudentTabPage.PerformLayout();
+            AddDepartmentTabPage.ResumeLayout(false);
+            AddDepartmentTabPage.PerformLayout();
             ResumeLayout(false);
         }
 
         #endregion
 
         private Label label2;
-        private TextBox textBox1;
-        private Button updateStudentButton;
+        private Button UpdateDepartmentButton;
         private PictureBox dashboardPictureBox;
         private Panel panelBack;
         private Panel panel14;
         private PictureBox expandPictureBox;
         private PictureBox logoutPictureBox;
-        private Label totalStudOutputLabel;
-        private TabPage searchStudentTabPage;
+        private Label TotalDeptNameOutputLabel;
+        private TabPage SearchDepartmentTabPage;
         private Label searchStudentLabel;
-        private Label totalStudentslabel;
+        private Label TotalDepartmentLabel;
         private PictureBox searchPictureBox;
-        private DataGridView SearchdataGridView;
-        private DataGridViewTextBoxColumn Column1;
-        private DataGridViewTextBoxColumn Column2;
-        private DataGridViewTextBoxColumn Column3;
-        private DataGridViewTextBoxColumn Column4;
+        private DataGridView SearchDataGridView;
         private Label label1;
         private Panel panel7;
         private TextBox searchTextBox;
         private TabPage tabPage1;
-        private Button deleteStudentbutton;
-        private Label label3;
-        private Label label4;
-        private Label label5;
-        private TextBox textBox2;
-        private Panel panel9;
-        private Panel panel10;
-        private TextBox textBox4;
-        private Panel panel13;
+        private Button DeleteDepartmentButton;
         private Panel dashboardPanel;
         private Button button3;
         private Button button2;
@@ -934,21 +795,21 @@
         private Label dashboardTitle;
         private Button archivedButton;
         private TabControl TabControl;
-        private TabPage addStudentTabPage;
+        private TabPage AddDepartmentTabPage;
         private Label addStudentLabel;
-        private TextBox studentLNameTextBox;
-        private Button addButton;
+        private TextBox DeptHeadTextBox;
+        private Button AddDepartmentButton;
         private Label studentLNameLabel;
-        private Label studentIDLabel;
-        private Label studFNameLabel;
-        private TextBox studentIDTextBox;
+        private Label Label;
+        private TextBox DeptNameTextBox;
         private Panel panel1;
         private Panel panel2;
-        private TextBox studentFNameTextBox;
-        private Panel panel3;
         private Button ReportButton;
-        private Label Departmentlabel;
-        private ComboBox DepartmentComboBox;
+        private TextBox UDdeptHeadTextBox;
+        private Label label3;
+        private Label label4;
+        private TextBox UDdeptNameTextBox;
+        private Panel panel3;
         private Panel panel4;
     }
 }
