@@ -29,42 +29,15 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Report));
-            TabControl = new TabControl();
-            StudentReportTabPage = new TabPage();
-            SaveAttendanceButton = new Button();
-            comboBox3 = new ComboBox();
-            label3 = new Label();
-            panel8 = new Panel();
-            userControlDashboard2 = new UserControlDashboard();
-            comboBox2 = new ComboBox();
-            label2 = new Label();
-            panel7 = new Panel();
-            panel6 = new Panel();
-            panel5 = new Panel();
-            panel4 = new Panel();
-            userControlDashboard1 = new UserControlDashboard();
-            comboBox1 = new ComboBox();
-            label1 = new Label();
-            panel3 = new Panel();
-            StudentReportLabel = new Label();
-            studentIDLabel = new Label();
-            panel1 = new Panel();
-            dateTimePicker1 = new DateTimePicker();
-            ClassReportTabPage = new TabPage();
-            pictureBox1 = new PictureBox();
-            label4 = new Label();
-            dataGridView1 = new DataGridView();
-            dataGridViewTextBoxColumn6 = new DataGridViewTextBoxColumn();
-            dataGridViewTextBoxColumn7 = new DataGridViewTextBoxColumn();
-            dataGridViewTextBoxColumn8 = new DataGridViewTextBoxColumn();
-            dataGridViewTextBoxColumn9 = new DataGridViewTextBoxColumn();
-            dataGridViewTextBoxColumn10 = new DataGridViewTextBoxColumn();
             panel2 = new Panel();
+            panel3 = new Panel();
+            logoutButton = new Button();
             panelBack = new Panel();
             expandPictureBox = new PictureBox();
             logoutPictureBox = new PictureBox();
             button2 = new Button();
             dashboardPanel = new Panel();
+            RegisterButton = new Button();
             buttonReport = new Button();
             ReportButton = new Button();
             button1 = new Button();
@@ -79,339 +52,78 @@
             dashboardSmallpanel = new Panel();
             dashboardTitle = new Label();
             dashboardPictureBox = new PictureBox();
-            TabControl.SuspendLayout();
-            StudentReportTabPage.SuspendLayout();
-            ClassReportTabPage.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ClassReportTabPage = new TabPage();
+            CourseComboBox = new ComboBox();
+            label2 = new Label();
+            panel7 = new Panel();
+            panel6 = new Panel();
+            panel5 = new Panel();
+            panel4 = new Panel();
+            studentIDLabel = new Label();
+            panel1 = new Panel();
+            StudentDateTimePicker = new DateTimePicker();
+            pictureBox1 = new PictureBox();
+            label4 = new Label();
+            dataGridView1 = new DataGridView();
+            TabControl = new TabControl();
+            tabPage1 = new TabPage();
+            pictureBox2 = new PictureBox();
+            dataGridView2 = new DataGridView();
+            label1 = new Label();
+            StudentIDComboBox = new ComboBox();
+            labelStudentID = new Label();
+            panel8 = new Panel();
+            panel9 = new Panel();
+            panel10 = new Panel();
+            panel11 = new Panel();
+            label3 = new Label();
+            label5 = new Label();
+            panel12 = new Panel();
+            dateTimePicker1 = new DateTimePicker();
+            panel2.SuspendLayout();
+            panel3.SuspendLayout();
             panelBack.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)expandPictureBox).BeginInit();
             ((System.ComponentModel.ISupportInitialize)logoutPictureBox).BeginInit();
             dashboardPanel.SuspendLayout();
             dashboardSmallpanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dashboardPictureBox).BeginInit();
+            ClassReportTabPage.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            TabControl.SuspendLayout();
+            tabPage1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridView2).BeginInit();
             SuspendLayout();
-            // 
-            // TabControl
-            // 
-            TabControl.Alignment = TabAlignment.Bottom;
-            TabControl.Controls.Add(StudentReportTabPage);
-            TabControl.Controls.Add(ClassReportTabPage);
-            TabControl.Font = new Font("Century Gothic", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            TabControl.ImeMode = ImeMode.NoControl;
-            TabControl.Location = new Point(272, 220);
-            TabControl.Name = "TabControl";
-            TabControl.SelectedIndex = 0;
-            TabControl.Size = new Size(1632, 760);
-            TabControl.TabIndex = 32;
-            // 
-            // StudentReportTabPage
-            // 
-            StudentReportTabPage.BackColor = SystemColors.Window;
-            StudentReportTabPage.Controls.Add(SaveAttendanceButton);
-            StudentReportTabPage.Controls.Add(comboBox3);
-            StudentReportTabPage.Controls.Add(label3);
-            StudentReportTabPage.Controls.Add(panel8);
-            StudentReportTabPage.Controls.Add(userControlDashboard2);
-            StudentReportTabPage.Controls.Add(comboBox2);
-            StudentReportTabPage.Controls.Add(label2);
-            StudentReportTabPage.Controls.Add(panel7);
-            StudentReportTabPage.Controls.Add(panel6);
-            StudentReportTabPage.Controls.Add(panel5);
-            StudentReportTabPage.Controls.Add(panel4);
-            StudentReportTabPage.Controls.Add(userControlDashboard1);
-            StudentReportTabPage.Controls.Add(comboBox1);
-            StudentReportTabPage.Controls.Add(label1);
-            StudentReportTabPage.Controls.Add(panel3);
-            StudentReportTabPage.Controls.Add(StudentReportLabel);
-            StudentReportTabPage.Controls.Add(studentIDLabel);
-            StudentReportTabPage.Controls.Add(panel1);
-            StudentReportTabPage.Controls.Add(dateTimePicker1);
-            StudentReportTabPage.Font = new Font("Century Gothic", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            StudentReportTabPage.Location = new Point(4, 4);
-            StudentReportTabPage.Name = "StudentReportTabPage";
-            StudentReportTabPage.Padding = new Padding(3);
-            StudentReportTabPage.Size = new Size(1624, 726);
-            StudentReportTabPage.TabIndex = 0;
-            StudentReportTabPage.Text = "Student Report";
-            // 
-            // SaveAttendanceButton
-            // 
-            SaveAttendanceButton.BackColor = Color.FromArgb(142, 195, 176);
-            SaveAttendanceButton.FlatAppearance.BorderSize = 0;
-            SaveAttendanceButton.FlatStyle = FlatStyle.Flat;
-            SaveAttendanceButton.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            SaveAttendanceButton.Location = new Point(321, 472);
-            SaveAttendanceButton.Name = "SaveAttendanceButton";
-            SaveAttendanceButton.Size = new Size(150, 40);
-            SaveAttendanceButton.TabIndex = 38;
-            SaveAttendanceButton.Text = "Save";
-            SaveAttendanceButton.UseVisualStyleBackColor = false;
-            // 
-            // comboBox3
-            // 
-            comboBox3.BackColor = SystemColors.Window;
-            comboBox3.FlatStyle = FlatStyle.Flat;
-            comboBox3.FormattingEnabled = true;
-            comboBox3.Location = new Point(1004, 338);
-            comboBox3.Name = "comboBox3";
-            comboBox3.Size = new Size(240, 29);
-            comboBox3.TabIndex = 37;
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Century Gothic", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label3.Location = new Point(1013, 315);
-            label3.Name = "label3";
-            label3.Size = new Size(65, 22);
-            label3.TabIndex = 35;
-            label3.Text = "Status:";
-            // 
-            // panel8
-            // 
-            panel8.BackColor = Color.Black;
-            panel8.Location = new Point(1004, 369);
-            panel8.Name = "panel8";
-            panel8.Size = new Size(240, 2);
-            panel8.TabIndex = 36;
-            // 
-            // userControlDashboard2
-            // 
-            userControlDashboard2.AutoSize = true;
-            userControlDashboard2.Location = new Point(1277, 315);
-            userControlDashboard2.Margin = new Padding(4, 3, 4, 3);
-            userControlDashboard2.Name = "userControlDashboard2";
-            userControlDashboard2.Size = new Size(0, 586);
-            userControlDashboard2.TabIndex = 34;
-            // 
-            // comboBox2
-            // 
-            comboBox2.BackColor = SystemColors.Window;
-            comboBox2.FlatStyle = FlatStyle.Flat;
-            comboBox2.FormattingEnabled = true;
-            comboBox2.Location = new Point(1004, 128);
-            comboBox2.Name = "comboBox2";
-            comboBox2.Size = new Size(240, 29);
-            comboBox2.TabIndex = 33;
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Century Gothic", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label2.Location = new Point(1013, 105);
-            label2.Name = "label2";
-            label2.Size = new Size(78, 22);
-            label2.TabIndex = 31;
-            label2.Text = "Course:";
-            // 
-            // panel7
-            // 
-            panel7.BackColor = Color.Black;
-            panel7.Location = new Point(1004, 159);
-            panel7.Name = "panel7";
-            panel7.Size = new Size(240, 2);
-            panel7.TabIndex = 32;
-            // 
-            // panel6
-            // 
-            panel6.BackColor = Color.Transparent;
-            panel6.Location = new Point(559, 344);
-            panel6.Name = "panel6";
-            panel6.Size = new Size(10, 27);
-            panel6.TabIndex = 30;
-            // 
-            // panel5
-            // 
-            panel5.BackColor = Color.Transparent;
-            panel5.Location = new Point(312, 344);
-            panel5.Name = "panel5";
-            panel5.Size = new Size(10, 30);
-            panel5.TabIndex = 10;
-            // 
-            // panel4
-            // 
-            panel4.BackColor = Color.Black;
-            panel4.Location = new Point(321, 369);
-            panel4.Name = "panel4";
-            panel4.Size = new Size(240, 2);
-            panel4.TabIndex = 9;
-            // 
-            // userControlDashboard1
-            // 
-            userControlDashboard1.AutoSize = true;
-            userControlDashboard1.Location = new Point(1277, 105);
-            userControlDashboard1.Margin = new Padding(4, 3, 4, 3);
-            userControlDashboard1.Name = "userControlDashboard1";
-            userControlDashboard1.Size = new Size(0, 586);
-            userControlDashboard1.TabIndex = 29;
-            // 
-            // comboBox1
-            // 
-            comboBox1.BackColor = SystemColors.Window;
-            comboBox1.FlatStyle = FlatStyle.Flat;
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(317, 128);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(240, 29);
-            comboBox1.TabIndex = 28;
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Century Gothic", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(326, 105);
-            label1.Name = "label1";
-            label1.Size = new Size(103, 22);
-            label1.TabIndex = 25;
-            label1.Text = "Student ID:";
-            // 
-            // panel3
-            // 
-            panel3.BackColor = Color.Black;
-            panel3.Location = new Point(317, 159);
-            panel3.Name = "panel3";
-            panel3.Size = new Size(240, 2);
-            panel3.TabIndex = 27;
-            // 
-            // StudentReportLabel
-            // 
-            StudentReportLabel.AutoSize = true;
-            StudentReportLabel.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            StudentReportLabel.ForeColor = Color.FromArgb(142, 195, 176);
-            StudentReportLabel.Location = new Point(15, 15);
-            StudentReportLabel.Name = "StudentReportLabel";
-            StudentReportLabel.Size = new Size(157, 23);
-            StudentReportLabel.TabIndex = 22;
-            StudentReportLabel.Text = "Student Report:";
-            // 
-            // studentIDLabel
-            // 
-            studentIDLabel.AutoSize = true;
-            studentIDLabel.Font = new Font("Century Gothic", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            studentIDLabel.Location = new Point(326, 315);
-            studentIDLabel.Name = "studentIDLabel";
-            studentIDLabel.Size = new Size(57, 22);
-            studentIDLabel.TabIndex = 5;
-            studentIDLabel.Text = "Date:";
-            // 
-            // panel1
-            // 
-            panel1.BackColor = Color.Transparent;
-            panel1.Location = new Point(317, 335);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(250, 10);
-            panel1.TabIndex = 8;
-            // 
-            // dateTimePicker1
-            // 
-            dateTimePicker1.CalendarTitleForeColor = SystemColors.Window;
-            dateTimePicker1.CalendarTrailingForeColor = SystemColors.Control;
-            dateTimePicker1.CustomFormat = "MM/dd/yyyy";
-            dateTimePicker1.Format = DateTimePickerFormat.Custom;
-            dateTimePicker1.Location = new Point(321, 341);
-            dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(242, 30);
-            dateTimePicker1.TabIndex = 23;
-            // 
-            // ClassReportTabPage
-            // 
-            ClassReportTabPage.BackColor = SystemColors.Window;
-            ClassReportTabPage.Controls.Add(pictureBox1);
-            ClassReportTabPage.Controls.Add(label4);
-            ClassReportTabPage.Controls.Add(dataGridView1);
-            ClassReportTabPage.Location = new Point(4, 4);
-            ClassReportTabPage.Name = "ClassReportTabPage";
-            ClassReportTabPage.Padding = new Padding(3);
-            ClassReportTabPage.Size = new Size(1624, 726);
-            ClassReportTabPage.TabIndex = 1;
-            ClassReportTabPage.Text = "Class Report";
-            // 
-            // pictureBox1
-            // 
-            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(1417, 18);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(64, 64);
-            pictureBox1.SizeMode = PictureBoxSizeMode.AutoSize;
-            pictureBox1.TabIndex = 27;
-            pictureBox1.TabStop = false;
-            pictureBox1.Click += PictureBox1_Click;
-            // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label4.ForeColor = Color.FromArgb(142, 195, 176);
-            label4.Location = new Point(12, 12);
-            label4.Name = "label4";
-            label4.Size = new Size(79, 23);
-            label4.TabIndex = 26;
-            label4.Text = "Report:";
-            // 
-            // dataGridView1
-            // 
-            dataGridView1.AllowUserToAddRows = false;
-            dataGridView1.AllowUserToDeleteRows = false;
-            dataGridView1.AllowUserToResizeColumns = false;
-            dataGridView1.AllowUserToResizeRows = false;
-            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridView1.BackgroundColor = Color.White;
-            dataGridView1.BorderStyle = BorderStyle.None;
-            dataGridView1.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single;
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { dataGridViewTextBoxColumn6, dataGridViewTextBoxColumn7, dataGridViewTextBoxColumn8, dataGridViewTextBoxColumn9, dataGridViewTextBoxColumn10 });
-            dataGridView1.Location = new Point(80, 130);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.ReadOnly = true;
-            dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            dataGridView1.ScrollBars = ScrollBars.Vertical;
-            dataGridView1.Size = new Size(1421, 456);
-            dataGridView1.TabIndex = 25;
-            // 
-            // dataGridViewTextBoxColumn6
-            // 
-            dataGridViewTextBoxColumn6.HeaderText = "Attendance ID";
-            dataGridViewTextBoxColumn6.MinimumWidth = 6;
-            dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            dataGridViewTextBoxColumn6.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn7
-            // 
-            dataGridViewTextBoxColumn7.HeaderText = "Student ID";
-            dataGridViewTextBoxColumn7.MinimumWidth = 6;
-            dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
-            dataGridViewTextBoxColumn7.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn8
-            // 
-            dataGridViewTextBoxColumn8.HeaderText = "Course ID";
-            dataGridViewTextBoxColumn8.MinimumWidth = 6;
-            dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
-            dataGridViewTextBoxColumn8.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn9
-            // 
-            dataGridViewTextBoxColumn9.HeaderText = "Attendance Date";
-            dataGridViewTextBoxColumn9.MinimumWidth = 6;
-            dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
-            dataGridViewTextBoxColumn9.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn10
-            // 
-            dataGridViewTextBoxColumn10.HeaderText = "Status";
-            dataGridViewTextBoxColumn10.MinimumWidth = 6;
-            dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
-            dataGridViewTextBoxColumn10.ReadOnly = true;
             // 
             // panel2
             // 
             panel2.BackColor = Color.FromArgb(188, 234, 213);
+            panel2.Controls.Add(panel3);
             panel2.Location = new Point(0, 98);
             panel2.Name = "panel2";
             panel2.Size = new Size(1628, 126);
             panel2.TabIndex = 3;
+            // 
+            // panel3
+            // 
+            panel3.Controls.Add(logoutButton);
+            panel3.Location = new Point(1319, 1);
+            panel3.Name = "panel3";
+            panel3.Size = new Size(200, 125);
+            panel3.TabIndex = 0;
+            // 
+            // logoutButton
+            // 
+            logoutButton.Font = new Font("Century Gothic", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            logoutButton.Location = new Point(0, -1);
+            logoutButton.Name = "logoutButton";
+            logoutButton.Size = new Size(200, 67);
+            logoutButton.TabIndex = 0;
+            logoutButton.Text = "Logout";
+            logoutButton.UseVisualStyleBackColor = true;
+            logoutButton.Click += logoutButton_Click;
             // 
             // panelBack
             // 
@@ -434,6 +146,7 @@
             expandPictureBox.SizeMode = PictureBoxSizeMode.AutoSize;
             expandPictureBox.TabIndex = 2;
             expandPictureBox.TabStop = false;
+            expandPictureBox.Click += expandPictureBox_Click;
             // 
             // logoutPictureBox
             // 
@@ -465,6 +178,7 @@
             // 
             dashboardPanel.Anchor = AnchorStyles.None;
             dashboardPanel.BackColor = Color.FromArgb(188, 234, 213);
+            dashboardPanel.Controls.Add(RegisterButton);
             dashboardPanel.Controls.Add(buttonReport);
             dashboardPanel.Controls.Add(button2);
             dashboardPanel.Controls.Add(ReportButton);
@@ -483,6 +197,23 @@
             dashboardPanel.Size = new Size(274, 1033);
             dashboardPanel.TabIndex = 31;
             // 
+            // RegisterButton
+            // 
+            RegisterButton.Anchor = AnchorStyles.None;
+            RegisterButton.FlatAppearance.BorderSize = 0;
+            RegisterButton.FlatStyle = FlatStyle.Flat;
+            RegisterButton.Font = new Font("Century Gothic", 11F);
+            RegisterButton.Image = (Image)resources.GetObject("RegisterButton.Image");
+            RegisterButton.ImageAlign = ContentAlignment.MiddleLeft;
+            RegisterButton.Location = new Point(13, 642);
+            RegisterButton.Name = "RegisterButton";
+            RegisterButton.Size = new Size(220, 40);
+            RegisterButton.TabIndex = 35;
+            RegisterButton.Text = "                Register";
+            RegisterButton.TextAlign = ContentAlignment.MiddleLeft;
+            RegisterButton.UseVisualStyleBackColor = true;
+            RegisterButton.Click += RegisterButton_Click;
+            // 
             // buttonReport
             // 
             buttonReport.Anchor = AnchorStyles.None;
@@ -498,6 +229,7 @@
             buttonReport.Text = "                Report";
             buttonReport.TextAlign = ContentAlignment.MiddleLeft;
             buttonReport.UseVisualStyleBackColor = true;
+            buttonReport.Click += buttonReport_Click;
             // 
             // ReportButton
             // 
@@ -562,6 +294,7 @@
             departmentButton.Text = "                Department";
             departmentButton.TextAlign = ContentAlignment.MiddleLeft;
             departmentButton.UseVisualStyleBackColor = true;
+            departmentButton.Click += departmentButton_Click;
             // 
             // professorButton
             // 
@@ -578,6 +311,7 @@
             professorButton.Text = "                Professor";
             professorButton.TextAlign = ContentAlignment.MiddleLeft;
             professorButton.UseVisualStyleBackColor = true;
+            professorButton.Click += professorButton_Click;
             // 
             // CclassButton
             // 
@@ -594,6 +328,7 @@
             CclassButton.Text = "                Class";
             CclassButton.TextAlign = ContentAlignment.MiddleLeft;
             CclassButton.UseVisualStyleBackColor = true;
+            CclassButton.Click += CclassButton_Click;
             // 
             // courseButton
             // 
@@ -610,6 +345,7 @@
             courseButton.Text = "                Course";
             courseButton.TextAlign = ContentAlignment.MiddleLeft;
             courseButton.UseVisualStyleBackColor = true;
+            courseButton.Click += courseButton_Click;
             // 
             // attendanceButton
             // 
@@ -626,6 +362,7 @@
             attendanceButton.Text = "                Attendance";
             attendanceButton.TextAlign = ContentAlignment.MiddleLeft;
             attendanceButton.UseVisualStyleBackColor = true;
+            attendanceButton.Click += attendanceButton_Click;
             // 
             // StudentButton
             // 
@@ -694,6 +431,321 @@
             dashboardPictureBox.TabIndex = 0;
             dashboardPictureBox.TabStop = false;
             // 
+            // ClassReportTabPage
+            // 
+            ClassReportTabPage.BackColor = SystemColors.Window;
+            ClassReportTabPage.Controls.Add(CourseComboBox);
+            ClassReportTabPage.Controls.Add(label2);
+            ClassReportTabPage.Controls.Add(panel7);
+            ClassReportTabPage.Controls.Add(panel6);
+            ClassReportTabPage.Controls.Add(panel5);
+            ClassReportTabPage.Controls.Add(panel4);
+            ClassReportTabPage.Controls.Add(studentIDLabel);
+            ClassReportTabPage.Controls.Add(panel1);
+            ClassReportTabPage.Controls.Add(StudentDateTimePicker);
+            ClassReportTabPage.Controls.Add(pictureBox1);
+            ClassReportTabPage.Controls.Add(label4);
+            ClassReportTabPage.Controls.Add(dataGridView1);
+            ClassReportTabPage.Location = new Point(4, 4);
+            ClassReportTabPage.Name = "ClassReportTabPage";
+            ClassReportTabPage.Padding = new Padding(3);
+            ClassReportTabPage.Size = new Size(1624, 726);
+            ClassReportTabPage.TabIndex = 1;
+            ClassReportTabPage.Text = "Class Report";
+            // 
+            // CourseComboBox
+            // 
+            CourseComboBox.BackColor = SystemColors.Window;
+            CourseComboBox.FlatStyle = FlatStyle.Flat;
+            CourseComboBox.FormattingEnabled = true;
+            CourseComboBox.Location = new Point(827, 84);
+            CourseComboBox.Name = "CourseComboBox";
+            CourseComboBox.Size = new Size(240, 29);
+            CourseComboBox.TabIndex = 42;
+            CourseComboBox.SelectedIndexChanged += CourseComboBox_SelectedIndexChanged;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Century Gothic", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label2.Location = new Point(833, 58);
+            label2.Name = "label2";
+            label2.Size = new Size(78, 22);
+            label2.TabIndex = 40;
+            label2.Text = "Course:";
+            // 
+            // panel7
+            // 
+            panel7.BackColor = Color.Black;
+            panel7.Location = new Point(827, 115);
+            panel7.Name = "panel7";
+            panel7.Size = new Size(240, 2);
+            panel7.TabIndex = 41;
+            // 
+            // panel6
+            // 
+            panel6.BackColor = Color.Transparent;
+            panel6.Location = new Point(506, 90);
+            panel6.Name = "panel6";
+            panel6.Size = new Size(10, 27);
+            panel6.TabIndex = 39;
+            // 
+            // panel5
+            // 
+            panel5.BackColor = Color.Transparent;
+            panel5.Location = new Point(259, 90);
+            panel5.Name = "panel5";
+            panel5.Size = new Size(10, 30);
+            panel5.TabIndex = 37;
+            // 
+            // panel4
+            // 
+            panel4.BackColor = Color.Black;
+            panel4.Location = new Point(268, 115);
+            panel4.Name = "panel4";
+            panel4.Size = new Size(240, 2);
+            panel4.TabIndex = 36;
+            // 
+            // studentIDLabel
+            // 
+            studentIDLabel.AutoSize = true;
+            studentIDLabel.Font = new Font("Century Gothic", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            studentIDLabel.Location = new Point(270, 58);
+            studentIDLabel.Name = "studentIDLabel";
+            studentIDLabel.Size = new Size(57, 22);
+            studentIDLabel.TabIndex = 34;
+            studentIDLabel.Text = "Date:";
+            // 
+            // panel1
+            // 
+            panel1.BackColor = Color.Transparent;
+            panel1.Location = new Point(264, 81);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(250, 10);
+            panel1.TabIndex = 35;
+            // 
+            // StudentDateTimePicker
+            // 
+            StudentDateTimePicker.CalendarTitleForeColor = SystemColors.Window;
+            StudentDateTimePicker.CalendarTrailingForeColor = SystemColors.Control;
+            StudentDateTimePicker.CustomFormat = "MM/dd/yyyy";
+            StudentDateTimePicker.Format = DateTimePickerFormat.Custom;
+            StudentDateTimePicker.Location = new Point(268, 87);
+            StudentDateTimePicker.Name = "StudentDateTimePicker";
+            StudentDateTimePicker.Size = new Size(242, 30);
+            StudentDateTimePicker.TabIndex = 38;
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Location = new Point(1417, 18);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(32, 32);
+            pictureBox1.SizeMode = PictureBoxSizeMode.AutoSize;
+            pictureBox1.TabIndex = 27;
+            pictureBox1.TabStop = false;
+            pictureBox1.Click += PictureBox1_Click;
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label4.ForeColor = Color.FromArgb(142, 195, 176);
+            label4.Location = new Point(12, 12);
+            label4.Name = "label4";
+            label4.Size = new Size(79, 23);
+            label4.TabIndex = 26;
+            label4.Text = "Report:";
+            // 
+            // dataGridView1
+            // 
+            dataGridView1.AllowUserToAddRows = false;
+            dataGridView1.AllowUserToDeleteRows = false;
+            dataGridView1.AllowUserToResizeColumns = false;
+            dataGridView1.AllowUserToResizeRows = false;
+            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridView1.BackgroundColor = Color.White;
+            dataGridView1.BorderStyle = BorderStyle.None;
+            dataGridView1.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single;
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Location = new Point(75, 182);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.ReadOnly = true;
+            dataGridView1.RowHeadersWidth = 51;
+            dataGridView1.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            dataGridView1.ScrollBars = ScrollBars.Vertical;
+            dataGridView1.Size = new Size(1421, 456);
+            dataGridView1.TabIndex = 25;
+            dataGridView1.CellContentClick += dataGridView1_CellContentClick;
+            // 
+            // TabControl
+            // 
+            TabControl.Alignment = TabAlignment.Bottom;
+            TabControl.Controls.Add(ClassReportTabPage);
+            TabControl.Controls.Add(tabPage1);
+            TabControl.Font = new Font("Century Gothic", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            TabControl.ImeMode = ImeMode.NoControl;
+            TabControl.Location = new Point(272, 220);
+            TabControl.Name = "TabControl";
+            TabControl.SelectedIndex = 0;
+            TabControl.Size = new Size(1632, 760);
+            TabControl.TabIndex = 32;
+            // 
+            // tabPage1
+            // 
+            tabPage1.BackColor = SystemColors.Window;
+            tabPage1.Controls.Add(pictureBox2);
+            tabPage1.Controls.Add(dataGridView2);
+            tabPage1.Controls.Add(label1);
+            tabPage1.Controls.Add(StudentIDComboBox);
+            tabPage1.Controls.Add(labelStudentID);
+            tabPage1.Controls.Add(panel8);
+            tabPage1.Controls.Add(panel9);
+            tabPage1.Controls.Add(panel10);
+            tabPage1.Controls.Add(panel11);
+            tabPage1.Controls.Add(label3);
+            tabPage1.Controls.Add(label5);
+            tabPage1.Controls.Add(panel12);
+            tabPage1.Controls.Add(dateTimePicker1);
+            tabPage1.Location = new Point(4, 4);
+            tabPage1.Name = "tabPage1";
+            tabPage1.Padding = new Padding(3);
+            tabPage1.Size = new Size(1624, 726);
+            tabPage1.TabIndex = 2;
+            tabPage1.Text = "Student Report";
+            // 
+            // pictureBox2
+            // 
+            pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
+            pictureBox2.Location = new Point(1469, 58);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new Size(32, 32);
+            pictureBox2.SizeMode = PictureBoxSizeMode.AutoSize;
+            pictureBox2.TabIndex = 67;
+            pictureBox2.TabStop = false;
+            pictureBox2.Click += pictureBox2_Click;
+            // 
+            // dataGridView2
+            // 
+            dataGridView2.AllowUserToAddRows = false;
+            dataGridView2.AllowUserToDeleteRows = false;
+            dataGridView2.AllowUserToResizeColumns = false;
+            dataGridView2.AllowUserToResizeRows = false;
+            dataGridView2.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridView2.BackgroundColor = Color.White;
+            dataGridView2.BorderStyle = BorderStyle.None;
+            dataGridView2.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single;
+            dataGridView2.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView2.Location = new Point(114, 231);
+            dataGridView2.Name = "dataGridView2";
+            dataGridView2.ReadOnly = true;
+            dataGridView2.RowHeadersWidth = 51;
+            dataGridView2.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            dataGridView2.ScrollBars = ScrollBars.Vertical;
+            dataGridView2.Size = new Size(1421, 456);
+            dataGridView2.TabIndex = 66;
+            dataGridView2.CellContentClick += dataGridView2_CellContentClick;
+            // 
+            // label1
+            // 
+            label1.Location = new Point(114, 231);
+            label1.Name = "label1";
+            label1.Size = new Size(496, 23);
+            label1.TabIndex = 65;
+            // 
+            // StudentIDComboBox
+            // 
+            StudentIDComboBox.BackColor = SystemColors.Window;
+            StudentIDComboBox.FlatStyle = FlatStyle.Flat;
+            StudentIDComboBox.FormattingEnabled = true;
+            StudentIDComboBox.Location = new Point(929, 151);
+            StudentIDComboBox.Name = "StudentIDComboBox";
+            StudentIDComboBox.Size = new Size(240, 29);
+            StudentIDComboBox.TabIndex = 64;
+            StudentIDComboBox.SelectedIndexChanged += StudentIDComboBox_SelectedIndexChanged;
+            // 
+            // labelStudentID
+            // 
+            labelStudentID.AutoSize = true;
+            labelStudentID.Font = new Font("Century Gothic", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            labelStudentID.Location = new Point(935, 125);
+            labelStudentID.Name = "labelStudentID";
+            labelStudentID.Size = new Size(103, 22);
+            labelStudentID.TabIndex = 62;
+            labelStudentID.Text = "Student ID:";
+            // 
+            // panel8
+            // 
+            panel8.BackColor = Color.Black;
+            panel8.Location = new Point(929, 182);
+            panel8.Name = "panel8";
+            panel8.Size = new Size(240, 2);
+            panel8.TabIndex = 63;
+            // 
+            // panel9
+            // 
+            panel9.BackColor = Color.Transparent;
+            panel9.Location = new Point(608, 157);
+            panel9.Name = "panel9";
+            panel9.Size = new Size(10, 27);
+            panel9.TabIndex = 61;
+            // 
+            // panel10
+            // 
+            panel10.BackColor = Color.Transparent;
+            panel10.Location = new Point(361, 157);
+            panel10.Name = "panel10";
+            panel10.Size = new Size(10, 30);
+            panel10.TabIndex = 58;
+            // 
+            // panel11
+            // 
+            panel11.BackColor = Color.Black;
+            panel11.Location = new Point(370, 182);
+            panel11.Name = "panel11";
+            panel11.Size = new Size(240, 2);
+            panel11.TabIndex = 57;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label3.ForeColor = Color.FromArgb(142, 195, 176);
+            label3.Location = new Point(6, 18);
+            label3.Name = "label3";
+            label3.Size = new Size(157, 23);
+            label3.TabIndex = 59;
+            label3.Text = "Student Report:";
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Font = new Font("Century Gothic", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label5.Location = new Point(372, 125);
+            label5.Name = "label5";
+            label5.Size = new Size(57, 22);
+            label5.TabIndex = 55;
+            label5.Text = "Date:";
+            // 
+            // panel12
+            // 
+            panel12.BackColor = Color.Transparent;
+            panel12.Location = new Point(366, 148);
+            panel12.Name = "panel12";
+            panel12.Size = new Size(250, 10);
+            panel12.TabIndex = 56;
+            // 
+            // dateTimePicker1
+            // 
+            dateTimePicker1.CalendarTitleForeColor = SystemColors.Window;
+            dateTimePicker1.CalendarTrailingForeColor = SystemColors.Control;
+            dateTimePicker1.CustomFormat = "MM/dd/yyyy";
+            dateTimePicker1.Format = DateTimePickerFormat.Custom;
+            dateTimePicker1.Location = new Point(370, 154);
+            dateTimePicker1.Name = "dateTimePicker1";
+            dateTimePicker1.Size = new Size(242, 30);
+            dateTimePicker1.TabIndex = 60;
+            // 
             // Report
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -705,13 +757,8 @@
             Controls.Add(dashboardPanel);
             Name = "Report";
             Text = "Report";
-            TabControl.ResumeLayout(false);
-            StudentReportTabPage.ResumeLayout(false);
-            StudentReportTabPage.PerformLayout();
-            ClassReportTabPage.ResumeLayout(false);
-            ClassReportTabPage.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            panel2.ResumeLayout(false);
+            panel3.ResumeLayout(false);
             panelBack.ResumeLayout(false);
             panelBack.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)expandPictureBox).EndInit();
@@ -720,20 +767,19 @@
             dashboardSmallpanel.ResumeLayout(false);
             dashboardSmallpanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dashboardPictureBox).EndInit();
+            ClassReportTabPage.ResumeLayout(false);
+            ClassReportTabPage.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            TabControl.ResumeLayout(false);
+            tabPage1.ResumeLayout(false);
+            tabPage1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridView2).EndInit();
             ResumeLayout(false);
         }
 
         #endregion
-
-        private TabControl TabControl;
-        private TabPage ClassReportTabPage;
-        private Label label4;
-        private DataGridView dataGridView1;
-        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
-        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
-        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
-        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
-        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
         private Panel panel2;
         private Panel panelBack;
         private PictureBox expandPictureBox;
@@ -754,26 +800,36 @@
         private Label dashboardTitle;
         private PictureBox dashboardPictureBox;
         private Button buttonReport;
-        private TabPage StudentReportTabPage;
-        private Button SaveAttendanceButton;
-        private ComboBox comboBox3;
-        private Label label3;
-        private Panel panel8;
-        private UserControlDashboard userControlDashboard2;
-        private ComboBox comboBox2;
+        private TabPage ClassReportTabPage;
+        private PictureBox pictureBox1;
+        private Label label4;
+        private DataGridView dataGridView1;
+        private TabControl TabControl;
+        private ComboBox CourseComboBox;
         private Label label2;
         private Panel panel7;
         private Panel panel6;
         private Panel panel5;
         private Panel panel4;
-        private UserControlDashboard userControlDashboard1;
-        private ComboBox comboBox1;
-        private Label label1;
-        private Panel panel3;
-        private Label StudentReportLabel;
         private Label studentIDLabel;
         private Panel panel1;
+        private DateTimePicker StudentDateTimePicker;
+        private Button RegisterButton;
+        private Panel panel3;
+        private Button logoutButton;
+        private TabPage tabPage1;
+        private PictureBox pictureBox2;
+        private DataGridView dataGridView2;
+        private Label label1;
+        private ComboBox StudentIDComboBox;
+        private Label labelStudentID;
+        private Panel panel8;
+        private Panel panel9;
+        private Panel panel10;
+        private Panel panel11;
+        private Label label3;
+        private Label label5;
+        private Panel panel12;
         private DateTimePicker dateTimePicker1;
-        private PictureBox pictureBox1;
     }
 }

@@ -38,9 +38,12 @@ namespace Student_Attendance_Management_System
             minimizePanel = new Panel();
             logoutPictureBox = new PictureBox();
             panelTop = new Panel();
+            panel20 = new Panel();
+            ButtonLogout = new Button();
             panelBack = new Panel();
             expandPictureBox = new PictureBox();
             dashboardPanel = new Panel();
+            RegisterButton = new Button();
             ReportButton = new Button();
             departmentButton = new Button();
             professorButton = new Button();
@@ -121,6 +124,7 @@ namespace Student_Attendance_Management_System
             minimizePanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)logoutPictureBox).BeginInit();
             panelTop.SuspendLayout();
+            panel20.SuspendLayout();
             panelBack.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)expandPictureBox).BeginInit();
             dashboardPanel.SuspendLayout();
@@ -206,12 +210,34 @@ namespace Student_Attendance_Management_System
             // panelTop
             // 
             panelTop.BackColor = Color.FromArgb(188, 234, 213);
+            panelTop.Controls.Add(panel20);
             panelTop.Controls.Add(panelExpand);
             panelTop.Dock = DockStyle.Bottom;
             panelTop.Location = new Point(0, 98);
             panelTop.Name = "panelTop";
             panelTop.Size = new Size(1628, 126);
             panelTop.TabIndex = 0;
+            // 
+            // panel20
+            // 
+            panel20.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            panel20.BackColor = Color.FromArgb(188, 234, 213);
+            panel20.Controls.Add(ButtonLogout);
+            panel20.Location = new Point(1318, 1);
+            panel20.Name = "panel20";
+            panel20.Size = new Size(200, 125);
+            panel20.TabIndex = 1;
+            // 
+            // ButtonLogout
+            // 
+            ButtonLogout.Font = new Font("Century Gothic", 10.8F);
+            ButtonLogout.Location = new Point(0, -2);
+            ButtonLogout.Name = "ButtonLogout";
+            ButtonLogout.Size = new Size(200, 67);
+            ButtonLogout.TabIndex = 0;
+            ButtonLogout.Text = "Logout";
+            ButtonLogout.UseVisualStyleBackColor = true;
+            ButtonLogout.Click += ButtonLogout_Click;
             // 
             // panelBack
             // 
@@ -234,11 +260,13 @@ namespace Student_Attendance_Management_System
             expandPictureBox.SizeMode = PictureBoxSizeMode.AutoSize;
             expandPictureBox.TabIndex = 2;
             expandPictureBox.TabStop = false;
+            expandPictureBox.Click += expandPictureBox_Click;
             // 
             // dashboardPanel
             // 
             dashboardPanel.Anchor = AnchorStyles.None;
             dashboardPanel.BackColor = Color.FromArgb(188, 234, 213);
+            dashboardPanel.Controls.Add(RegisterButton);
             dashboardPanel.Controls.Add(ReportButton);
             dashboardPanel.Controls.Add(departmentButton);
             dashboardPanel.Controls.Add(professorButton);
@@ -254,6 +282,23 @@ namespace Student_Attendance_Management_System
             dashboardPanel.Size = new Size(274, 1033);
             dashboardPanel.TabIndex = 2;
             // 
+            // RegisterButton
+            // 
+            RegisterButton.Anchor = AnchorStyles.None;
+            RegisterButton.FlatAppearance.BorderSize = 0;
+            RegisterButton.FlatStyle = FlatStyle.Flat;
+            RegisterButton.Font = new Font("Century Gothic", 11F);
+            RegisterButton.Image = (Image)resources.GetObject("RegisterButton.Image");
+            RegisterButton.ImageAlign = ContentAlignment.MiddleLeft;
+            RegisterButton.Location = new Point(13, 642);
+            RegisterButton.Name = "RegisterButton";
+            RegisterButton.Size = new Size(220, 40);
+            RegisterButton.TabIndex = 23;
+            RegisterButton.Text = "                Register";
+            RegisterButton.TextAlign = ContentAlignment.MiddleLeft;
+            RegisterButton.UseVisualStyleBackColor = true;
+            RegisterButton.Click += RegisterButton_Click;
+            // 
             // ReportButton
             // 
             ReportButton.Anchor = AnchorStyles.None;
@@ -266,7 +311,7 @@ namespace Student_Attendance_Management_System
             ReportButton.Name = "ReportButton";
             ReportButton.Size = new Size(220, 40);
             ReportButton.TabIndex = 17;
-            ReportButton.Text = "                Reports";
+            ReportButton.Text = "                Report";
             ReportButton.TextAlign = ContentAlignment.MiddleLeft;
             ReportButton.UseVisualStyleBackColor = true;
             ReportButton.Click += button1_Click;
@@ -1073,6 +1118,7 @@ namespace Student_Attendance_Management_System
             UDStudentIDtextBox.Name = "UDStudentIDtextBox";
             UDStudentIDtextBox.Size = new Size(270, 23);
             UDStudentIDtextBox.TabIndex = 28;
+            UDStudentIDtextBox.TextChanged += UDStudentIDtextBox_TextChanged;
             // 
             // UDStudentEmailtextBox
             // 
@@ -1192,6 +1238,7 @@ namespace Student_Attendance_Management_System
             minimizePanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)logoutPictureBox).EndInit();
             panelTop.ResumeLayout(false);
+            panel20.ResumeLayout(false);
             panelBack.ResumeLayout(false);
             panelBack.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)expandPictureBox).EndInit();
@@ -1299,5 +1346,8 @@ namespace Student_Attendance_Management_System
         private Panel panel18;
         private Panel panel19;
         private DateTimePicker UDdobdateTimePicker;
+        private Button RegisterButton;
+        private Panel panel20;
+        private Button ButtonLogout;
     }
 }

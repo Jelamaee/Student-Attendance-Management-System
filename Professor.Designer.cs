@@ -68,6 +68,7 @@
             UDEmailTextBox = new TextBox();
             panel5 = new Panel();
             dashboardPanel = new Panel();
+            RegisterButton = new Button();
             ReportButton = new Button();
             button2 = new Button();
             button1 = new Button();
@@ -83,10 +84,13 @@
             dashboardPictureBox = new PictureBox();
             archivedButton = new Button();
             TabControl = new TabControl();
+            panel8 = new Panel();
+            logoutButton = new Button();
             ((System.ComponentModel.ISupportInitialize)searchPictureBox).BeginInit();
             ((System.ComponentModel.ISupportInitialize)SearchProfessorDataGridView).BeginInit();
             AddProfessorTabPage.SuspendLayout();
             panelBack.SuspendLayout();
+            panel14.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)expandPictureBox).BeginInit();
             ((System.ComponentModel.ISupportInitialize)logoutPictureBox).BeginInit();
             SearchProfessorTabPage.SuspendLayout();
@@ -95,6 +99,7 @@
             dashboardSmallpanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dashboardPictureBox).BeginInit();
             TabControl.SuspendLayout();
+            panel8.SuspendLayout();
             SuspendLayout();
             // 
             // searchStudentLabel
@@ -361,6 +366,7 @@
             // panel14
             // 
             panel14.BackColor = Color.FromArgb(188, 234, 213);
+            panel14.Controls.Add(panel8);
             panel14.Location = new Point(0, 98);
             panel14.Name = "panel14";
             panel14.Size = new Size(1628, 126);
@@ -376,6 +382,7 @@
             expandPictureBox.SizeMode = PictureBoxSizeMode.AutoSize;
             expandPictureBox.TabIndex = 2;
             expandPictureBox.TabStop = false;
+            expandPictureBox.Click += expandPictureBox_Click;
             // 
             // logoutPictureBox
             // 
@@ -525,6 +532,7 @@
             // 
             dashboardPanel.Anchor = AnchorStyles.None;
             dashboardPanel.BackColor = Color.FromArgb(188, 234, 213);
+            dashboardPanel.Controls.Add(RegisterButton);
             dashboardPanel.Controls.Add(ReportButton);
             dashboardPanel.Controls.Add(button2);
             dashboardPanel.Controls.Add(button1);
@@ -541,6 +549,23 @@
             dashboardPanel.Name = "dashboardPanel";
             dashboardPanel.Size = new Size(274, 1033);
             dashboardPanel.TabIndex = 26;
+            // 
+            // RegisterButton
+            // 
+            RegisterButton.Anchor = AnchorStyles.None;
+            RegisterButton.FlatAppearance.BorderSize = 0;
+            RegisterButton.FlatStyle = FlatStyle.Flat;
+            RegisterButton.Font = new Font("Century Gothic", 11F);
+            RegisterButton.Image = (Image)resources.GetObject("RegisterButton.Image");
+            RegisterButton.ImageAlign = ContentAlignment.MiddleLeft;
+            RegisterButton.Location = new Point(13, 638);
+            RegisterButton.Name = "RegisterButton";
+            RegisterButton.Size = new Size(220, 40);
+            RegisterButton.TabIndex = 25;
+            RegisterButton.Text = "                Register";
+            RegisterButton.TextAlign = ContentAlignment.MiddleLeft;
+            RegisterButton.UseVisualStyleBackColor = true;
+            RegisterButton.Click += RegisterButton_Click;
             // 
             // ReportButton
             // 
@@ -773,6 +798,25 @@
             TabControl.Size = new Size(1632, 760);
             TabControl.TabIndex = 27;
             // 
+            // panel8
+            // 
+            panel8.Controls.Add(logoutButton);
+            panel8.Location = new Point(1319, 3);
+            panel8.Name = "panel8";
+            panel8.Size = new Size(200, 125);
+            panel8.TabIndex = 0;
+            // 
+            // logoutButton
+            // 
+            logoutButton.Font = new Font("Century Gothic", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            logoutButton.Location = new Point(0, -3);
+            logoutButton.Name = "logoutButton";
+            logoutButton.Size = new Size(200, 67);
+            logoutButton.TabIndex = 0;
+            logoutButton.Text = "Logout";
+            logoutButton.UseVisualStyleBackColor = true;
+            logoutButton.Click += logoutButton_Click;
+            // 
             // Professor
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -790,6 +834,7 @@
             AddProfessorTabPage.PerformLayout();
             panelBack.ResumeLayout(false);
             panelBack.PerformLayout();
+            panel14.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)expandPictureBox).EndInit();
             ((System.ComponentModel.ISupportInitialize)logoutPictureBox).EndInit();
             SearchProfessorTabPage.ResumeLayout(false);
@@ -801,6 +846,7 @@
             dashboardSmallpanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dashboardPictureBox).EndInit();
             TabControl.ResumeLayout(false);
+            panel8.ResumeLayout(false);
             ResumeLayout(false);
         }
 
@@ -860,5 +906,8 @@
         private Panel panel4;
         private TextBox UDEmailTextBox;
         private Panel panel5;
+        private Button RegisterButton;
+        private Panel panel8;
+        private Button logoutButton;
     }
 }

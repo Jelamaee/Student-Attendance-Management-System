@@ -29,19 +29,20 @@
         private void InitializeComponent()
         {
             ResetPassGroupBox = new GroupBox();
-            UsernameLabel = new Label();
-            NewPassLabel = new Label();
-            ConfirmPassLabel = new Label();
-            UsernameTextBox = new TextBox();
-            NewPassTextBox = new TextBox();
-            ConfirmPassTextBox = new TextBox();
-            ResetButton = new Button();
             CancelButton = new Button();
+            ResetButton = new Button();
+            ConfirmPassTextBox = new TextBox();
+            NewPassTextBox = new TextBox();
+            UsernameTextBox = new TextBox();
+            ConfirmPassLabel = new Label();
+            NewPassLabel = new Label();
+            UsernameLabel = new Label();
             ResetPassGroupBox.SuspendLayout();
             SuspendLayout();
             // 
             // ResetPassGroupBox
             // 
+            ResetPassGroupBox.BackColor = SystemColors.Window;
             ResetPassGroupBox.Controls.Add(CancelButton);
             ResetPassGroupBox.Controls.Add(ResetButton);
             ResetPassGroupBox.Controls.Add(ConfirmPassTextBox);
@@ -51,30 +52,59 @@
             ResetPassGroupBox.Controls.Add(NewPassLabel);
             ResetPassGroupBox.Controls.Add(UsernameLabel);
             ResetPassGroupBox.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            ResetPassGroupBox.Location = new Point(341, 64);
+            ResetPassGroupBox.Location = new Point(284, 46);
             ResetPassGroupBox.Name = "ResetPassGroupBox";
             ResetPassGroupBox.Size = new Size(514, 411);
             ResetPassGroupBox.TabIndex = 0;
             ResetPassGroupBox.TabStop = false;
             ResetPassGroupBox.Text = "Reset Password";
+            ResetPassGroupBox.Enter += ResetPassGroupBox_Enter;
             // 
-            // UsernameLabel
+            // CancelButton
             // 
-            UsernameLabel.AutoSize = true;
-            UsernameLabel.Location = new Point(112, 52);
-            UsernameLabel.Name = "UsernameLabel";
-            UsernameLabel.Size = new Size(113, 23);
-            UsernameLabel.TabIndex = 0;
-            UsernameLabel.Text = "Username:";
+            CancelButton.BackColor = Color.Red;
+            CancelButton.Location = new Point(303, 318);
+            CancelButton.Name = "CancelButton";
+            CancelButton.Size = new Size(96, 43);
+            CancelButton.TabIndex = 7;
+            CancelButton.Text = "Cancel";
+            CancelButton.UseVisualStyleBackColor = false;
+            CancelButton.Click += CancelButton_Click;
             // 
-            // NewPassLabel
+            // ResetButton
             // 
-            NewPassLabel.AutoSize = true;
-            NewPassLabel.Location = new Point(112, 139);
-            NewPassLabel.Name = "NewPassLabel";
-            NewPassLabel.Size = new Size(160, 23);
-            NewPassLabel.TabIndex = 1;
-            NewPassLabel.Text = "New Password:";
+            ResetButton.BackColor = Color.FromArgb(142, 195, 176);
+            ResetButton.Location = new Point(118, 318);
+            ResetButton.Name = "ResetButton";
+            ResetButton.Size = new Size(99, 43);
+            ResetButton.TabIndex = 6;
+            ResetButton.Text = "Reset";
+            ResetButton.UseVisualStyleBackColor = false;
+            ResetButton.Click += ResetButton_Click;
+            // 
+            // ConfirmPassTextBox
+            // 
+            ConfirmPassTextBox.Location = new Point(118, 253);
+            ConfirmPassTextBox.Name = "ConfirmPassTextBox";
+            ConfirmPassTextBox.Size = new Size(281, 32);
+            ConfirmPassTextBox.TabIndex = 5;
+            ConfirmPassTextBox.TextChanged += ConfirmPassTextBox_TextChanged;
+            // 
+            // NewPassTextBox
+            // 
+            NewPassTextBox.Location = new Point(118, 165);
+            NewPassTextBox.Name = "NewPassTextBox";
+            NewPassTextBox.Size = new Size(281, 32);
+            NewPassTextBox.TabIndex = 4;
+            NewPassTextBox.TextChanged += NewPassTextBox_TextChanged;
+            // 
+            // UsernameTextBox
+            // 
+            UsernameTextBox.Location = new Point(118, 78);
+            UsernameTextBox.Name = "UsernameTextBox";
+            UsernameTextBox.Size = new Size(281, 32);
+            UsernameTextBox.TabIndex = 3;
+            UsernameTextBox.TextChanged += UsernameTextBox_TextChanged;
             // 
             // ConfirmPassLabel
             // 
@@ -86,54 +116,29 @@
             ConfirmPassLabel.Text = "Confirm Password:";
             ConfirmPassLabel.Click += label2_Click;
             // 
-            // UsernameTextBox
+            // NewPassLabel
             // 
-            UsernameTextBox.Location = new Point(118, 78);
-            UsernameTextBox.Name = "UsernameTextBox";
-            UsernameTextBox.Size = new Size(281, 32);
-            UsernameTextBox.TabIndex = 3;
-            UsernameTextBox.TextChanged += UsernameTextBox_TextChanged;
+            NewPassLabel.AutoSize = true;
+            NewPassLabel.Location = new Point(112, 139);
+            NewPassLabel.Name = "NewPassLabel";
+            NewPassLabel.Size = new Size(160, 23);
+            NewPassLabel.TabIndex = 1;
+            NewPassLabel.Text = "New Password:";
             // 
-            // NewPassTextBox
+            // UsernameLabel
             // 
-            NewPassTextBox.Location = new Point(118, 165);
-            NewPassTextBox.Name = "NewPassTextBox";
-            NewPassTextBox.Size = new Size(281, 32);
-            NewPassTextBox.TabIndex = 4;
-            NewPassTextBox.TextChanged += NewPassTextBox_TextChanged;
-            // 
-            // ConfirmPassTextBox
-            // 
-            ConfirmPassTextBox.Location = new Point(118, 253);
-            ConfirmPassTextBox.Name = "ConfirmPassTextBox";
-            ConfirmPassTextBox.Size = new Size(281, 32);
-            ConfirmPassTextBox.TabIndex = 5;
-            ConfirmPassTextBox.TextChanged += ConfirmPassTextBox_TextChanged;
-            // 
-            // ResetButton
-            // 
-            ResetButton.Location = new Point(126, 327);
-            ResetButton.Name = "ResetButton";
-            ResetButton.Size = new Size(94, 29);
-            ResetButton.TabIndex = 6;
-            ResetButton.Text = "Reset";
-            ResetButton.UseVisualStyleBackColor = true;
-            ResetButton.Click += ResetButton_Click;
-            // 
-            // CancelButton
-            // 
-            CancelButton.Location = new Point(315, 327);
-            CancelButton.Name = "CancelButton";
-            CancelButton.Size = new Size(94, 29);
-            CancelButton.TabIndex = 7;
-            CancelButton.Text = "Cancel";
-            CancelButton.UseVisualStyleBackColor = true;
-            CancelButton.Click += CancelButton_Click;
+            UsernameLabel.AutoSize = true;
+            UsernameLabel.Location = new Point(112, 52);
+            UsernameLabel.Name = "UsernameLabel";
+            UsernameLabel.Size = new Size(113, 23);
+            UsernameLabel.TabIndex = 0;
+            UsernameLabel.Text = "Username:";
             // 
             // ForgotPassword
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = SystemColors.Window;
             ClientSize = new Size(1023, 528);
             Controls.Add(ResetPassGroupBox);
             Name = "ForgotPassword";

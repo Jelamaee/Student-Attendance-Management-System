@@ -34,6 +34,7 @@
             logoutPictureBox = new PictureBox();
             panelBack = new Panel();
             dashboardPanel = new Panel();
+            RegisterButton = new Button();
             buttonReport = new Button();
             ReportButton = new Button();
             departmentButton = new Button();
@@ -49,6 +50,9 @@
             ViewClasstabPage = new TabPage();
             ViewClassDataGridView = new DataGridView();
             AddClassTabPage = new TabPage();
+            StudentIDComboBox = new ComboBox();
+            label5 = new Label();
+            panel12 = new Panel();
             AddClassButton = new Button();
             panel8 = new Panel();
             panel9 = new Panel();
@@ -74,9 +78,9 @@
             panel1 = new Panel();
             StartTimeDateTimePicker = new DateTimePicker();
             TabControl = new TabControl();
-            StudentIDComboBox = new ComboBox();
-            label5 = new Label();
-            panel12 = new Panel();
+            panel13 = new Panel();
+            logoutButton = new Button();
+            panel14.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)expandPictureBox).BeginInit();
             ((System.ComponentModel.ISupportInitialize)logoutPictureBox).BeginInit();
             panelBack.SuspendLayout();
@@ -87,11 +91,13 @@
             ((System.ComponentModel.ISupportInitialize)ViewClassDataGridView).BeginInit();
             AddClassTabPage.SuspendLayout();
             TabControl.SuspendLayout();
+            panel13.SuspendLayout();
             SuspendLayout();
             // 
             // panel14
             // 
             panel14.BackColor = Color.FromArgb(188, 234, 213);
+            panel14.Controls.Add(panel13);
             panel14.Location = new Point(0, 98);
             panel14.Name = "panel14";
             panel14.Size = new Size(1628, 126);
@@ -107,6 +113,7 @@
             expandPictureBox.SizeMode = PictureBoxSizeMode.AutoSize;
             expandPictureBox.TabIndex = 2;
             expandPictureBox.TabStop = false;
+            expandPictureBox.Click += expandPictureBox_Click;
             // 
             // logoutPictureBox
             // 
@@ -133,6 +140,7 @@
             // 
             dashboardPanel.Anchor = AnchorStyles.None;
             dashboardPanel.BackColor = Color.FromArgb(188, 234, 213);
+            dashboardPanel.Controls.Add(RegisterButton);
             dashboardPanel.Controls.Add(buttonReport);
             dashboardPanel.Controls.Add(ReportButton);
             dashboardPanel.Controls.Add(departmentButton);
@@ -147,6 +155,23 @@
             dashboardPanel.Name = "dashboardPanel";
             dashboardPanel.Size = new Size(274, 1033);
             dashboardPanel.TabIndex = 33;
+            // 
+            // RegisterButton
+            // 
+            RegisterButton.Anchor = AnchorStyles.None;
+            RegisterButton.FlatAppearance.BorderSize = 0;
+            RegisterButton.FlatStyle = FlatStyle.Flat;
+            RegisterButton.Font = new Font("Century Gothic", 11F);
+            RegisterButton.Image = (Image)resources.GetObject("RegisterButton.Image");
+            RegisterButton.ImageAlign = ContentAlignment.MiddleLeft;
+            RegisterButton.Location = new Point(12, 642);
+            RegisterButton.Name = "RegisterButton";
+            RegisterButton.Size = new Size(220, 40);
+            RegisterButton.TabIndex = 22;
+            RegisterButton.Text = "                Register";
+            RegisterButton.TextAlign = ContentAlignment.MiddleLeft;
+            RegisterButton.UseVisualStyleBackColor = true;
+            RegisterButton.Click += RegisterButton_Click;
             // 
             // buttonReport
             // 
@@ -403,6 +428,35 @@
             AddClassTabPage.Text = "Add Class";
             AddClassTabPage.Click += AddClassTabPage_Click;
             // 
+            // StudentIDComboBox
+            // 
+            StudentIDComboBox.BackColor = SystemColors.Window;
+            StudentIDComboBox.FlatStyle = FlatStyle.Flat;
+            StudentIDComboBox.FormattingEnabled = true;
+            StudentIDComboBox.Location = new Point(321, 177);
+            StudentIDComboBox.Name = "StudentIDComboBox";
+            StudentIDComboBox.Size = new Size(240, 29);
+            StudentIDComboBox.TabIndex = 46;
+            StudentIDComboBox.SelectedIndexChanged += StudentIDComboBox_SelectedIndexChanged;
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Font = new Font("Century Gothic", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label5.Location = new Point(321, 145);
+            label5.Name = "label5";
+            label5.Size = new Size(103, 22);
+            label5.TabIndex = 44;
+            label5.Text = "Student ID:";
+            // 
+            // panel12
+            // 
+            panel12.BackColor = Color.Black;
+            panel12.Location = new Point(321, 208);
+            panel12.Name = "panel12";
+            panel12.Size = new Size(240, 2);
+            panel12.TabIndex = 45;
+            // 
             // AddClassButton
             // 
             AddClassButton.BackColor = Color.FromArgb(142, 195, 176);
@@ -645,34 +699,24 @@
             TabControl.Size = new Size(1632, 760);
             TabControl.TabIndex = 32;
             // 
-            // StudentIDComboBox
+            // panel13
             // 
-            StudentIDComboBox.BackColor = SystemColors.Window;
-            StudentIDComboBox.FlatStyle = FlatStyle.Flat;
-            StudentIDComboBox.FormattingEnabled = true;
-            StudentIDComboBox.Location = new Point(321, 177);
-            StudentIDComboBox.Name = "StudentIDComboBox";
-            StudentIDComboBox.Size = new Size(240, 29);
-            StudentIDComboBox.TabIndex = 46;
-            StudentIDComboBox.SelectedIndexChanged += StudentIDComboBox_SelectedIndexChanged;
+            panel13.Controls.Add(logoutButton);
+            panel13.Location = new Point(1319, 1);
+            panel13.Name = "panel13";
+            panel13.Size = new Size(200, 125);
+            panel13.TabIndex = 0;
             // 
-            // label5
+            // logoutButton
             // 
-            label5.AutoSize = true;
-            label5.Font = new Font("Century Gothic", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label5.Location = new Point(321, 145);
-            label5.Name = "label5";
-            label5.Size = new Size(103, 22);
-            label5.TabIndex = 44;
-            label5.Text = "Student ID:";
-            // 
-            // panel12
-            // 
-            panel12.BackColor = Color.Black;
-            panel12.Location = new Point(321, 208);
-            panel12.Name = "panel12";
-            panel12.Size = new Size(240, 2);
-            panel12.TabIndex = 45;
+            logoutButton.Font = new Font("Century Gothic", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            logoutButton.Location = new Point(0, 0);
+            logoutButton.Name = "logoutButton";
+            logoutButton.Size = new Size(200, 67);
+            logoutButton.TabIndex = 0;
+            logoutButton.Text = "Logout";
+            logoutButton.UseVisualStyleBackColor = true;
+            logoutButton.Click += logoutButton_Click;
             // 
             // Cclasses
             // 
@@ -685,6 +729,7 @@
             Controls.Add(panelBack);
             Name = "Cclasses";
             Text = "Class";
+            panel14.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)expandPictureBox).EndInit();
             ((System.ComponentModel.ISupportInitialize)logoutPictureBox).EndInit();
             panelBack.ResumeLayout(false);
@@ -698,6 +743,7 @@
             AddClassTabPage.ResumeLayout(false);
             AddClassTabPage.PerformLayout();
             TabControl.ResumeLayout(false);
+            panel13.ResumeLayout(false);
             ResumeLayout(false);
         }
 
@@ -750,5 +796,8 @@
         private ComboBox StudentIDComboBox;
         private Label label5;
         private Panel panel12;
+        private Button RegisterButton;
+        private Panel panel13;
+        private Button logoutButton;
     }
 }

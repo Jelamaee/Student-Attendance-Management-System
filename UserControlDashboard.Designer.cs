@@ -30,15 +30,15 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserControlDashboard));
             studentPanel = new Panel();
-            label2 = new Label();
+            TotalStudentOutputLabel = new Label();
             studentLabel = new Label();
             pictureBox1 = new PictureBox();
             panel1 = new Panel();
-            label1 = new Label();
+            TotalAttendanceOutputLabel = new Label();
             label3 = new Label();
             pictureBox2 = new PictureBox();
             panel2 = new Panel();
-            label4 = new Label();
+            TotalRoleOutputLabel = new Label();
             label5 = new Label();
             pictureBox3 = new PictureBox();
             studentPanel.SuspendLayout();
@@ -53,7 +53,7 @@
             // 
             studentPanel.Anchor = AnchorStyles.None;
             studentPanel.BackColor = Color.FromArgb(158, 213, 197);
-            studentPanel.Controls.Add(label2);
+            studentPanel.Controls.Add(TotalStudentOutputLabel);
             studentPanel.Controls.Add(studentLabel);
             studentPanel.Controls.Add(pictureBox1);
             studentPanel.Location = new Point(145, 88);
@@ -61,16 +61,17 @@
             studentPanel.Size = new Size(250, 125);
             studentPanel.TabIndex = 0;
             // 
-            // label2
+            // TotalStudentOutputLabel
             // 
-            label2.Anchor = AnchorStyles.None;
-            label2.AutoSize = true;
-            label2.Font = new Font("Century Gothic", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label2.Location = new Point(148, 84);
-            label2.Name = "label2";
-            label2.Size = new Size(33, 21);
-            label2.TabIndex = 2;
-            label2.Text = "(?)";
+            TotalStudentOutputLabel.Anchor = AnchorStyles.None;
+            TotalStudentOutputLabel.AutoSize = true;
+            TotalStudentOutputLabel.Font = new Font("Century Gothic", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            TotalStudentOutputLabel.Location = new Point(148, 84);
+            TotalStudentOutputLabel.Name = "TotalStudentOutputLabel";
+            TotalStudentOutputLabel.Size = new Size(33, 21);
+            TotalStudentOutputLabel.TabIndex = 2;
+            TotalStudentOutputLabel.Text = "(?)";
+            TotalStudentOutputLabel.Click += TotalStudentOutputLabel_Click;
             // 
             // studentLabel
             // 
@@ -98,7 +99,7 @@
             // 
             panel1.Anchor = AnchorStyles.None;
             panel1.BackColor = Color.FromArgb(158, 213, 197);
-            panel1.Controls.Add(label1);
+            panel1.Controls.Add(TotalAttendanceOutputLabel);
             panel1.Controls.Add(label3);
             panel1.Controls.Add(pictureBox2);
             panel1.Location = new Point(723, 88);
@@ -106,16 +107,17 @@
             panel1.Size = new Size(250, 125);
             panel1.TabIndex = 1;
             // 
-            // label1
+            // TotalAttendanceOutputLabel
             // 
-            label1.Anchor = AnchorStyles.None;
-            label1.AutoSize = true;
-            label1.Font = new Font("Century Gothic", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label1.Location = new Point(148, 84);
-            label1.Name = "label1";
-            label1.Size = new Size(33, 21);
-            label1.TabIndex = 2;
-            label1.Text = "(?)";
+            TotalAttendanceOutputLabel.Anchor = AnchorStyles.None;
+            TotalAttendanceOutputLabel.AutoSize = true;
+            TotalAttendanceOutputLabel.Font = new Font("Century Gothic", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            TotalAttendanceOutputLabel.Location = new Point(148, 84);
+            TotalAttendanceOutputLabel.Name = "TotalAttendanceOutputLabel";
+            TotalAttendanceOutputLabel.Size = new Size(33, 21);
+            TotalAttendanceOutputLabel.TabIndex = 2;
+            TotalAttendanceOutputLabel.Text = "(?)";
+            TotalAttendanceOutputLabel.Click += TotalAttendanceOutputLabel_Click;
             // 
             // label3
             // 
@@ -143,7 +145,7 @@
             // 
             panel2.Anchor = AnchorStyles.None;
             panel2.BackColor = Color.FromArgb(158, 213, 197);
-            panel2.Controls.Add(label4);
+            panel2.Controls.Add(TotalRoleOutputLabel);
             panel2.Controls.Add(label5);
             panel2.Controls.Add(pictureBox3);
             panel2.Location = new Point(440, 318);
@@ -151,16 +153,17 @@
             panel2.Size = new Size(250, 125);
             panel2.TabIndex = 3;
             // 
-            // label4
+            // TotalRoleOutputLabel
             // 
-            label4.Anchor = AnchorStyles.None;
-            label4.AutoSize = true;
-            label4.Font = new Font("Century Gothic", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label4.Location = new Point(148, 84);
-            label4.Name = "label4";
-            label4.Size = new Size(33, 21);
-            label4.TabIndex = 2;
-            label4.Text = "(?)";
+            TotalRoleOutputLabel.Anchor = AnchorStyles.None;
+            TotalRoleOutputLabel.AutoSize = true;
+            TotalRoleOutputLabel.Font = new Font("Century Gothic", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            TotalRoleOutputLabel.Location = new Point(148, 84);
+            TotalRoleOutputLabel.Name = "TotalRoleOutputLabel";
+            TotalRoleOutputLabel.Size = new Size(33, 21);
+            TotalRoleOutputLabel.TabIndex = 2;
+            TotalRoleOutputLabel.Text = "(?)";
+            TotalRoleOutputLabel.Click += TotalRoleOutputLabel_Click;
             // 
             // label5
             // 
@@ -169,9 +172,9 @@
             label5.Font = new Font("Century Gothic", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label5.Location = new Point(146, 51);
             label5.Name = "label5";
-            label5.Size = new Size(48, 21);
+            label5.Size = new Size(55, 21);
             label5.TabIndex = 1;
-            label5.Text = "Role";
+            label5.Text = "Roles";
             // 
             // pictureBox3
             // 
@@ -209,14 +212,14 @@
         #endregion
 
         private Panel studentPanel;
-        private Label label2;
+        private Label TotalStudentOutputLabel;
         private PictureBox pictureBox1;
         private Panel panel1;
-        private Label label1;
+        private Label TotalAttendanceOutputLabel;
         private Label label3;
         private PictureBox pictureBox2;
         private Panel panel2;
-        private Label label4;
+        private Label TotalRoleOutputLabel;
         private Label label5;
         private PictureBox pictureBox3;
         private Label studentLabel;

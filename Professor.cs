@@ -7,18 +7,26 @@ namespace Student_Attendance_Management_System
 {
     public partial class Professor : Form
     {
+        private Login loginForm;
         string connectionString = "server=localhost;database=student_attendance_system;user=root;password=jelamae;";
         MySqlConnection connection;
         private DataTable originalProfessorData;
+        private int userId; // To store the passed user ID
 
-        public Professor()
+        public Professor(int userId)
         {
             InitializeComponent();
+            this.userId = userId;
+            loginForm = new Login(); // Initialize once
+            logoutButton.Visible = false; // Hide logout button initially
             connection = new MySqlConnection(connectionString);
             this.Load += Professor_Load;
-
-            // Manually attach TextChanged event
             searchTextBox.TextChanged += searchTextBox_TextChanged;
+        }
+
+        public Professor()
+            : this(-1) // Default constructor for designer
+        {
         }
 
         private void Professor_Load(object sender, EventArgs e)
@@ -37,7 +45,6 @@ namespace Student_Attendance_Management_System
                 MySqlDataAdapter adapter = new MySqlDataAdapter(query, connection);
                 originalProfessorData = new DataTable();
                 adapter.Fill(originalProfessorData);
-
                 SearchProfessorDataGridView.DataSource = originalProfessorData;
                 UpdateTotalProfOutputCountLabel();
             }
@@ -51,7 +58,7 @@ namespace Student_Attendance_Management_System
                     connection.Close();
             }
         }
-        // ✅ This method is defined here, as its own separate method
+
         private void UpdateTotalProfOutputCountLabel()
         {
             if (SearchProfessorDataGridView.DataSource is DataView dv)
@@ -64,7 +71,6 @@ namespace Student_Attendance_Management_System
             }
         }
 
-        // Navigation buttons
         private void dashboardButton_Click(object sender, EventArgs e)
         {
             Dashboard dashboard = new Dashboard();
@@ -112,7 +118,6 @@ namespace Student_Attendance_Management_System
             LoadProfessors();
         }
 
-        // Add Professor
         private void addButton_Click(object sender, EventArgs e)
         {
             try
@@ -125,37 +130,35 @@ namespace Student_Attendance_Management_System
                     return;
                 }
 
-                connection.Open();
-                string query = "INSERT INTO professors (LastName, FirstName, Email) VALUES (@LastName, @FirstName, @Email)";
-                MySqlCommand command = new MySqlCommand(query, connection);
-                command.Parameters.AddWithValue("@LastName", ProfessorLNameTextBox.Text.Trim());
-                command.Parameters.AddWithValue("@FirstName", ProfessorFNameTextBox.Text.Trim());
-                command.Parameters.AddWithValue("@Email", EmailTextBox.Text.Trim());
+                using (MySqlConnection conn = new MySqlConnection(connectionString))
+                {
+                    conn.Open();
 
-                int rowsAffected = command.ExecuteNonQuery();
-                if (rowsAffected > 0)
-                {
-                    MessageBox.Show("Professor added successfully!");
-                    ClearAddProfessorsFields();
-                    LoadProfessors();
+                    // Insert professor with the same ID as the user
+                    string query = "INSERT INTO professors (LastName, FirstName, Email, user_id) VALUES (@LastName, @FirstName, @Email, @user_id)";
+                    MySqlCommand cmd = new MySqlCommand(query, conn);
+                    cmd.Parameters.AddWithValue("@LastName", ProfessorLNameTextBox.Text.Trim());
+                    cmd.Parameters.AddWithValue("@FirstName", ProfessorFNameTextBox.Text.Trim());
+                    cmd.Parameters.AddWithValue("@Email", EmailTextBox.Text.Trim());
+                    cmd.Parameters.AddWithValue("@user_id", userId); // Use the passed user ID
+
+                    int rowsAffected = cmd.ExecuteNonQuery();
+
+                    if (rowsAffected > 0)
+                    {
+                        MessageBox.Show("Professor added successfully!");
+                        ClearAddProfessorsFields();
+                        LoadProfessors();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Failed to add professor.");
+                    }
                 }
-                else
-                {
-                    MessageBox.Show("Failed to add professor.");
-                }
-            }
-            catch (MySqlException ex) when (ex.Number == 1062)
-            {
-                MessageBox.Show("A professor with this email already exists.");
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Error saving professor: " + ex.Message);
-            }
-            finally
-            {
-                if (connection.State == ConnectionState.Open)
-                    connection.Close();
             }
         }
 
@@ -174,39 +177,29 @@ namespace Student_Attendance_Management_System
             try
             {
                 string searchValue = searchTextBox.Text.Trim();
-
                 DataView dv = new DataView(originalProfessorData);
 
                 if (!string.IsNullOrEmpty(searchValue))
                 {
-                    // Convert searchValue to uppercase for case-insensitive comparison
                     searchValue = searchValue.ToUpper();
-
-                    // Filter conditions
                     List<string> filters = new List<string>();
 
-                    // Check if ProfessorID is numeric
                     if (int.TryParse(searchValue, out int professorId))
                     {
-                        // Add ProfessorID filter if searchValue is numeric
                         filters.Add($"ProfessorID = {professorId}");
                     }
 
-                    // Add FirstName and LastName filters
                     filters.Add($"FirstName LIKE '%{searchValue}%'");
                     filters.Add($"LastName LIKE '%{searchValue}%'");
 
-                    // Combine all filters with OR
                     string combinedFilter = string.Join(" OR ", filters);
                     dv.RowFilter = combinedFilter;
                 }
                 else
                 {
-                    // Show all records if search box is empty
                     dv.RowFilter = "";
                 }
 
-                // Bind filtered data to DataGridView
                 SearchProfessorDataGridView.DataSource = dv;
                 UpdateTotalProfOutputCountLabel();
             }
@@ -216,7 +209,6 @@ namespace Student_Attendance_Management_System
             }
         }
 
-        // Manual Search Button (optional)
         private void searchPictureBox_Click(object sender, EventArgs e)
         {
             try
@@ -232,7 +224,6 @@ namespace Student_Attendance_Management_System
 
                 string searchTerm = "%" + searchTextBox.Text.Trim() + "%";
                 string query = "SELECT * FROM professors WHERE LastName LIKE @SearchTerm OR FirstName LIKE @SearchTerm OR Email LIKE @SearchTerm";
-
                 MySqlCommand command = new MySqlCommand(query, connection);
                 command.Parameters.AddWithValue("@SearchTerm", searchTerm);
 
@@ -255,7 +246,6 @@ namespace Student_Attendance_Management_System
             }
         }
 
-        // Update Professor
         private void UpdateProfessorButton_Click(object sender, EventArgs e)
         {
             try
@@ -277,6 +267,7 @@ namespace Student_Attendance_Management_System
                 command.Parameters.AddWithValue("@ProfessorID", professorID);
 
                 int rowsAffected = command.ExecuteNonQuery();
+
                 if (rowsAffected > 0)
                 {
                     MessageBox.Show("Professor updated successfully!");
@@ -313,7 +304,6 @@ namespace Student_Attendance_Management_System
             throw new Exception("Could not find professor ID.");
         }
 
-        // Delete Professor
         private void DeleteProfessorButton_Click(object sender, EventArgs e)
         {
             try
@@ -333,8 +323,6 @@ namespace Student_Attendance_Management_System
                 if (result == DialogResult.No) return;
 
                 connection.Open();
-
-                // Build DELETE query based on First Name and/or Last Name
                 string query = "DELETE FROM professors WHERE ";
                 List<string> conditions = new List<string>();
                 List<MySqlParameter> parameters = new List<MySqlParameter>();
@@ -390,7 +378,6 @@ namespace Student_Attendance_Management_System
             UDProfessorFNameTextBox.Clear();
             UDProfessorLNameTextBox.Clear();
             UDEmailTextBox.Clear();
-
             if (this.Controls.Find("UDProfessorIDHiddenLabel", true).Length > 0)
             {
                 Label idLabel = (Label)this.Controls.Find("UDProfessorIDHiddenLabel", true)[0];
@@ -399,8 +386,38 @@ namespace Student_Attendance_Management_System
             this.Tag = null;
         }
 
-        // Optional placeholder event handlers
-        private void button3_Click(object sender, EventArgs e) { }
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Report report = new Report();
+            report.Show();
+        }
+
         private void addStudentTabPage_Click(object sender, EventArgs e) { }
+
+        private void RegisterButton_Click(object sender, EventArgs e)
+        {
+            Register register = new Register();
+            register.Show();
+        }
+
+        private void expandPictureBox_Click(object sender, EventArgs e)
+        {
+            logoutButton.Visible = !logoutButton.Visible;
+        }
+
+        private void logoutButton_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show(
+                "Are you sure you want to log out?",
+                "Confirm Logout",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question
+            );
+            if (result == DialogResult.Yes)
+            {
+                this.Hide(); // Hide dashboard
+                loginForm.Show(); // Show login form
+            }
+        }
     }
 }

@@ -107,5 +107,10 @@ namespace Student_Attendance_Management_System
         {
             this.Close(); // Close the form without doing anything
         }
+
+        private void ResetPassGroupBox_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }

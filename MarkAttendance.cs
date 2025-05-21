@@ -7,6 +7,7 @@ namespace Student_Attendance_Management_System
 {
     public partial class MarkAttendance : Form
     {
+        private Login loginForm;
         private string _professorId;
 
         // Default constructor - used by designer and Admin
@@ -18,6 +19,8 @@ namespace Student_Attendance_Management_System
         public MarkAttendance(string professorId)
         {
             InitializeComponent();
+            loginForm = new Login(); // Initialize once
+            logoutButton.Visible = false; // Hide logout button initially
             _professorId = professorId;
             LoadCourses(); // Load filtered courses if professor is logged in
         }
@@ -293,6 +296,29 @@ namespace Student_Attendance_Management_System
             {
                 LoadStudents(selectedItem.CourseId);
             }
+        }
+
+        private void logoutButton_Click(object sender, EventArgs e)
+        {
+            // Show confirmation message
+            DialogResult result = MessageBox.Show(
+                "Are you sure you want to log out?",
+                "Confirm Logout",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question
+            );
+
+            if (result == DialogResult.Yes)
+            {
+                this.Hide(); // Hide dashboard
+                loginForm.Show(); // Show login form
+            }
+        }
+
+        private void expandPictureBox_Click(object sender, EventArgs e)
+        {
+            // Toggle visibility of the logout button
+            logoutButton.Visible = !logoutButton.Visible;
         }
     }
 }

@@ -49,11 +49,6 @@
             StudentReportTabPage = new TabPage();
             pictureBox2 = new PictureBox();
             dataGridView2 = new DataGridView();
-            dataGridViewTextBoxColumn1 = new DataGridViewTextBoxColumn();
-            dataGridViewTextBoxColumn2 = new DataGridViewTextBoxColumn();
-            dataGridViewTextBoxColumn3 = new DataGridViewTextBoxColumn();
-            dataGridViewTextBoxColumn4 = new DataGridViewTextBoxColumn();
-            dataGridViewTextBoxColumn5 = new DataGridViewTextBoxColumn();
             label1 = new Label();
             StudentIDComboBox = new ComboBox();
             labelStudentID = new Label();
@@ -67,6 +62,8 @@
             dateTimePicker1 = new DateTimePicker();
             panelBack = new Panel();
             panel2 = new Panel();
+            panel12 = new Panel();
+            logoutButton = new Button();
             expandPictureBox = new PictureBox();
             logoutPictureBox = new PictureBox();
             archivedButton = new Button();
@@ -86,6 +83,8 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView2).BeginInit();
             panelBack.SuspendLayout();
+            panel2.SuspendLayout();
+            panel12.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)expandPictureBox).BeginInit();
             ((System.ComponentModel.ISupportInitialize)logoutPictureBox).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dashboardPictureBox).BeginInit();
@@ -311,10 +310,11 @@
             pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
             pictureBox2.Location = new Point(1447, 44);
             pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(64, 64);
+            pictureBox2.Size = new Size(32, 32);
             pictureBox2.SizeMode = PictureBoxSizeMode.AutoSize;
             pictureBox2.TabIndex = 54;
             pictureBox2.TabStop = false;
+            pictureBox2.Click += pictureBox2_Click;
             // 
             // dataGridView2
             // 
@@ -327,7 +327,6 @@
             dataGridView2.BorderStyle = BorderStyle.None;
             dataGridView2.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single;
             dataGridView2.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView2.Columns.AddRange(new DataGridViewColumn[] { dataGridViewTextBoxColumn1, dataGridViewTextBoxColumn2, dataGridViewTextBoxColumn3, dataGridViewTextBoxColumn4, dataGridViewTextBoxColumn5 });
             dataGridView2.Location = new Point(92, 217);
             dataGridView2.Name = "dataGridView2";
             dataGridView2.ReadOnly = true;
@@ -337,41 +336,6 @@
             dataGridView2.Size = new Size(1421, 456);
             dataGridView2.TabIndex = 53;
             dataGridView2.CellContentClick += dataGridView2_CellContentClick;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            dataGridViewTextBoxColumn1.HeaderText = "Attendance ID";
-            dataGridViewTextBoxColumn1.MinimumWidth = 6;
-            dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            dataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            dataGridViewTextBoxColumn2.HeaderText = "Student ID";
-            dataGridViewTextBoxColumn2.MinimumWidth = 6;
-            dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            dataGridViewTextBoxColumn2.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            dataGridViewTextBoxColumn3.HeaderText = "Course ID";
-            dataGridViewTextBoxColumn3.MinimumWidth = 6;
-            dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            dataGridViewTextBoxColumn3.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            dataGridViewTextBoxColumn4.HeaderText = "Attendance Date";
-            dataGridViewTextBoxColumn4.MinimumWidth = 6;
-            dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            dataGridViewTextBoxColumn4.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            dataGridViewTextBoxColumn5.HeaderText = "Status";
-            dataGridViewTextBoxColumn5.MinimumWidth = 6;
-            dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            dataGridViewTextBoxColumn5.ReadOnly = true;
             // 
             // label1
             // 
@@ -440,9 +404,9 @@
             label4.ForeColor = Color.FromArgb(142, 195, 176);
             label4.Location = new Point(21, 21);
             label4.Name = "label4";
-            label4.Size = new Size(79, 23);
+            label4.Size = new Size(157, 23);
             label4.TabIndex = 46;
-            label4.Text = "Report:";
+            label4.Text = "Student Report:";
             // 
             // label5
             // 
@@ -487,10 +451,30 @@
             // panel2
             // 
             panel2.BackColor = Color.FromArgb(188, 234, 213);
+            panel2.Controls.Add(panel12);
             panel2.Location = new Point(-9, 98);
             panel2.Name = "panel2";
             panel2.Size = new Size(1637, 126);
             panel2.TabIndex = 3;
+            // 
+            // panel12
+            // 
+            panel12.Controls.Add(logoutButton);
+            panel12.Location = new Point(1328, 3);
+            panel12.Name = "panel12";
+            panel12.Size = new Size(200, 125);
+            panel12.TabIndex = 0;
+            // 
+            // logoutButton
+            // 
+            logoutButton.Font = new Font("Century Gothic", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            logoutButton.Location = new Point(0, 0);
+            logoutButton.Name = "logoutButton";
+            logoutButton.Size = new Size(200, 67);
+            logoutButton.TabIndex = 0;
+            logoutButton.Text = "Logout";
+            logoutButton.UseVisualStyleBackColor = true;
+            logoutButton.Click += logoutButton_Click;
             // 
             // expandPictureBox
             // 
@@ -502,6 +486,7 @@
             expandPictureBox.SizeMode = PictureBoxSizeMode.AutoSize;
             expandPictureBox.TabIndex = 2;
             expandPictureBox.TabStop = false;
+            expandPictureBox.Click += expandPictureBox_Click;
             // 
             // logoutPictureBox
             // 
@@ -663,6 +648,8 @@
             ((System.ComponentModel.ISupportInitialize)dataGridView2).EndInit();
             panelBack.ResumeLayout(false);
             panelBack.PerformLayout();
+            panel2.ResumeLayout(false);
+            panel12.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)expandPictureBox).EndInit();
             ((System.ComponentModel.ISupportInitialize)logoutPictureBox).EndInit();
             ((System.ComponentModel.ISupportInitialize)dashboardPictureBox).EndInit();
@@ -707,11 +694,6 @@
         private TabPage StudentReportTabPage;
         private PictureBox pictureBox2;
         private DataGridView dataGridView2;
-        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
         private Label label1;
         private ComboBox StudentIDComboBox;
         private Label labelStudentID;
@@ -723,5 +705,8 @@
         private Label label5;
         private Panel panel11;
         private DateTimePicker dateTimePicker1;
+        private Panel panel12;
+        private Button logoutButton;
+
     }
 }

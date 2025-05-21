@@ -181,6 +181,18 @@
         bQAAAABJRU5ErkJggg==
 </value>
   </data>
+  <data name="RegisterButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAA
+        qAAAAKgBefSzxgAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAFQSURBVEhL3ZS7
+        LgVRFIbPE+jRegRvgXgBQoVGJS6JUiReQi0e4JQuIZ5AR60lQqNw+b7J2clkZtaePVHxJV9O1qw9/5rb
+        2aN/yTJe4zt+B95inVV8xBc8xSns5AS7ApveYGIfm32HtPDKbX7gHs5gH67znE/cxPlJ/YwtfCw2vaIS
+        UrhuewAcYv1QVQ3e0OZ0VeWph+s9OsQ7sV7BFmlxHzvoOsMMNdz6a/J7iJ2UDKiHr3kANrA3XPoGdIWv
+        Y3os2XDJDdjFFG6o1MN9J4k7bP5PKqIBc2hQSbhEOWEjfXrnVZUPlygnbJyhx8fokFy4RDlh4wlTTx3g
+        O4mIcsLGJTrEO9lC30mOwQOGEuakraJkk4uYRTNeq6rBFdos3ey6OEAzLqqqwRLadLt2yJA7ca3neK4Z
+        C9jJMbrgNx5hlkX0y0nvpETX+ljCK/+rjEY/wvWxha77jZMAAAAASUVORK5CYII=
+</value>
+  </data>
   <data name="buttonReport.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAA

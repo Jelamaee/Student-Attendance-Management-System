@@ -49,10 +49,14 @@
             AddUserLabel = new Label();
             label4 = new Label();
             SearchUserTabPage = new TabPage();
+            TotalUsersOutputLabel = new Label();
+            totalStudentslabel = new Label();
+            SearchUserDataGridView = new DataGridView();
             AttendanceDataGridView = new DataGridView();
             UserTabControl = new TabControl();
             AddUserTabPage = new TabPage();
             AdminCheckBox = new CheckBox();
+            ProfessorCheckBox = new CheckBox();
             RoleLabel = new Label();
             PasswordTextBox = new TextBox();
             addButton = new Button();
@@ -62,18 +66,36 @@
             panel1 = new Panel();
             panel3 = new Panel();
             UpdateDeleteTabPage = new TabPage();
+            label5 = new Label();
+            deleteUserbutton = new Button();
+            checkBox1 = new CheckBox();
+            checkBox2 = new CheckBox();
+            label1 = new Label();
+            UDPassTextBox = new TextBox();
+            updateButton = new Button();
+            label2 = new Label();
+            label3 = new Label();
+            UDUserTextBox = new TextBox();
+            panel5 = new Panel();
+            panel6 = new Panel();
+            userControlDashboard1 = new UserControlDashboard();
             panel2 = new Panel();
+            panel4 = new Panel();
+            logoutButton = new Button();
             expandPictureBox = new PictureBox();
             logoutPictureBox = new PictureBox();
             panelBack = new Panel();
-            ProfessorCheckBox = new CheckBox();
             dashboardPanel.SuspendLayout();
             dashboardSmallpanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dashboardPictureBox).BeginInit();
             SearchUserTabPage.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)SearchUserDataGridView).BeginInit();
             ((System.ComponentModel.ISupportInitialize)AttendanceDataGridView).BeginInit();
             UserTabControl.SuspendLayout();
             AddUserTabPage.SuspendLayout();
+            UpdateDeleteTabPage.SuspendLayout();
+            panel2.SuspendLayout();
+            panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)expandPictureBox).BeginInit();
             ((System.ComponentModel.ISupportInitialize)logoutPictureBox).BeginInit();
             panelBack.SuspendLayout();
@@ -100,6 +122,7 @@
             dashboardPanel.Name = "dashboardPanel";
             dashboardPanel.Size = new Size(274, 1033);
             dashboardPanel.TabIndex = 28;
+            dashboardPanel.Paint += dashboardPanel_Paint;
             // 
             // RegisterButton
             // 
@@ -116,6 +139,7 @@
             RegisterButton.Text = "                Register";
             RegisterButton.TextAlign = ContentAlignment.MiddleLeft;
             RegisterButton.UseVisualStyleBackColor = true;
+            RegisterButton.Click += RegisterButton_Click;
             // 
             // button1
             // 
@@ -132,6 +156,7 @@
             button1.Text = "                Report";
             button1.TextAlign = ContentAlignment.MiddleLeft;
             button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // ReportsButton
             // 
@@ -180,6 +205,7 @@
             departmentButton.Text = "                Department";
             departmentButton.TextAlign = ContentAlignment.MiddleLeft;
             departmentButton.UseVisualStyleBackColor = true;
+            departmentButton.Click += departmentButton_Click;
             // 
             // professorButton
             // 
@@ -196,6 +222,7 @@
             professorButton.Text = "                Professor";
             professorButton.TextAlign = ContentAlignment.MiddleLeft;
             professorButton.UseVisualStyleBackColor = true;
+            professorButton.Click += professorButton_Click;
             // 
             // classButton
             // 
@@ -212,6 +239,7 @@
             classButton.Text = "                Class";
             classButton.TextAlign = ContentAlignment.MiddleLeft;
             classButton.UseVisualStyleBackColor = true;
+            classButton.Click += classButton_Click;
             // 
             // courseButton
             // 
@@ -228,6 +256,7 @@
             courseButton.Text = "                Course";
             courseButton.TextAlign = ContentAlignment.MiddleLeft;
             courseButton.UseVisualStyleBackColor = true;
+            courseButton.Click += courseButton_Click;
             // 
             // attendanceButton
             // 
@@ -244,6 +273,7 @@
             attendanceButton.Text = "                Attendance";
             attendanceButton.TextAlign = ContentAlignment.MiddleLeft;
             attendanceButton.UseVisualStyleBackColor = true;
+            attendanceButton.Click += attendanceButton_Click;
             // 
             // studentButton
             // 
@@ -261,6 +291,7 @@
             studentButton.Text = "                Student";
             studentButton.TextAlign = ContentAlignment.MiddleLeft;
             studentButton.UseVisualStyleBackColor = true;
+            studentButton.Click += studentButton_Click;
             // 
             // dashboardButton
             // 
@@ -277,6 +308,7 @@
             dashboardButton.Text = "                Dashboard";
             dashboardButton.TextAlign = ContentAlignment.MiddleLeft;
             dashboardButton.UseVisualStyleBackColor = true;
+            dashboardButton.Click += dashboardButton_Click;
             // 
             // dashboardSmallpanel
             // 
@@ -353,13 +385,16 @@
             label4.ForeColor = Color.FromArgb(142, 195, 176);
             label4.Location = new Point(6, 6);
             label4.Name = "label4";
-            label4.Size = new Size(186, 23);
+            label4.Size = new Size(120, 23);
             label4.TabIndex = 26;
-            label4.Text = "View Attendance:";
+            label4.Text = "View Users:";
             // 
             // SearchUserTabPage
             // 
             SearchUserTabPage.BackColor = SystemColors.Window;
+            SearchUserTabPage.Controls.Add(TotalUsersOutputLabel);
+            SearchUserTabPage.Controls.Add(totalStudentslabel);
+            SearchUserTabPage.Controls.Add(SearchUserDataGridView);
             SearchUserTabPage.Controls.Add(label4);
             SearchUserTabPage.Controls.Add(AttendanceDataGridView);
             SearchUserTabPage.Location = new Point(4, 4);
@@ -368,6 +403,47 @@
             SearchUserTabPage.Size = new Size(1624, 726);
             SearchUserTabPage.TabIndex = 1;
             SearchUserTabPage.Text = "Search User";
+            // 
+            // TotalUsersOutputLabel
+            // 
+            TotalUsersOutputLabel.AutoSize = true;
+            TotalUsersOutputLabel.Font = new Font("Century Gothic", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            TotalUsersOutputLabel.Location = new Point(1529, 686);
+            TotalUsersOutputLabel.Name = "TotalUsersOutputLabel";
+            TotalUsersOutputLabel.Size = new Size(33, 21);
+            TotalUsersOutputLabel.TabIndex = 29;
+            TotalUsersOutputLabel.Text = "(?)";
+            TotalUsersOutputLabel.Click += TotalUsersOutputLabel_Click;
+            // 
+            // totalStudentslabel
+            // 
+            totalStudentslabel.AutoSize = true;
+            totalStudentslabel.Font = new Font("Century Gothic", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            totalStudentslabel.Location = new Point(1416, 686);
+            totalStudentslabel.Name = "totalStudentslabel";
+            totalStudentslabel.Size = new Size(107, 22);
+            totalStudentslabel.TabIndex = 28;
+            totalStudentslabel.Text = "Total Users:";
+            // 
+            // SearchUserDataGridView
+            // 
+            SearchUserDataGridView.AllowUserToAddRows = false;
+            SearchUserDataGridView.AllowUserToDeleteRows = false;
+            SearchUserDataGridView.AllowUserToResizeColumns = false;
+            SearchUserDataGridView.AllowUserToResizeRows = false;
+            SearchUserDataGridView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            SearchUserDataGridView.BackgroundColor = Color.White;
+            SearchUserDataGridView.BorderStyle = BorderStyle.None;
+            SearchUserDataGridView.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single;
+            SearchUserDataGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            SearchUserDataGridView.Location = new Point(102, 135);
+            SearchUserDataGridView.Name = "SearchUserDataGridView";
+            SearchUserDataGridView.ReadOnly = true;
+            SearchUserDataGridView.RowHeadersWidth = 51;
+            SearchUserDataGridView.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            SearchUserDataGridView.Size = new Size(1421, 456);
+            SearchUserDataGridView.TabIndex = 27;
+            SearchUserDataGridView.CellContentClick += SearchUserDataGridView_CellContentClick;
             // 
             // AttendanceDataGridView
             // 
@@ -406,8 +482,8 @@
             // AddUserTabPage
             // 
             AddUserTabPage.BackColor = SystemColors.Window;
-            AddUserTabPage.Controls.Add(ProfessorCheckBox);
             AddUserTabPage.Controls.Add(AdminCheckBox);
+            AddUserTabPage.Controls.Add(ProfessorCheckBox);
             AddUserTabPage.Controls.Add(RoleLabel);
             AddUserTabPage.Controls.Add(PasswordTextBox);
             AddUserTabPage.Controls.Add(addButton);
@@ -430,13 +506,24 @@
             // AdminCheckBox
             // 
             AdminCheckBox.AutoSize = true;
-            AdminCheckBox.Location = new Point(1339, 154);
+            AdminCheckBox.Location = new Point(1337, 146);
             AdminCheckBox.Name = "AdminCheckBox";
+            AdminCheckBox.RightToLeft = RightToLeft.No;
             AdminCheckBox.Size = new Size(90, 25);
-            AdminCheckBox.TabIndex = 62;
+            AdminCheckBox.TabIndex = 64;
             AdminCheckBox.Text = "Admin";
             AdminCheckBox.UseVisualStyleBackColor = true;
-            AdminCheckBox.CheckedChanged += AdminCheckBox_CheckedChanged;
+            // 
+            // ProfessorCheckBox
+            // 
+            ProfessorCheckBox.AutoSize = true;
+            ProfessorCheckBox.Location = new Point(1337, 183);
+            ProfessorCheckBox.Name = "ProfessorCheckBox";
+            ProfessorCheckBox.Size = new Size(109, 25);
+            ProfessorCheckBox.TabIndex = 63;
+            ProfessorCheckBox.Text = "Professor";
+            ProfessorCheckBox.UseVisualStyleBackColor = true;
+            ProfessorCheckBox.CheckedChanged += ProfessorCheckBox_CheckedChanged;
             // 
             // RoleLabel
             // 
@@ -528,21 +615,200 @@
             // 
             // UpdateDeleteTabPage
             // 
+            UpdateDeleteTabPage.BackColor = SystemColors.Window;
+            UpdateDeleteTabPage.Controls.Add(label5);
+            UpdateDeleteTabPage.Controls.Add(deleteUserbutton);
+            UpdateDeleteTabPage.Controls.Add(checkBox1);
+            UpdateDeleteTabPage.Controls.Add(checkBox2);
+            UpdateDeleteTabPage.Controls.Add(label1);
+            UpdateDeleteTabPage.Controls.Add(UDPassTextBox);
+            UpdateDeleteTabPage.Controls.Add(updateButton);
+            UpdateDeleteTabPage.Controls.Add(label2);
+            UpdateDeleteTabPage.Controls.Add(label3);
+            UpdateDeleteTabPage.Controls.Add(UDUserTextBox);
+            UpdateDeleteTabPage.Controls.Add(panel5);
+            UpdateDeleteTabPage.Controls.Add(panel6);
+            UpdateDeleteTabPage.Controls.Add(userControlDashboard1);
             UpdateDeleteTabPage.Location = new Point(4, 4);
             UpdateDeleteTabPage.Name = "UpdateDeleteTabPage";
             UpdateDeleteTabPage.Padding = new Padding(3);
-            UpdateDeleteTabPage.Size = new Size(1624, 726);
+            UpdateDeleteTabPage.Size = new Size(192, 67);
             UpdateDeleteTabPage.TabIndex = 2;
             UpdateDeleteTabPage.Text = "Update and Delete User";
-            UpdateDeleteTabPage.UseVisualStyleBackColor = true;
+            UpdateDeleteTabPage.Click += UpdateDeleteTabPage_Click;
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label5.ForeColor = Color.FromArgb(142, 195, 176);
+            label5.Location = new Point(22, 18);
+            label5.Name = "label5";
+            label5.Size = new Size(257, 23);
+            label5.TabIndex = 77;
+            label5.Text = "Update and Delete Users:";
+            // 
+            // deleteUserbutton
+            // 
+            deleteUserbutton.BackColor = Color.Red;
+            deleteUserbutton.FlatAppearance.BorderSize = 0;
+            deleteUserbutton.FlatStyle = FlatStyle.Flat;
+            deleteUserbutton.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            deleteUserbutton.Location = new Point(488, 438);
+            deleteUserbutton.Name = "deleteUserbutton";
+            deleteUserbutton.Size = new Size(150, 40);
+            deleteUserbutton.TabIndex = 76;
+            deleteUserbutton.Text = "Delete";
+            deleteUserbutton.UseVisualStyleBackColor = false;
+            deleteUserbutton.Click += deleteUserbutton_Click;
+            // 
+            // checkBox1
+            // 
+            checkBox1.AutoSize = true;
+            checkBox1.Location = new Point(1384, 216);
+            checkBox1.Name = "checkBox1";
+            checkBox1.RightToLeft = RightToLeft.No;
+            checkBox1.Size = new Size(90, 25);
+            checkBox1.TabIndex = 75;
+            checkBox1.Text = "Admin";
+            checkBox1.UseVisualStyleBackColor = true;
+            // 
+            // checkBox2
+            // 
+            checkBox2.AutoSize = true;
+            checkBox2.Location = new Point(1384, 253);
+            checkBox2.Name = "checkBox2";
+            checkBox2.Size = new Size(109, 25);
+            checkBox2.TabIndex = 74;
+            checkBox2.Text = "Professor";
+            checkBox2.UseVisualStyleBackColor = true;
+            // 
+            // label1
+            // 
+            label1.Anchor = AnchorStyles.None;
+            label1.AutoSize = true;
+            label1.Font = new Font("Century Gothic", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.Location = new Point(602, -142);
+            label1.Name = "label1";
+            label1.Size = new Size(53, 22);
+            label1.TabIndex = 73;
+            label1.Text = "Role:";
+            // 
+            // UDPassTextBox
+            // 
+            UDPassTextBox.Anchor = AnchorStyles.None;
+            UDPassTextBox.BackColor = SystemColors.Window;
+            UDPassTextBox.BorderStyle = BorderStyle.None;
+            UDPassTextBox.Font = new Font("Century Gothic", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            UDPassTextBox.Location = new Point(56, -114);
+            UDPassTextBox.Name = "UDPassTextBox";
+            UDPassTextBox.Size = new Size(270, 23);
+            UDPassTextBox.TabIndex = 70;
+            UDPassTextBox.TextChanged += UDPassTextBox_TextChanged;
+            // 
+            // updateButton
+            // 
+            updateButton.Anchor = AnchorStyles.None;
+            updateButton.BackColor = Color.FromArgb(142, 195, 176);
+            updateButton.FlatAppearance.BorderSize = 0;
+            updateButton.FlatStyle = FlatStyle.Flat;
+            updateButton.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            updateButton.Location = new Point(-489, 108);
+            updateButton.Name = "updateButton";
+            updateButton.Size = new Size(150, 40);
+            updateButton.TabIndex = 72;
+            updateButton.Text = "Update";
+            updateButton.UseVisualStyleBackColor = false;
+            updateButton.Click += updateButton_Click;
+            // 
+            // label2
+            // 
+            label2.Anchor = AnchorStyles.None;
+            label2.AutoSize = true;
+            label2.Font = new Font("Century Gothic", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label2.Location = new Point(56, -142);
+            label2.Name = "label2";
+            label2.Size = new Size(97, 22);
+            label2.TabIndex = 66;
+            label2.Text = "Password:";
+            // 
+            // label3
+            // 
+            label3.Anchor = AnchorStyles.None;
+            label3.AutoSize = true;
+            label3.Font = new Font("Century Gothic", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label3.Location = new Point(-489, -144);
+            label3.Name = "label3";
+            label3.Size = new Size(105, 22);
+            label3.TabIndex = 67;
+            label3.Text = "Username:";
+            // 
+            // UDUserTextBox
+            // 
+            UDUserTextBox.Anchor = AnchorStyles.None;
+            UDUserTextBox.BackColor = SystemColors.Window;
+            UDUserTextBox.BorderStyle = BorderStyle.None;
+            UDUserTextBox.Font = new Font("Century Gothic", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            UDUserTextBox.Location = new Point(-489, -120);
+            UDUserTextBox.Name = "UDUserTextBox";
+            UDUserTextBox.Size = new Size(270, 23);
+            UDUserTextBox.TabIndex = 68;
+            UDUserTextBox.TextChanged += UDUserTextBox_TextChanged;
+            // 
+            // panel5
+            // 
+            panel5.Anchor = AnchorStyles.None;
+            panel5.BackColor = Color.Black;
+            panel5.Location = new Point(-489, -91);
+            panel5.Name = "panel5";
+            panel5.Size = new Size(270, 2);
+            panel5.TabIndex = 69;
+            // 
+            // panel6
+            // 
+            panel6.Anchor = AnchorStyles.None;
+            panel6.BackColor = Color.Black;
+            panel6.Location = new Point(56, -85);
+            panel6.Name = "panel6";
+            panel6.Size = new Size(270, 2);
+            panel6.TabIndex = 71;
+            // 
+            // userControlDashboard1
+            // 
+            userControlDashboard1.AutoSize = true;
+            userControlDashboard1.Location = new Point(1318, 379);
+            userControlDashboard1.Margin = new Padding(4, 3, 4, 3);
+            userControlDashboard1.Name = "userControlDashboard1";
+            userControlDashboard1.Size = new Size(0, 586);
+            userControlDashboard1.TabIndex = 65;
             // 
             // panel2
             // 
             panel2.BackColor = Color.FromArgb(188, 234, 213);
+            panel2.Controls.Add(panel4);
             panel2.Location = new Point(-9, 98);
             panel2.Name = "panel2";
             panel2.Size = new Size(1637, 126);
             panel2.TabIndex = 3;
+            // 
+            // panel4
+            // 
+            panel4.Controls.Add(logoutButton);
+            panel4.Location = new Point(1328, 1);
+            panel4.Name = "panel4";
+            panel4.Size = new Size(200, 125);
+            panel4.TabIndex = 0;
+            // 
+            // logoutButton
+            // 
+            logoutButton.Font = new Font("Century Gothic", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            logoutButton.Location = new Point(0, -1);
+            logoutButton.Name = "logoutButton";
+            logoutButton.Size = new Size(200, 67);
+            logoutButton.TabIndex = 0;
+            logoutButton.Text = "Logout";
+            logoutButton.UseVisualStyleBackColor = true;
+            logoutButton.Click += logoutButton_Click;
             // 
             // expandPictureBox
             // 
@@ -554,6 +820,7 @@
             expandPictureBox.SizeMode = PictureBoxSizeMode.AutoSize;
             expandPictureBox.TabIndex = 2;
             expandPictureBox.TabStop = false;
+            expandPictureBox.Click += expandPictureBox_Click;
             // 
             // logoutPictureBox
             // 
@@ -576,17 +843,6 @@
             panelBack.Size = new Size(1628, 224);
             panelBack.TabIndex = 27;
             // 
-            // ProfessorCheckBox
-            // 
-            ProfessorCheckBox.AutoSize = true;
-            ProfessorCheckBox.Location = new Point(1339, 196);
-            ProfessorCheckBox.Name = "ProfessorCheckBox";
-            ProfessorCheckBox.Size = new Size(109, 25);
-            ProfessorCheckBox.TabIndex = 63;
-            ProfessorCheckBox.Text = "Professor";
-            ProfessorCheckBox.UseVisualStyleBackColor = true;
-            ProfessorCheckBox.CheckedChanged += ProfessorCheckBox_CheckedChanged;
-            // 
             // Register
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -603,10 +859,15 @@
             ((System.ComponentModel.ISupportInitialize)dashboardPictureBox).EndInit();
             SearchUserTabPage.ResumeLayout(false);
             SearchUserTabPage.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)SearchUserDataGridView).EndInit();
             ((System.ComponentModel.ISupportInitialize)AttendanceDataGridView).EndInit();
             UserTabControl.ResumeLayout(false);
             AddUserTabPage.ResumeLayout(false);
             AddUserTabPage.PerformLayout();
+            UpdateDeleteTabPage.ResumeLayout(false);
+            UpdateDeleteTabPage.PerformLayout();
+            panel2.ResumeLayout(false);
+            panel4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)expandPictureBox).EndInit();
             ((System.ComponentModel.ISupportInitialize)logoutPictureBox).EndInit();
             panelBack.ResumeLayout(false);
@@ -651,8 +912,26 @@
         private TextBox UsernameTextBox;
         private Panel panel1;
         private Panel panel3;
-        private CheckBox AdminCheckBox;
         private Label RoleLabel;
         private CheckBox ProfessorCheckBox;
+        private Panel panel4;
+        private Button logoutButton;
+        private CheckBox AdminCheckBox;
+        private DataGridView SearchUserDataGridView;
+        private Label TotalUsersOutputLabel;
+        private Label totalStudentslabel;
+        private CheckBox checkBox1;
+        private CheckBox checkBox2;
+        private Label label1;
+        private TextBox UDPassTextBox;
+        private Button updateButton;
+        private Label label2;
+        private Label label3;
+        private TextBox UDUserTextBox;
+        private Panel panel5;
+        private Panel panel6;
+        private UserControlDashboard userControlDashboard1;
+        private Button deleteUserbutton;
+        private Label label5;
     }
 }

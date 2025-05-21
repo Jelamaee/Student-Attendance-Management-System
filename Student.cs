@@ -7,6 +7,7 @@ namespace Student_Attendance_Management_System
 {
     public partial class Student : Form
     {
+        private Login loginForm; // Reference to the Login form
         string connectionString = "server=localhost;database=student_attendance_system;user=root;password=jelamae;";
         MySqlConnection connection;
 
@@ -14,12 +15,10 @@ namespace Student_Attendance_Management_System
         {
             InitializeComponent();
             connection = new MySqlConnection(connectionString);
+            loginForm = new Login(); // Initialize once
+            ButtonLogout.Visible = false; // Hide logout button initially
             this.Load += (s, e) => LoadStudents();
-
-            // Event subscriptions
             SearchdataGridView.CellClick += SearchdataGridView_CellClick;
-
-            // Gender RadioButton events
             maleRadioButton.CheckedChanged += GenderRadioButton_CheckedChanged;
             femaleRadioButton.CheckedChanged += GenderRadioButton_CheckedChanged;
         }
@@ -233,15 +232,12 @@ namespace Student_Attendance_Management_System
                     MessageBox.Show("Please select a student to update.");
                     return;
                 }
-
-                // Evaluate gender just before executing the query
                 string gender = maleRadioButton.Checked ? "Male" : (femaleRadioButton.Checked ? "Female" : "");
                 if (string.IsNullOrEmpty(gender))
                 {
                     MessageBox.Show("Please select a gender.");
                     return;
                 }
-
                 connection.Open();
                 string query = @"UPDATE students SET 
                                  FirstName=@fname, LastName=@lname, ProgramAndYear=@prog, 
@@ -255,7 +251,6 @@ namespace Student_Attendance_Management_System
                 cmd.Parameters.AddWithValue("@email", UDStudentEmailtextBox.Text);
                 cmd.Parameters.AddWithValue("@gender", gender);
                 cmd.Parameters.AddWithValue("@id", UDStudentIDtextBox.Text);
-
                 int rowsAffected = cmd.ExecuteNonQuery();
                 if (rowsAffected > 0)
                 {
@@ -366,28 +361,115 @@ namespace Student_Attendance_Management_System
             }
         }
 
-        // ————————
-        // DESIGNER STUBS (do not remove)
-        // These are empty but must be present for designer compatibility
-        // ————————
+        private void ButtonLogout_Click(object sender, EventArgs e)
+        {
+            // Show confirmation message
+            DialogResult result = MessageBox.Show(
+                "Are you sure you want to log out?",
+                "Confirm Logout",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question
+            );
 
-        private void button1_Click(object sender, EventArgs e) { }
-        private void panel1_Paint(object sender, PaintEventArgs e) { }
-        private void studentIDLabel_Click(object sender, EventArgs e) { }
-        private void tabPage1_Click(object sender, EventArgs e) { }
-        private void maleRadioButton_CheckedChanged(object sender, EventArgs e) { }
-        private void studentEmailTextBox_TextChanged(object sender, EventArgs e) { }
-        private void totalStudentsLabel_Click(object sender, EventArgs e) { }
-        private void toolTip1_Popup(object sender, PopupEventArgs e) { }
-        private void studentIDTextBox_TextChanged(object sender, EventArgs e) { }
-        private void programAndYearTextBox_TextChanged(object sender, EventArgs e) { }
-        private void studentLNameTextBox_TextChanged(object sender, EventArgs e) { }
-        private void studentFNameTextBox_TextChanged(object sender, EventArgs e) { }
-        private void dobTextBox_TextChanged(object sender, EventArgs e) { }
-        private void femaleRadioButton_CheckedChanged(object sender, EventArgs e) { }
-        private void genderLabel_Click(object sender, EventArgs e) { }
-        private void Student_Load(object sender, EventArgs e) { }
-        private void dashboardSmallpanel_Paint(object sender, PaintEventArgs e) { }
-        private void totalStudOutputLabel_Click(object sender, EventArgs e) { }
+            if (result == DialogResult.Yes)
+            {
+                this.Hide(); // Hide dashboard
+                loginForm.Show(); // Show login form
+            }
+        }
+
+        private void expandPictureBox_Click(object sender, EventArgs e)
+        {
+            // Toggle visibility of the logout button
+            ButtonLogout.Visible = !ButtonLogout.Visible;
+        }
+
+        // Add missing methods
+        private void genderLabel_Click(object sender, EventArgs e)
+        {
+            // Handle gender label click if needed
+        }
+
+        private void programAndYearTextBox_TextChanged(object sender, EventArgs e)
+        {
+            // Handle program and year text change if needed
+        }
+
+        private void studentIDTextBox_TextChanged(object sender, EventArgs e)
+        {
+            // Handle student ID text change if needed
+        }
+
+        private void studentLNameTextBox_TextChanged(object sender, EventArgs e)
+        {
+            // Handle last name text change if needed
+        }
+
+        private void tabPage1_Click(object sender, EventArgs e)
+        {
+            // Handle tab page click if needed
+        }
+
+        private void totalStudentsLabel_Click(object sender, EventArgs e)
+        {
+            // Handle total students label click if needed
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            // Handle button1 click if needed
+        }
+
+        private void dashboardSmallpanel_Paint(object sender, PaintEventArgs e)
+        {
+            // Handle painting logic here if needed
+        }
+
+        private void femaleRadioButton_CheckedChanged(object sender, EventArgs e)
+        {
+            // Handle gender radio button change if needed
+        }
+
+        private void maleRadioButton_CheckedChanged(object sender, EventArgs e)
+        {
+            // Handle gender radio button change if needed
+        }
+
+        private void studentEmailTextBox_TextChanged(object sender, EventArgs e)
+        {
+            // Handle email text change if needed
+        }
+
+        private void RegisterButton_Click(object sender, EventArgs e)
+        {
+            // Handle register button click if needed
+        }
+
+        private void Student_Load(object sender, EventArgs e)
+        {
+            // Handle form load event if needed
+        }
+
+        private void totalStudOutputLabel_Click(object sender, EventArgs e)
+        {
+            // Handle total students output label click if needed
+        }
+        private void studentIDLabel_Click(object sender, EventArgs e)
+        {
+            // Handle total students output label click if needed
+        }
+        private void studentFNameTextBox_TextChanged(object sender, EventArgs e)
+        {
+            // Handle total students output label click if needed
+        }
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+            // You can leave this empty or add custom drawing logic
+        }
+
+        private void UDStudentIDtextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

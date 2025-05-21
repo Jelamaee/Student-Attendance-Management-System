@@ -62,15 +62,19 @@
             panel1 = new Panel();
             AttendanceDateTimePicker = new DateTimePicker();
             TabControl = new TabControl();
+            panel3 = new Panel();
+            logoutButton = new Button();
             dashboardPanel.SuspendLayout();
             dashboardSmallpanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dashboardPictureBox).BeginInit();
+            panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)expandPictureBox).BeginInit();
             ((System.ComponentModel.ISupportInitialize)logoutPictureBox).BeginInit();
             panelBack.SuspendLayout();
             markAttendanceTabPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)StudentListDataGridView).BeginInit();
             TabControl.SuspendLayout();
+            panel3.SuspendLayout();
             SuspendLayout();
             // 
             // dashboardPanel
@@ -205,6 +209,7 @@
             // panel2
             // 
             panel2.BackColor = Color.FromArgb(188, 234, 213);
+            panel2.Controls.Add(panel3);
             panel2.Location = new Point(-9, 98);
             panel2.Name = "panel2";
             panel2.Size = new Size(1637, 126);
@@ -220,6 +225,7 @@
             expandPictureBox.SizeMode = PictureBoxSizeMode.AutoSize;
             expandPictureBox.TabIndex = 2;
             expandPictureBox.TabStop = false;
+            expandPictureBox.Click += expandPictureBox_Click;
             // 
             // logoutPictureBox
             // 
@@ -458,6 +464,25 @@
             TabControl.Size = new Size(1632, 760);
             TabControl.TabIndex = 26;
             // 
+            // panel3
+            // 
+            panel3.Controls.Add(logoutButton);
+            panel3.Location = new Point(1328, 3);
+            panel3.Name = "panel3";
+            panel3.Size = new Size(200, 125);
+            panel3.TabIndex = 0;
+            // 
+            // logoutButton
+            // 
+            logoutButton.Font = new Font("Century Gothic", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            logoutButton.Location = new Point(0, -3);
+            logoutButton.Name = "logoutButton";
+            logoutButton.Size = new Size(200, 67);
+            logoutButton.TabIndex = 0;
+            logoutButton.Text = "Logout";
+            logoutButton.UseVisualStyleBackColor = true;
+            logoutButton.Click += logoutButton_Click;
+            // 
             // MarkAttendance
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -472,6 +497,7 @@
             dashboardSmallpanel.ResumeLayout(false);
             dashboardSmallpanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dashboardPictureBox).EndInit();
+            panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)expandPictureBox).EndInit();
             ((System.ComponentModel.ISupportInitialize)logoutPictureBox).EndInit();
             panelBack.ResumeLayout(false);
@@ -480,6 +506,7 @@
             markAttendanceTabPage.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)StudentListDataGridView).EndInit();
             TabControl.ResumeLayout(false);
+            panel3.ResumeLayout(false);
             ResumeLayout(false);
         }
 
@@ -518,5 +545,7 @@
         private DataGridViewTextBoxColumn Column2;
         private DataGridViewCheckBoxColumn Column3;
         private Button SaveButton;
+        private Panel panel3;
+        private Button logoutButton;
     }
 }

@@ -54,6 +54,7 @@
             panel3 = new Panel();
             panel4 = new Panel();
             dashboardPanel = new Panel();
+            RegisterButton = new Button();
             ReportButton = new Button();
             button3 = new Button();
             button2 = new Button();
@@ -78,8 +79,11 @@
             DeptNameTextBox = new TextBox();
             panel1 = new Panel();
             panel2 = new Panel();
+            panel5 = new Panel();
+            logoutButton = new Button();
             ((System.ComponentModel.ISupportInitialize)dashboardPictureBox).BeginInit();
             panelBack.SuspendLayout();
+            panel14.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)expandPictureBox).BeginInit();
             ((System.ComponentModel.ISupportInitialize)logoutPictureBox).BeginInit();
             SearchDepartmentTabPage.SuspendLayout();
@@ -90,6 +94,7 @@
             dashboardSmallpanel.SuspendLayout();
             TabControl.SuspendLayout();
             AddDepartmentTabPage.SuspendLayout();
+            panel5.SuspendLayout();
             SuspendLayout();
             // 
             // label2
@@ -142,6 +147,7 @@
             // panel14
             // 
             panel14.BackColor = Color.FromArgb(188, 234, 213);
+            panel14.Controls.Add(panel5);
             panel14.Location = new Point(0, 98);
             panel14.Name = "panel14";
             panel14.Size = new Size(1628, 126);
@@ -157,6 +163,7 @@
             expandPictureBox.SizeMode = PictureBoxSizeMode.AutoSize;
             expandPictureBox.TabIndex = 2;
             expandPictureBox.TabStop = false;
+            expandPictureBox.Click += expandPictureBox_Click;
             // 
             // logoutPictureBox
             // 
@@ -371,6 +378,7 @@
             // 
             dashboardPanel.Anchor = AnchorStyles.None;
             dashboardPanel.BackColor = Color.FromArgb(188, 234, 213);
+            dashboardPanel.Controls.Add(RegisterButton);
             dashboardPanel.Controls.Add(ReportButton);
             dashboardPanel.Controls.Add(button3);
             dashboardPanel.Controls.Add(button2);
@@ -388,6 +396,23 @@
             dashboardPanel.Name = "dashboardPanel";
             dashboardPanel.Size = new Size(274, 1033);
             dashboardPanel.TabIndex = 29;
+            // 
+            // RegisterButton
+            // 
+            RegisterButton.Anchor = AnchorStyles.None;
+            RegisterButton.FlatAppearance.BorderSize = 0;
+            RegisterButton.FlatStyle = FlatStyle.Flat;
+            RegisterButton.Font = new Font("Century Gothic", 11F);
+            RegisterButton.Image = (Image)resources.GetObject("RegisterButton.Image");
+            RegisterButton.ImageAlign = ContentAlignment.MiddleLeft;
+            RegisterButton.Location = new Point(13, 642);
+            RegisterButton.Name = "RegisterButton";
+            RegisterButton.Size = new Size(220, 40);
+            RegisterButton.TabIndex = 33;
+            RegisterButton.Text = "                Register";
+            RegisterButton.TextAlign = ContentAlignment.MiddleLeft;
+            RegisterButton.UseVisualStyleBackColor = true;
+            RegisterButton.Click += RegisterButton_Click;
             // 
             // ReportButton
             // 
@@ -729,6 +754,25 @@
             panel2.Size = new Size(270, 2);
             panel2.TabIndex = 10;
             // 
+            // panel5
+            // 
+            panel5.Controls.Add(logoutButton);
+            panel5.Location = new Point(1319, 1);
+            panel5.Name = "panel5";
+            panel5.Size = new Size(200, 125);
+            panel5.TabIndex = 0;
+            // 
+            // logoutButton
+            // 
+            logoutButton.Font = new Font("Century Gothic", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            logoutButton.Location = new Point(0, -1);
+            logoutButton.Name = "logoutButton";
+            logoutButton.Size = new Size(200, 67);
+            logoutButton.TabIndex = 0;
+            logoutButton.Text = "Logout";
+            logoutButton.UseVisualStyleBackColor = true;
+            logoutButton.Click += logoutButton_Click;
+            // 
             // Department
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -743,6 +787,7 @@
             ((System.ComponentModel.ISupportInitialize)dashboardPictureBox).EndInit();
             panelBack.ResumeLayout(false);
             panelBack.PerformLayout();
+            panel14.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)expandPictureBox).EndInit();
             ((System.ComponentModel.ISupportInitialize)logoutPictureBox).EndInit();
             SearchDepartmentTabPage.ResumeLayout(false);
@@ -757,6 +802,7 @@
             TabControl.ResumeLayout(false);
             AddDepartmentTabPage.ResumeLayout(false);
             AddDepartmentTabPage.PerformLayout();
+            panel5.ResumeLayout(false);
             ResumeLayout(false);
         }
 
@@ -811,5 +857,8 @@
         private TextBox UDdeptNameTextBox;
         private Panel panel3;
         private Panel panel4;
+        private Button RegisterButton;
+        private Panel panel5;
+        private Button logoutButton;
     }
 }

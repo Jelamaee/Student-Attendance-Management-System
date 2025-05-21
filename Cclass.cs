@@ -7,13 +7,15 @@ namespace Student_Attendance_Management_System
 {
     public partial class Cclasses : Form
     {
-        // Database connection string
+        private Login loginForm; // Reference to the Login form
         string connectionString = "server=localhost;database=student_attendance_system;user=root;password=jelamae;";
         MySqlConnection connection;
 
         public Cclasses()
         {
             InitializeComponent();
+            loginForm = new Login(); // Initialize once
+            logoutButton.Visible = false; // Hide logout button initially
             connection = new MySqlConnection(connectionString);
 
             // Wire up dropdown refresh event
@@ -309,5 +311,34 @@ namespace Student_Attendance_Management_System
         }
 
         #endregion
+
+        private void RegisterButton_Click(object sender, EventArgs e)
+        {
+            Register registerForm = new Register();
+            registerForm.Show();
+        }
+
+        private void logoutButton_Click(object sender, EventArgs e)
+        {
+            // Show confirmation message
+            DialogResult result = MessageBox.Show(
+                "Are you sure you want to log out?",
+                "Confirm Logout",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question
+            );
+
+            if (result == DialogResult.Yes)
+            {
+                this.Hide(); // Hide dashboard
+                loginForm.Show(); // Show login form
+            }
+        }
+
+        private void expandPictureBox_Click(object sender, EventArgs e)
+        {
+            // Toggle visibility of the logout button
+            logoutButton.Visible = !logoutButton.Visible;
+        }
     }
 }

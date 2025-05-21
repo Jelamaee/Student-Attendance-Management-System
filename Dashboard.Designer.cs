@@ -48,8 +48,6 @@
             panelTop = new Panel();
             panelExpand = new Panel();
             logoutButton = new Button();
-            minimizePanel = new Panel();
-            minimizeButton = new Button();
             userControlDashboard1 = new UserControlDashboard();
             dashboardPanel.SuspendLayout();
             dashboardSmallpanel.SuspendLayout();
@@ -59,7 +57,6 @@
             ((System.ComponentModel.ISupportInitialize)logoutPictureBox).BeginInit();
             panelTop.SuspendLayout();
             panelExpand.SuspendLayout();
-            minimizePanel.SuspendLayout();
             SuspendLayout();
             // 
             // dashboardPanel
@@ -316,8 +313,7 @@
             panelExpand.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             panelExpand.BackColor = Color.FromArgb(188, 234, 213);
             panelExpand.Controls.Add(logoutButton);
-            panelExpand.Controls.Add(minimizePanel);
-            panelExpand.Location = new Point(1326, 0);
+            panelExpand.Location = new Point(1319, 0);
             panelExpand.Name = "panelExpand";
             panelExpand.Size = new Size(200, 125);
             panelExpand.TabIndex = 0;
@@ -326,33 +322,13 @@
             // 
             logoutButton.FlatAppearance.BorderSize = 0;
             logoutButton.Font = new Font("Century Gothic", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            logoutButton.Location = new Point(0, 59);
+            logoutButton.Location = new Point(0, 0);
             logoutButton.Name = "logoutButton";
             logoutButton.Size = new Size(200, 67);
             logoutButton.TabIndex = 1;
             logoutButton.Text = "Logout";
             logoutButton.UseVisualStyleBackColor = true;
-            // 
-            // minimizePanel
-            // 
-            minimizePanel.Anchor = AnchorStyles.Top;
-            minimizePanel.Controls.Add(minimizeButton);
-            minimizePanel.Location = new Point(0, -1);
-            minimizePanel.Name = "minimizePanel";
-            minimizePanel.Size = new Size(200, 63);
-            minimizePanel.TabIndex = 0;
-            // 
-            // minimizeButton
-            // 
-            minimizeButton.Anchor = AnchorStyles.Top;
-            minimizeButton.FlatAppearance.BorderSize = 0;
-            minimizeButton.Font = new Font("Century Gothic", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            minimizeButton.Location = new Point(0, 0);
-            minimizeButton.Name = "minimizeButton";
-            minimizeButton.Size = new Size(200, 70);
-            minimizeButton.TabIndex = 0;
-            minimizeButton.Text = "Minimize";
-            minimizeButton.UseVisualStyleBackColor = true;
+            logoutButton.Click += logoutButton_Click;
             // 
             // userControlDashboard1
             // 
@@ -389,7 +365,6 @@
             ((System.ComponentModel.ISupportInitialize)logoutPictureBox).EndInit();
             panelTop.ResumeLayout(false);
             panelExpand.ResumeLayout(false);
-            minimizePanel.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();
         }
@@ -412,11 +387,9 @@
         private Panel panelTop;
         private PictureBox logoutPictureBox;
         private PictureBox expandPictureBox;
-        private Panel panelExpand;
-        private Panel minimizePanel;
-        private Button minimizeButton;
         private Button logoutButton;
         private UserControlDashboard userControlDashboard1;
         private Button RegisterButton;
+        private Panel panelExpand;
     }
 }
